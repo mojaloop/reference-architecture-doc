@@ -25,7 +25,7 @@ Run `yarn run build` to build the project to render the static vuepress site for
 To version the current `next` document version found in the `./vuepress/docs` folder, run the following command
 
 ```bash
-npx vuepress version docs {VERSION}
+npx vuepress version docs ${VERSION}
 ```
 
 Example: `npx vuepress version docs 1.0.1`.
