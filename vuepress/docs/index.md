@@ -13,3 +13,6 @@ features:
   details: Feature 3 Description
 footer: Made by Mojaloop with ❤️
 ---
+
+| table |
+|---|---|

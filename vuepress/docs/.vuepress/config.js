@@ -44,18 +44,6 @@ module.exports = {
         link: '/getting-started/',
       },
       {
-        text: 'Title 1',
-        link: '/title1/'
-      },
-      {
-        text: 'Title 2',
-        link: '/title2/'
-      },
-      {
-        text: 'Title 3',
-        link: '/title3/'
-      },
-      {
         text: 'Mojaloop',
         link: 'https://mojaloop.io/'
       }
@@ -80,18 +68,28 @@ module.exports = {
         ]
       },
       {
-        title: 'Title 1',
-        path: '/title1/',      // optional, link of the title, which should be an absolute path and must exist
+        title: 'Introduction',
+        path: '/introduction/',      // optional, link of the title, which should be an absolute path and must exist
         // children: [ /* ... */ ],
       },
       {
-        title: 'Title 2',
-        path: '/title2/',      // optional, link of the title, which should be an absolute path and must exist
+        title: 'Reference Architecture',
+        path: '/refarch/',      // optional, link of the title, which should be an absolute path and must exist
         // children: [ /* ... */ ],
       },
       {
-        title: 'Title 3',
-        path: '/title3/',      // optional, link of the title, which should be an absolute path and must exist
+        title: 'How to Implement',
+        path: '/how_to_implement/',      // optional, link of the title, which should be an absolute path and must exist
+        // children: [ /* ... */ ],
+      },
+      {
+        title: 'Glossary',
+        path: '/glossary/',      // optional, link of the title, which should be an absolute path and must exist
+        // children: [ /* ... */ ],
+      },
+      {
+        title: 'Further Reading',
+        path: '/further_reading/',      // optional, link of the title, which should be an absolute path and must exist
         // children: [ /* ... */ ],
       }
     ]
