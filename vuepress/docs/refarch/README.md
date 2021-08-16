@@ -1,14 +1,3 @@
-<p style="color: red; font-weight: bold">>>>>>  gd2md-html alert:  ERRORs: 0; WARNINGs: 0; ALERTS: 5.</p>
-<ul style="color: red; font-weight: bold"><li>See top comment block for details on ERRORs and WARNINGs. <li>In the converted Markdown or HTML, search for inline alerts that start with >>>>>  gd2md-html alert:  for specific instances that need correction.</ul>
-
-<p style="color: red; font-weight: bold">Links to alert messages:</p><a href="#gdcalert1">alert1</a>
-<a href="#gdcalert2">alert2</a>
-<a href="#gdcalert3">alert3</a>
-<a href="#gdcalert4">alert4</a>
-<a href="#gdcalert5">alert5</a>
-
-<p style="color: red; font-weight: bold">>>>>> PLEASE check and correct alert issues and delete this message and the inline alerts.<hr></p>
-
 # Reference architecture
 
 ## Principles guiding this architecture
@@ -87,72 +76,39 @@ As noted in the DDD-architecture overview, the Problem Space contains a number o
 
 ### Core Problems
 
-
-![alt_text](./assets/images/DDD_ProblemSpace-1_20210630.png "image_tooltip")
+![alt_text](./assets/images/DDD_ProblemSpace-1_20210630.png "Core Problems")
 
 A number of Core Problems (improvements) have been identified by (Business/Developers/Both Business & Developers).  In order to implement the improvements, “internal” development teams will be tasked with developing the required solutions.  Typically the Subdomains thus identified generate significant value for the Mojaloop system, therefore care is taken to ensure that the services they provide are not compromised.  Examples of Core Problem Subdomains include: Participant Lifecycle Management, Settlements, and Scheduling.
 
-### Generic Problems
-
-
-
-<p id="gdcalert2" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image2.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert3">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image2.png "image_tooltip")
-
+### Generic Problems ###
+![alt_text](./assets/images/DDD_ProblemSpace-2_20210630.png "Generic Problems")
 
 A number of Generic Problems (improvements) have been identified by (Business/Developers/Both Business & Developers).  In order to implement the improvements, off-the-shelf solutions will be implemented that require no further customization.  They will require integration with the Mojaloop.  Examples of Generic problem subdomains include Authentication, FRMS, and Platform Monitoring.
 
 
-### Supporting Problems
+### Supporting Problems ### 
 
-
-### 
-
-<p id="gdcalert3" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image3.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert4">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image3.png "image_tooltip")
-
+![alt_text](./assets/images/DDD_ProblemSpace-3_20210630.png "Supporting Problems")
 
 A number of Supporting Problems (improvements) have been identified by (Business/Developers/Both Business & Developers).  In order to implement the improvements, off-the-shelf solutions will be implemented, however in order to fully integrate them with the Mojaloop system and satisfy the identified problems (improvements) additional customization will be required for each of the integrated solutions.  Examples of Supporting Problem Subdomains include Access Policy Management, Reporting, and Authorization (Access Policy content verification).
 
-
-### Non-Functional Requirements
+### Non-Functional Requirements ###
 
 A number of Non-Functional Requirements have been identified by (Business/Developers/Both Business & Developers).  Whilst they do not add direct value to Mojaloop, they are required in order to fulfil a number of business-related problems (improvements).  Examples of Non-Functional Requirements include security which does not occupy its own subdomain.  All system Subdomains will need to include elements of code pertaining to security in fulfillment of this requirement, alternatively, a central security management service will be implemented that includes centrally managed and constructed security profiles for each Subdomain in the system which they will download upon joining the Domain, or upon initiation, and/or which will be pushed down to them from the central service when updates occur.
 
-**[Space for diagram/map]**
+*[Space for diagram/map]*
 
+### New and Unclassified (non-domain) ###
 
-### New and Unclassified (non-domain)
-
-
-
-<p id="gdcalert4" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image4.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert5">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image4.png "image_tooltip")
-
+![alt_text](./assets/images/DDD_ProblemSpace-4_20210630.png "New & Unclassified Problems")
 
 A number of New and Unclassified (non-domain) problems have been identified by (Business/Developers/Both Business & Developers).  Once Business and the System Architects have identified the required solution in order to solve the problem, they will be classified into one of the Problem containers and fulfilled in accordance with its processes.
-
-
-
 
 ## Solution Space (_High level description and the context map)_
 
 The Solution Space defined by DDD-architecture is focused on how the business problems (improvements) identified in the Problem Space are going to be solved.  As a result it necessarily contains more information and technical details than the Problem Space.  It includes elements such as Ubiquitous Language, Bounded Contexts, and Cross-Cutting Concerns.
 
-
-
-<p id="gdcalert5" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image5.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert6">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image5.png "image_tooltip")
-
-
+![alt_text](./assets/images/BC-overview.png "Solution Space")
 
 ### Ubiquitous Language
 
@@ -164,124 +120,61 @@ In the instance of Mojaloop, the naming convention for Ubiquitous Language terms
 
 _(To be completed post discussion with the members of the Reference Architecture team on 07/19 or 07/20, 2021)_ 
 
-
 ### Bounded Contexts
 
 The following Bounded Contexts have been identified and implemented in Mojaloop:
 
 (This is a high-level description of each Bounded Context.  A more detailed view follows later in this document)
 
+|||||
+|--- |--- |--- |--- |
+|Bounded Context|Purpose|Bounded Context|Purpose|
+|Settlements|Performs Settlements
 
-<table>
-  <tr>
-   <td>Bounded Context
-   </td>
-   <td>Purpose
-   </td>
-   <td>Bounded Context
-   </td>
-   <td>Purpose
-   </td>
-  </tr>
-  <tr>
-   <td>Settlements
-   </td>
-   <td>Performs Settlements
-<p>
 Configures settlement models
-<p>
-Calculate Settlements
-   </td>
-   <td>Participant Lifecycle Management
-   </td>
-   <td>Participant Onboarding
-<p>
+
+Calculate Settlements|Participant Lifecycle Management|Participant Onboarding
+
 Participant Lifecycle Management
-<p>
+
 Participant Self-service
-<p>
-Participant Self-service UI
-   </td>
-  </tr>
-  <tr>
-   <td>Account Lookup & Discovery
-   </td>
-   <td>Internal Oracle core
-<p>
+
+Participant Self-service UI|
+|Account Lookup & Discovery|Internal Oracle core
+
 Account lookup / discovery
-<p>
+
 Bulk transactions
-<p>
+
 Duplicate Identifier management
-<p>
-Inter-scheme connections (incl.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  settlements) cross-border
-   </td>
-   <td>Accounts  & Balances
-   </td>
-   <td>System of record of DFSP participant financial activity & balance
-   </td>
-  </tr>
-  <tr>
-   <td>Transfers & Transactions
-   </td>
-   <td>Transfer processing
-<p>
+
+Inter-scheme connections (incl.settlements) cross-border|Accounts  & Balances|System of record of DFSP participant financial activity & balance|
+|Transfers & Transactions|Transfer processing
+
 Liquidity check for each transfer
-<p>
+
 Bulk transactions
-<p>
-Multi-currency, incl.multi-hop transactions
-   </td>
-   <td>Agreement (Quoting)
-   </td>
-   <td>Agreement /quoting (core)
-<p>
+
+Multi-currency, incl.multi-hop transactions|Agreement (Quoting)|Agreement /quoting (core)
+
 Bulk transactions
-<p>
+
 Multi-currency, incl.multi-hop transactions
-<p>
-Scheme Rule/Patterns Enforcement Happens in each BC
-   </td>
-  </tr>
-  <tr>
-   <td>Scheduling
-   </td>
-   <td>Scheduling time-based events of API calls (Core)
-   </td>
-   <td>Notifications & Alerts
-   </td>
-   <td>Notification state - priority & SLA aware (Core)
-<p>
+
+Scheme Rule/Patterns Enforcement Happens in each BC|
+|Scheduling|Scheduling time-based events of API calls (Core)|Notifications & Alerts|Notification state - priority & SLA aware (Core)
+
 Trigger & alert management (Core)
-<p>
-Notifications delivery - priority and SLA aware (Generic)
-   </td>
-  </tr>
-  <tr>
-   <td>FSP Interop APIs
-   </td>
-   <td>ISO External API (Bulk; API, Callbacks triggering (transfers only, Missing in AS-IS)[^6]
-   </td>
-   <td>Third Party Initiated Payments
-   </td>
-   <td>PISP Account Linking
-<p>
+
+Notifications delivery - priority and SLA aware (Generic)|
+|FSP Interop APIs|ISO External API (Bulk; API, Callbacks triggering (transfers only, Missing in AS-IS)[^6]|Third Party Initiated Payments|PISP Account Linking
+
 Consent Management
-<p>
-3rd Party Payment Initiation (Core)
-   </td>
-  </tr>
-  <tr>
-   <td colspan="2" >Third party API
-   </td>
-   <td colspan="2" >PISP Mojaloop External API
-<p>
-PISP ISO External API
-   </td>
-  </tr>
-</table>
 
+3rd Party Payment Initiation (Core)|
+|Third party API|||PISP Mojaloop External API
 
+PISP ISO External API|
 
 ### Cross cutting concerns
 
@@ -289,72 +182,32 @@ The following Cross cutting concerns have been identified in Mojaloop:
 
 (This is a high-level description of each Bounded Context.  A more detailed view follows later in this document)
 
-
-<table>
-  <tr>
-   <td>Cross Cutting Concern BC
-   </td>
-   <td>Purpose
-   </td>
-  </tr>
-  <tr>
-   <td>AuthZ & AuthN and Identity Management BC
-   </td>
-   <td>Manage all aspects of both user and system authentication (AuthN) and authorization (AuthZ).  Planned solutions will fit into the Generic and Supporting categories
-   </td>
-  </tr>
-  <tr>
-   <td>Cryptographic BC
-   </td>
-   <td>Manage all cryptographic related services including Key and Certificate Management and Storage Systems.  Planned solutions will fit into the Generic category.
-   </td>
-  </tr>
-  <tr>
-   <td>Reporting and Auditing BC
-   </td>
-   <td>Manage all audit and reporting services including Compliance and Assurance Reporting, Forensic Event Logging and KMS, Forensic Event Log Access and Management, Process Monitoring and SLAs, and System Auditing.  (Each BC will include auditing capability.  The Reporting and Auditing BC will retain logs from all of the BCs).  Planned solutions will fit into all of the Problem Space categories: Core, Supporting, and Generic.
-   </td>
-  </tr>
-  <tr>
-   <td>Platform Configuration (Business) BC
-   </td>
-   <td>Manage Scheme rule/patterns management process (Note; Scheme rule/patterns enforcement is maintained in each BC), Scheme mandated transaction patterns, application management and security, identity and access management (including user and team management), bizops API linking consent management, and access policy management.  Planned solutions will fit into all of the Problem Space categories: Core, Supporting, and Generic
-   </td>
-  </tr>
-  <tr>
-   <td>Technical Platform Management BC
-   </td>
-   <td>Manage platform monitoring, and platform management.  Planned solutions will fit into the Generic category.
-   </td>
-  </tr>
-</table>
-
-
+|||
+|--- |--- |
+|Cross Cutting Concern BC|Purpose|
+|AuthZ & AuthN and Identity Management BC|Manage all aspects of both user and system authentication (AuthN) and authorization (AuthZ).  Planned solutions will fit into the Generic and Supporting categories|
+|Cryptographic BC|Manage all cryptographic related services including Key and Certificate Management and Storage Systems.  Planned solutions will fit into the Generic category.|
+|Reporting and Auditing BC|Manage all audit and reporting services including Compliance and Assurance Reporting, Forensic Event Logging and KMS, Forensic Event Log Access and Management, Process Monitoring and SLAs, and System Auditing.  (Each BC will include auditing capability.  The Reporting and Auditing BC will retain logs from all of the BCs).  Planned solutions will fit into all of the Problem Space categories: Core, Supporting, and Generic.|
+|Platform Configuration (Business) BC|Manage Scheme rule/patterns management process (Note; Scheme rule/patterns enforcement is maintained in each BC), Scheme mandated transaction patterns, application management and security, identity and access management (including user and team management), bizops API linking consent management, and access policy management.  Planned solutions will fit into all of the Problem Space categories: Core, Supporting, and Generic|
+|Technical Platform Management BC|Manage platform monitoring, and platform management.  Planned solutions will fit into the Generic category.|
 
 <!-- Footnotes themselves at the bottom. -->
 ## Notes
 
 [^1]:
-
-######      Further reading: [Domain-driven design From Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/Domain-driven_design)
+###### Further reading:[Domain-driven design From Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/Domain-driven_design)
 
 [^2]:
-
-######      Further reading: [SOLID From WIkipedia, the free encyclopedia](https://en.wikipedia.org/wiki/SOLID)
+###### Further reading: [SOLID From WIkipedia, the free encyclopedia](https://en.wikipedia.org/wiki/SOLID)
 
 [^3]:
-
-######      Further reading: [Strategic Domain-Driven Design](https://vaadin.com/learn/tutorials/ddd/strategic_domain_driven_design) - Publisher: Vaadin.com; Author: Petter Holmstrom
+###### Further reading: [Strategic Domain-Driven Design](https://vaadin.com/learn/tutorials/ddd/strategic_domain_driven_design) - Publisher: Vaadin.com; Author: Petter Holmstrom
 
 [^4]:
-
-
-######      Financial Service Provider Interoperability API.  For further reading please see: [Mojaloop FSP Interoperability API Version 1.1](https://mojaloop.io/mojaloop-fsp-interoperability-api-version-1-1/) - Publisher: Mojaloop Foundation; Author: Sam Kummary; Date: 06/17/2021
+###### Financial Service Provider Interoperability API.  For further reading please see: [Mojaloop FSP Interoperability API Version 1.1](https://mojaloop.io/mojaloop-fsp-interoperability-api-version-1-1/) - Publisher: Mojaloop Foundation; Author: Sam Kummary; Date: 06/17/2021
 
 [^5]:
-
-
-######      Further reading: [Cross-cutting Concern](https://en.wikipedia.org/wiki/Cross-cutting_concern#:~:text=Cross%2Dcutting%20concerns%20are%20parts,oriented%20programming%20or%20procedural%20programming.) - Publisher: Wikipedia, the free encyclopedia
+###### Further reading: [Cross-cutting Concern](https://en.wikipedia.org/wiki/Cross-cutting_concern#:~:text=Cross%2Dcutting%20concerns%20are%20parts,oriented%20programming%20or%20procedural%20programming.) - Publisher: Wikipedia, the free encyclopedia
 
 [^6]:
 <h6>     “AS-IS” - refers to the current Mojaloop system, as in, “The system architects have identified problems in the system as is.”, or in its current state.</h6>
