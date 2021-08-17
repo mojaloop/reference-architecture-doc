@@ -1,4 +1,5 @@
-const { description } = require('../../package.json')
+const { description } = require('../../package')
+
 
 module.exports = {
   /**
@@ -9,17 +10,6 @@ module.exports = {
    * Ref：https://v1.vuepress.vuejs.org/config/#description
    */
   description: description,
-
-  /**
-   * Customize Markdown
-   */
-  markdown: {
-    // options for markdown-it-anchor
-    extendMarkdown: md => {
-      md.use(require('markdown-it'))
-      md.use(require('markdown-it-footnote'))
-    }
-  },
 
   /**
    * Extra tags to be injected to the page HTML `<head>`
