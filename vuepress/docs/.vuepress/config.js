@@ -14,7 +14,7 @@ module.exports = {
    * Customize Markdown
    */
   markdown: {
-    // options for markdown-it-anchor
+    // options for markdown-it-*
     extendMarkdown: md => {
       md.use(require('markdown-it'))
       md.use(require('markdown-it-footnote'))
