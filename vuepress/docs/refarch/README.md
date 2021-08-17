@@ -2,7 +2,7 @@
 
 ## Principles guiding this architecture
 
-The Mojaloop 2.0 Reference Architecture design has been guided by  Domain-Driven Design[^1] principles, and inspired by SOLID [^2] object-oriented programming principles for building software applications.
+The Mojaloop 2.0 Reference Architecture design has been guided by  Domain-Driven Design[^1] principles, and inspired by SOLID[^2] object-oriented programming principles for building software applications.
 
 To provide an understanding of the architecture interpretation by Mojaloop, we include a brief overview of Domain Driven Design architecture.
 
@@ -142,7 +142,7 @@ The following Cross cutting concerns have been identified in Mojaloop:
 <!-- Footnotes themselves at the bottom. -->
 ## Notes
 
-[^1]: Further reading:[Domain-driven design From Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/Domain-driven_design)
+[^1]: Further reading: [Domain-driven design From Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/Domain-driven_design)
 
 [^2]: Further reading: [SOLID From WIkipedia, the free encyclopedia](https://en.wikipedia.org/wiki/SOLID)
 
