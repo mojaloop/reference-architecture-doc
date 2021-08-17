@@ -6,9 +6,9 @@ The Mojaloop 2.0 Reference Architecture design has been guided by  Domain-Driven
 
 To provide an understanding of the architecture interpretation by Mojaloop, we include a brief overview of Domain Driven Design architecture.
 
-### DDD-Architecture[^3] Overview
+### DDD-Architecture Overview
 
-The DDD-architecture implementation for Mojaloop includes the following components -
+The DDD-architecture[^3] implementation for Mojaloop includes the following components -
 
 * **Problem Space** - Typically DDD-architecture recognises business requirements as belonging to separate domains.  For example an eCommerce system is seen as a **_Domain_**.  But an eCommerce system has several components in order to work such as an inventory, a shopping cart, checkout, etc.  Each component is categorised as a **_Subdomain_** that contributes value to the domain which is the eCommerce system.  Mojaloop uses a single domain - it is a switch.
 
