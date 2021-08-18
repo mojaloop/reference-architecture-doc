@@ -14,7 +14,7 @@ module.exports = {
    * Customize Markdown
    */
   markdown: {
-    /// options for markdown-it-*
+    /// --=== options for markdown-it-* ===--
     html:         true,        // Enable HTML tags in source
     xhtmlOut:     false,        // Use '/' to close single tags (<br />).
                                 // This is only for full CommonMark compatibility.
@@ -39,12 +39,12 @@ module.exports = {
     //// If result starts with <pre... internal wrapper is skipped.
     // highlight: function (/*str, lang*/) { return ''; }
     
-    /// options for markdown-it-footnote
+    /// --=== options for markdown-it-footnote ===--
     multiline:  true,
     rowspan:    true,
     headerless: false,
 
-    /// options for markdown-it-multimd-table
+    /// --=== options for markdown-it-multimd-table ===--
     //
     extendMarkdown: md => {
       md.use(require('markdown-it'))
