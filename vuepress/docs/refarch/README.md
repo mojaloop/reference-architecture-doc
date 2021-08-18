@@ -1,40 +1,5 @@
 # Reference architecture
 
-| test1  | test2  |
-|---: | ---: | ---: |
-|  r1c1 | r1c2  | r1c3 |
-| *testssssssssss sssss* |
-| r3c1 | r3c2 | r3c3 |
-| ^^ | r4c2 | r4c3 |
-| r5c1 | r5c2r5c3 |
-
-(c) (C) → ©
-
-(tm) (TM) → ™
-
-(r) (R) → ®
-
-+- → ±
-
-(p) (P) -> §
-
-... → … (also ?.... → ?.., !.... → !..)
-
-???????? → ???, !!!!! → !!!, `,,` → `,`
-
--- → &ndash;, --- → &mdash;
-
-Stage | Direct Products | ATP Yields
-----: | --------------: | ---------:
-Glycolysis | 2 ATP ||
-^^ | 2 NADH | 3--5 ATP |
-Pyruvaye oxidation | 2 NADH | 5 ATP |
-Citric acid cycle | 2 ATP ||
-^^ | 6 NADH | 15 ATP |
-^^ | 2 FADH2 | 3 ATP |
-**30--32** ATP |||
-[Net ATP yields per hexose]
-
 ## Principles guiding this architecture
 
 The Mojaloop 2.0 Reference Architecture design has been guided by  Domain-Driven Design[^1] principles, and inspired by SOLID[^2] object-oriented programming principles for building software applications.
@@ -178,12 +143,12 @@ The following Cross cutting concerns have been identified in Mojaloop:
 
 In this section we take a deep dive into each of the identified Bounded Contexts indicating their purpose (description), Subdomains spanned, Use Cases that each Bounded Context addresses, and concluding remarks where they have been included.
 
-| Common Terms and Conventions (All Bounded Contexts and Use Cases) |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |  |
-|-------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--|
-| Convention/Term                                                   | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |  |
-| Actors                                                            | Human or external system Use Case participant. All Use Cases are driven by Actors.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |  |
-| BC                                                                | Bounded Context: A bounded-context is a component of Design-Driven Development and typically contains a single, or multiple subdomains. Bounded Contexts are Solution Space entities, and contain a single solution applicable to a single, or multiple, subdomain/s.<br/>(For further information please see: Bounded Contexts in the Solution Space overview, or References and Further Reading)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |  |
-| UC                                                                | Use Case: A Use Case is a list of actions or steps describing interactions between an Actor (human or external system) and a system to achieve a particular objective. An example of a Use Case from Mojaloop is "Perform Transfer with Payee Confirmation".<br/>(Further reading: "Use Case" (Definition) - From Wikipedia, the free encyclopedia)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |  |
+| Common Terms and Conventions (All Bounded Contexts and Use Cases) |||
+| :--- | :--- | --- |
+| **Convention/Term** | **Description** ||
+| Actors                                                            | Human or external system Use Case participant. All Use Cases are driven by Actors.||
+| BC                                                                | Bounded Context: A bounded-context is a component of Design-Driven Development and typically contains a single, or multiple subdomains. Bounded Contexts are Solution Space entities, and contain a single solution applicable to a single, or multiple, subdomain/s.<br/>(For further information please see: Bounded Contexts in the Solution Space overview, or References and Further Reading) | |
+| UC | Use Case: A Use Case is a list of actions or steps describing interactions between an Actor (human or external system) and a system to achieve a particular objective. An example of a Use Case from Mojaloop is "Perform Transfer with Payee Confirmation".<br/>(Further reading: "Use Case" (Definition) - From Wikipedia, the free encyclopedia) |  |
 | Sync                                                              | Synchronous communications, one or two way, part of the originating process. Signified by a solid line in the UC schematics. Typically used for Messages that need to be included in a particular UC workflow in order for it to execute successfully. An example of synch Messaging is a query from the Transfers BC to the Participant Lifecycle Management BC to get Participant data if not cached to complete a Transfer request.                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |  |
 | Async                                                             | Asynchronous communications, one or two way, not part of the originating process. Signified by a dotted line in the UC schematics. Typically used for Events which are used to indicate something that has happened, and is immutable and won't change, for example callback reports.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |  |
 | POST                                                              | Utilized to **create** new resources. In particular, it's used to create subordinate resources. That is, subordinate to some other (e.g. parent) resource. IOW, when creating a new resource, POST to the parent and the service takes care of associating the new resource with the parent, assigning an ID (new resource URI), etc. On successful creation, the system will return a Location header with a link to the newly-created resource with the 201 HTTP status.<br/>(Source: Restful API Tutor - see References and further reading)                                                                                                                                                                                                                                                                                                                                                                      |  |
