@@ -9,7 +9,7 @@
   ],
   "repository": "https://github.com/mojaloop/reference-architecture-doc",
   "scripts": {
-    "dev": "vuepress dev docs",
+    "dev": "vuepress dev docs --no-cache",
     "build": "vuepress build docs",
     "dep:check": "npx ncu -e 2",
     "dep:update": "npx ncu -u",
