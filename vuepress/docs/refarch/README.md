@@ -1,5 +1,40 @@
 # Reference architecture
 
+| test1  | test2  |
+|---: | ---: | ---: |
+|  r1c1 | r1c2  | r1c3 |
+| *testssssssssss sssss* |
+| r3c1 | r3c2 | r3c3 |
+| ^^ | r4c2 | r4c3 |
+| r5c1 | r5c2r5c3 |
+
+(c) (C) → ©
+
+(tm) (TM) → ™
+
+(r) (R) → ®
+
++- → ±
+
+(p) (P) -> §
+
+... → … (also ?.... → ?.., !.... → !..)
+
+???????? → ???, !!!!! → !!!, `,,` → `,`
+
+-- → &ndash;, --- → &mdash;
+
+Stage | Direct Products | ATP Yields
+----: | --------------: | ---------:
+Glycolysis | 2 ATP ||
+^^ | 2 NADH | 3--5 ATP |
+Pyruvaye oxidation | 2 NADH | 5 ATP |
+Citric acid cycle | 2 ATP ||
+^^ | 6 NADH | 15 ATP |
+^^ | 2 FADH2 | 3 ATP |
+**30--32** ATP |||
+[Net ATP yields per hexose]
+
 ## Principles guiding this architecture
 
 The Mojaloop 2.0 Reference Architecture design has been guided by  Domain-Driven Design[^1] principles, and inspired by SOLID[^2] object-oriented programming principles for building software applications.
