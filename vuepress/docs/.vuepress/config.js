@@ -115,8 +115,27 @@ module.exports = {
       {
         title: 'Reference Architecture',
         path: '/refarch/',      // optional, link of the title, which should be an absolute path and must exist
-        // children: [ /* ... */ ],
-      },
+        // collapsable: false, // optional, defaults to true
+        // sidebarDepth: 1,    // optional, defaults to 1
+        initialOpenGroupIndex: 1, // optional, defaults to 0, defines the index of initially opened subgroup,
+        children: [
+          {
+            title: 'Reference Architecture Overview',
+            path: '/refarch/',      // optional, link of the title, which should be an absolute path and must exist
+            // children: [ /* ... */ ],
+          },
+          {
+            title: 'Bounded Contexts',
+            path: '/refarch/Bounded Context/BC_Intro.md',      // optional, link of the title, which should be an absolute path and must exist
+            // children: [ /* ... */ ],
+          },
+         {
+            title: 'Interfaces',
+            path: '/refarch/Interfaces',      // optional, link of the title, which should be an absolute path and must exist
+            // children: [ /* ... */ ],
+          },
+        ]
+     },
       {
         title: 'How to Implement',
         path: '/how_to_implement/',      // optional, link of the title, which should be an absolute path and must exist
