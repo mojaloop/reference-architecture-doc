@@ -3,7 +3,7 @@ home: true
 heroImage: /mojaloop_logo_med.png
 tagline: This is the official Reference Architecture documentation for the Mojaloop project.
 actionText: Getting Started →
-actionLink: /getting-started/
+actionLink: /gettingStarted/
 features:
 - title: Title1
   details: Feature 1 Description
