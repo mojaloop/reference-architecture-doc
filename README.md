@@ -4,11 +4,9 @@
 
 ## Building and testing locally
 
-Our updated docs currently live in the `./vuepress` directory
+Our updated docs currently live in the `./docs` directory
 
 ```bash
-cd ./vuepress
-
 # install npm dependencies
 yarn 
 
@@ -22,7 +20,7 @@ Run `yarn run build` to build the project to render the static vuepress site for
 
 ## Versioning
 
-To version the current `next` document version found in the `./vuepress/docs` folder, run the following command
+To version the current `next` document version found in the `./docs` folder, run the following command
 
 ```bash
 npx vuepress version docs ${VERSION}
@@ -30,11 +28,11 @@ npx vuepress version docs ${VERSION}
 
 Example: `npx vuepress version docs 1.0.1`.
 
-This will preserve the documents found in `./vuepress/docs` to `./vuepress/website/versioned_docs/1.0.1`.
+This will preserve the documents found in `./docs` to `./website/versioned_docs/1.0.1`.
 
 This is managed by a [vuepress versioning plugin](https://titanium-docs-devkit.netlify.app/guide/versioning.html).
 
-The latest version will automatically be loaded when access the website, with a version drop-down list appearing on the top left (next to the Mojaloop logo). Here you can select the different versions that have been archived in the `./vuepress/website/versioned_docs/` folder, with `next` representing the working folder `./vuepress/docs`.
+The latest version will automatically be loaded when access the website, with a version drop-down list appearing on the top left (next to the Mojaloop logo). Here you can select the different versions that have been archived in the `./vuepress/website/versioned_docs/` folder, with `next` representing the working folder `./docs`.
 
 ## Publishing
 
