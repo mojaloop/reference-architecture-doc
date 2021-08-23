@@ -120,7 +120,7 @@ module.exports = {
         initialOpenGroupIndex: 1, // optional, defaults to 0, defines the index of initially opened subgroup,
         children: [
           {
-            title: 'Reference Architecture Overview',
+            title: 'Overview',
             path: '/refarch/',      // optional, link of the title, which should be an absolute path and must exist
             // children: [ /* ... */ ],
           },
