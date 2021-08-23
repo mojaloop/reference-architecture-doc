@@ -9,8 +9,11 @@
   ],
   "repository": "https://github.com/mojaloop/reference-architecture-doc",
   "scripts": {
-    "dev": "vuepress dev docs",
-    "build": "vuepress build docs"
+    "dev": "vuepress dev docs --no-cache",
+    "build": "vuepress build docs",
+    "dep:check": "npx ncu -e 2",
+    "dep:update": "npx ncu -u",
+    "ci": "yarn install --frozen-lockfile"
   },
   "license": "Apache-2.0",
   "devDependencies": {
@@ -18,7 +21,9 @@
     "@vuepress/plugin-medium-zoom": "^1.8.2",
     "markdown-it": "^12.2.0",
     "markdown-it-footnote": "^3.0.3",
-    "vuepress": "^1.5.3",
+    "markdown-it-multimd-table": "^4.1.0",
+    "npm-check-updates": "^11.8.3",
+    "vuepress": "^1.8.2",
     "vuepress-plugin-versioning": "^4.10.2",
     "vuepress-theme-titanium": "^4.9.0"
   },

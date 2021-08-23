@@ -14,10 +14,40 @@ module.exports = {
    * Customize Markdown
    */
   markdown: {
-    // options for markdown-it-*
+    /// Options for markdown-it
+    html:         true,        // Enable HTML tags in source
+    xhtmlOut:     false,        // Use '/' to close single tags (<br />).
+                                // This is only for full CommonMark compatibility.
+    breaks:       true,        // Convert '\n' in paragraphs into <br>
+    langPrefix:   'language-',  // CSS language prefix for fenced blocks. Can be
+                                // useful for external highlighters.
+    // linkify:      false,        // Autoconvert URL-like text to links
+  
+    /// Enable some language-neutral replacement + quotes beautification
+    /// For the full list of replacements, see https://github.com/markdown-it/markdown-it/blob/master/lib/rules_core/replacements.js
+    typographer:  true,
+  
+    /// Double + single quotes replacement pairs, when typographer enabled,
+    /// and smartquotes on. Could be either a String or an Array.
+    ///
+    /// For example, you can use '«»„“' for Russian, '„“‚‘' for German,
+    /// and ['«\xA0', '\xA0»', '‹\xA0', '\xA0›'] for French (including nbsp).
+    // quotes: '“”‘’',
+  
+    /// Highlighter function. Should return escaped HTML,
+    /// or '' if the source string is not changed and should be escaped externally.
+    /// If result starts with <pre... internal wrapper is skipped.
+    // highlight: function (/*str, lang*/) { return ''; }
+    
     extendMarkdown: md => {
       md.use(require('markdown-it'))
       md.use(require('markdown-it-footnote'))
+      md.use(require('markdown-it-multimd-table'), {
+        /// Options for markdown-it-multimd-table
+        multiline:  true,
+        rowspan:    true,
+        headerless: true,
+      })
     }
   },
 
@@ -85,8 +115,27 @@ module.exports = {
       {
         title: 'Reference Architecture',
         path: '/refarch/',      // optional, link of the title, which should be an absolute path and must exist
-        // children: [ /* ... */ ],
-      },
+        // collapsable: false, // optional, defaults to true
+        // sidebarDepth: 1,    // optional, defaults to 1
+        initialOpenGroupIndex: 1, // optional, defaults to 0, defines the index of initially opened subgroup,
+        children: [
+          {
+            title: 'Reference Architecture Overview',
+            path: '/refarch/',      // optional, link of the title, which should be an absolute path and must exist
+            // children: [ /* ... */ ],
+          },
+          {
+            title: 'Bounded Contexts',
+            path: '/refarch/Bounded Context/BC_Intro.md',      // optional, link of the title, which should be an absolute path and must exist
+            // children: [ /* ... */ ],
+          },
+         {
+            title: 'Interfaces',
+            path: '/refarch/Interfaces',      // optional, link of the title, which should be an absolute path and must exist
+            // children: [ /* ... */ ],
+          },
+        ]
+     },
       {
         title: 'How to Implement',
         path: '/how_to_implement/',      // optional, link of the title, which should be an absolute path and must exist

@@ -146,7 +146,7 @@ The following Cross cutting concerns have been identified in Mojaloop:
 
 [^2]: Further reading: [SOLID From WIkipedia, the free encyclopedia](https://en.wikipedia.org/wiki/SOLID)
 
-[^3]: Further reading: [Strategic Domain-Driven Design](https://vaadin.com/learn/tutorials/ddd/strategic_domain_driven_design) - Publisher: Vaadin.com; Author: Petter Holmstrom
+[^3]: Further reading: [Strategic Domain-Driven Design](https://vaadin.com/learn/tutorials/ddd/strategic_domain_driven_design) - Publisher: Vaadin; Author: Petter Holmström
 
 [^4]: Financial Service Provider Interoperability API.  For further reading please see: [Mojaloop FSP Interoperability API Version 1.1](https://mojaloop.io/mojaloop-fsp-interoperability-api-version-1-1/) - Publisher: Mojaloop Foundation; Author: Sam Kummary; Date: 06/17/2021
 
