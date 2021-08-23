@@ -126,12 +126,12 @@ module.exports = {
           },
           {
             title: 'Bounded Contexts',
-            path: '/refarch/Bounded Context/BC_Intro.md',      // optional, link of the title, which should be an absolute path and must exist
+            path: '/refarch/boundedContext/intro.md',      // optional, link of the title, which should be an absolute path and must exist
             // children: [ /* ... */ ],
           },
          {
             title: 'Interfaces',
-            path: '/refarch/Interfaces',      // optional, link of the title, which should be an absolute path and must exist
+            path: '/refarch/commonInterfaces',      // optional, link of the title, which should be an absolute path and must exist
             // children: [ /* ... */ ],
           },
         ]
