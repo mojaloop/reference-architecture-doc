@@ -81,7 +81,7 @@ module.exports = {
     nav: [
       {
         text: 'Getting Started',
-        link: '/getting-started/',
+        link: '/gettingStarted/',
       },
       {
         text: 'Mojaloop',
@@ -91,7 +91,7 @@ module.exports = {
     sidebar: [
       {
         title: 'Getting Started',   // required
-        path: '/getting-started/',      // optional, link of the title, which should be an absolute path and must exist
+        path: '/gettingStarted/',      // optional, link of the title, which should be an absolute path and must exist
         collapsable: false, // optional, defaults to true
         sidebarDepth: 1,    // optional, defaults to 1
         initialOpenGroupIndex: -1, // optional, defaults to 0, defines the index of initially opened subgroup,
@@ -102,7 +102,7 @@ module.exports = {
           },
           {
             title: 'Sub Menu',
-            path: '/getting-started/sub-menu/',      // optional, link of the title, which should be an absolute path and must exist
+            path: '/gettingStarted/subMenu/',      // optional, link of the title, which should be an absolute path and must exist
             // children: [ /* ... */ ],
           },
         ]
@@ -120,14 +120,90 @@ module.exports = {
         initialOpenGroupIndex: 1, // optional, defaults to 0, defines the index of initially opened subgroup,
         children: [
           {
-            title: 'Reference Architecture Overview',
+            title: 'Overview',
             path: '/refarch/',      // optional, link of the title, which should be an absolute path and must exist
             // children: [ /* ... */ ],
           },
           {
             title: 'Bounded Contexts',
-            path: '/refarch/boundedContext/intro.md',      // optional, link of the title, which should be an absolute path and must exist
-            // children: [ /* ... */ ],
+            path: '/refarch/boundedContexts/intro',      // optional, link of the title, which should be an absolute path and must exist
+            children: [
+              {
+                title: 'Account Lookup & Discovery',
+                path: '/refarch/boundedContexts/accountLookupAndDiscovery/',      // optional, link of the title, which should be an absolute path and must exist
+                // children: [ /* ... */ ],
+              },
+              {
+                title: 'Accounts & Balances',
+                path: '/refarch/boundedContexts/accountsAndBalances/',      // optional, link of the title, which should be an absolute path and must exist
+                // children: [ /* ... */ ],
+              },
+              {
+                title: 'Agreement',
+                path: '/refarch/boundedContexts/agreement/',      // optional, link of the title, which should be an absolute path and must exist
+                // children: [ /* ... */ ],
+              },
+              {
+                title: 'Auditing',
+                path: '/refarch/boundedContexts/auditing/',      // optional, link of the title, which should be an absolute path and must exist
+                // children: [ /* ... */ ],
+              },
+              {
+                title: 'FSP Interop API',
+                path: '/refarch/boundedContexts/fspInteropApi/',      // optional, link of the title, which should be an absolute path and must exist
+                // children: [ /* ... */ ],
+              },
+              {
+                title: 'Logging',
+                path: '/refarch/boundedContexts/logging/',      // optional, link of the title, which should be an absolute path and must exist
+                // children: [ /* ... */ ],
+              },
+              {
+                title: 'Notifications And Alerts',
+                path: '/refarch/boundedContexts/notificationsAndAlerts/',      // optional, link of the title, which should be an absolute path and must exist
+                // children: [ /* ... */ ],
+              },
+              {
+                title: 'Participant Lifecycle Management',
+                path: '/refarch/boundedContexts/participantLifecycleManagement/',      // optional, link of the title, which should be an absolute path and must exist
+                // children: [ /* ... */ ],
+              },
+              {
+                title: 'Platform Monitoring',
+                path: '/refarch/boundedContexts/platformMonitoring/',      // optional, link of the title, which should be an absolute path and must exist
+                // children: [ /* ... */ ],
+              },
+              {
+                title: 'Reporting',
+                path: '/refarch/boundedContexts/reporting/',      // optional, link of the title, which should be an absolute path and must exist
+                // children: [ /* ... */ ],
+              },
+              {
+                title: 'Scheduling',
+                path: '/refarch/boundedContexts/scheduling/',      // optional, link of the title, which should be an absolute path and must exist
+                // children: [ /* ... */ ],
+              },
+              {
+                title: 'Security',
+                path: '/refarch/boundedContexts/security/',      // optional, link of the title, which should be an absolute path and must exist
+                // children: [ /* ... */ ],
+              },
+              {
+                title: 'Settlements',
+                path: '/refarch/boundedContexts/settlements/',      // optional, link of the title, which should be an absolute path and must exist
+                // children: [ /* ... */ ],
+              },
+              {
+                title: 'Third Party API',
+                path: '/refarch/boundedContexts/thirdPartyApi/',      // optional, link of the title, which should be an absolute path and must exist
+                // children: [ /* ... */ ],
+              },
+              {
+                title: 'Transfers',
+                path: '/refarch/boundedContexts/transfers/',      // optional, link of the title, which should be an absolute path and must exist
+                // children: [ /* ... */ ],
+              },
+            ],
           },
          {
             title: 'Interfaces',
@@ -138,7 +214,7 @@ module.exports = {
      },
       {
         title: 'How to Implement',
-        path: '/how_to_implement/',      // optional, link of the title, which should be an absolute path and must exist
+        path: '/howToImplement/',      // optional, link of the title, which should be an absolute path and must exist
         // children: [ /* ... */ ],
       },
       {
@@ -148,7 +224,7 @@ module.exports = {
       },
       {
         title: 'Further Reading',
-        path: '/further_reading/',      // optional, link of the title, which should be an absolute path and must exist
+        path: '/furtherReading/',      // optional, link of the title, which should be an absolute path and must exist
         // children: [ /* ... */ ],
       }
     ]
