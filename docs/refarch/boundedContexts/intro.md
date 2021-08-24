@@ -1,6 +1,8 @@
-## Bounded Context: Common Terms and Conventions Used
+# Bounded Context
 
 In this section we take a deep dive into each of the identified Bounded Contexts indicating their purpose (description), Subdomains spanned, Use Cases that each Bounded Context addresses, and concluding remarks where they have been included.
+
+## Common Terms and Conventions Used
 
 | **Common Terms and Conventions (All Bounded Contexts and Use Cases**)||
 |    **Convention/Term**    |       **Description**       |
