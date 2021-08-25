@@ -213,7 +213,7 @@ Mojaloop uses two canonical models to manage funds transfers, one for non-bulk t
   * Validation of cryptographical conditions and fulfillment woudl be managed by the Transfers BC as it is a fundamental component of the "transfer" process (i.e.: function is not specific to the FSPIOP language)
   * The Transfers BC will apply the same validation pattern as the Quoting & Party BC to validate Participants, to determine the ability of an Account to transact, or if a Participant is enabled as mutually exclusive.
   * The Transfers BC is the single "source of truth" for all transfers, and is thus responsible for persisting the state/s of transfer's.
-  * Disabling Participants already in a "prepared" state should not hinder processing of transfers, however new transfer instructions received by the Transfers BC via the TransferPrepareAccountAllocated events should be declined.
+  * Disabling Participants already in a "prepared" state should not hinder processing of current transfers, however new transfer instructions received by the Transfers BC via the TransferPrepareAccountAllocated events should be declined.
 
 <!-- Footnotes themselves at the bottom. -->
 <!--## Notes -->
