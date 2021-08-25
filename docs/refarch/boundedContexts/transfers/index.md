@@ -1,4 +1,4 @@
-# Transfer BC
+# Transfers BC
 
 The Transfers BC is responsible for orchestrating transfer requests.  It works in concert with a number of other BCs, notably Settlements, Scheduling, Participant Lifecycle Management, Accounts & Balances, and the FSPIOP.
 
@@ -159,7 +159,63 @@ Transfer status query - validation fail - Transfer identifier token not found
 <!--![Use Case - Query (GET) Transfer - Validation Failure (Transfer Identifier Not Found)](./assets/useCaseExample.png) -->
 > UC Diagram TBC
 
+## Canonical Model
+Mojaloop uses two canonical models to manage funds transfers, one for non-bulk transfers, and one for bulk transfers.
+
+### Standard Canonical Model
+
+ * Transfer
+   * transferId
+   * transferType
+   * quoteld (optional)
+   * settlementModelId
+   * Participants
+     * Payer
+       * participantId
+       * Accounts
+         * Debit
+           * accountId
+           * accountType
+           * currency
+         * Credit
+           * accountId
+           * accountType
+           * currency
+     * Payee
+       * ParticipantId
+       * Accounts
+         * Debit
+           * accountId
+           * accountType
+           * currency
+         * Credit
+           * accountId
+           * accountType
+           * currency
+    * Amount (Amount to transfer)
+      * value (number)
+      * currency (ISO currency code)
+    * expiration (ISO dateTime)
+    * ilpPacket
+    * Extensions
+
+### Bulk Canonical Model
+
+  * Transfers
+    * bulkId
+    * bulkQuoteId
+    * Transfers[]
+      * Transfer* (see above)
+
+## Concluding Comments
+
+  * The Payer FSP should not be permitted to unilaterally time-out a transfer (irrespective of its expiration time), but should respect the Switch's timeout decisions.
+  * Validation of cryptographical conditions and fulfillment woudl be managed by the Transfers BC as it is a fundamental component of the "transfer" process (i.e.: function is not specific to the FSPIOP language)
+  * The Transfers BC will apply the same validation pattern as the Quoting & Party BC to validate Participants, to determine the ability of an Account to transact, or if a Participant is enabled as mutually exclusive.
+  * The Transfers BC is the single "source of truth" for all transfers, and is thus responsible for persisting the state/s of transfer's.
+  * Disabling Participants already in a "prepared" state should not hinder processing of transfers, however new transfer instructions received by the Transfers BC via the TransferPrepareAccountAllocated events should be declined.
+
 <!-- Footnotes themselves at the bottom. -->
-## Notes
+<!--## Notes -->
 
 [^1]: Common Interfaces: [Mojaloop Common Interface List](../../commonInterfaces.md)
