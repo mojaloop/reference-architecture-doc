@@ -90,7 +90,8 @@ The canonical model stores the following details of quotations in the Quotes & A
  * We need to better understand/calrify the "GET" via "POST" pattern:
    * Should a "GET" event be a simple Restful "GET", or does the system need to support the "GET" from duplicate posts?
    * Are we required to serve "GET" requests that include FSP details at a later date?
-<!-- Footnotes themselves at the bottom. -->
+
 <!--## Notes -->
+<!-- Footnotes themselves at the bottom. -->
 
 [^1]: Common Interfaces: [Mojaloop Common Interface List](../../commonInterfaces.md)
