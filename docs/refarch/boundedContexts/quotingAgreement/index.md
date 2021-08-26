@@ -52,7 +52,7 @@ The following terms are used in this BC, also known as a domain.
 ![Use Case - Calculate Quote - Invalid Scheme Rules detected in response](./assets/qtaCalculateQuoteInvalidSchemeRulesResponse_20210825.png)
 >
 
-## Notes
+<!--## Notes -->
 
 <!-- Footnotes themselves at the bottom. -->
 [^1]: Common Interfaces: [Mojaloop Common Interface List](../../commonInterfaces.md)
