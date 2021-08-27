@@ -22,7 +22,9 @@ The following terms are used in this BC, also known as a domain.
 
 #### Description
 
-Associate transfer/s participant/s.
+Associate transfer/s Participant/s and/or parties.
+
+#### Flow Diagram
 
 ![Use Case - Party/Participant Associate](./assets/aldPartyParticipantAssoc_20210825.png)
 >
@@ -31,7 +33,9 @@ Associate transfer/s participant/s.
 
 #### Description
 
-Disassociate transfer/s participant/s.
+Disassociate transfer/s Participants and/or Parties.
+
+#### Flow Diagram
 
 ![Use Case - Party/Participant Disassociate](./assets/aldPartyParticipantDisassoc_20210825.png)
 >
@@ -42,6 +46,8 @@ Disassociate transfer/s participant/s.
 
 Get transfer/s Participant/s details.
 
+#### Flow Diagram
+
 ![Use Case - Get Participant](./assets/aldGetParticipant_20210825.png)
 >
 
@@ -50,6 +56,8 @@ Get transfer/s Participant/s details.
 #### Description
 
 Get transfer/s Party/s details.
+
+#### Flow Diagram
 
 ![Use Case - Get Party](./assets/aldGetParty_20210825.png)
 >
