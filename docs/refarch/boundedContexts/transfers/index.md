@@ -19,6 +19,8 @@ The following terms are used in this BC, also known as a domain.
 
 Transfer method without Actor intervention.
 
+#### Flow Diagram
+
 ![Perform Transfer (Universal Mode)](./assets/transfersUniversal_20210715.png)
 >
 
@@ -27,6 +29,8 @@ Transfer method without Actor intervention.
 #### Description
 
 Transfer method with Actor intervention.
+
+#### Flow Diagram
 
 ![Use Case - Perform Transfer with Payee Confirmation](./assets/transfersWithPayeeConfirm_20210715.png)
 >
@@ -37,6 +41,8 @@ Transfer method with Actor intervention.
 
 Transfer status report query.
 
+#### Flow Diagram
+
 ![Use Case - Query (GET) Transfer](./assets/transfersQuery_GET_20210716.png)
 >
 
@@ -46,6 +52,8 @@ Transfer status report query.
 
 Duplicate Transfer request method - completes
 
+#### Flow Diagram
+
 ![Use Case - Perform Transfer - Duplicate POST (Resend)](./assets/transfersDuplicatePOSTResend_20210716.png)
 >
 
@@ -54,6 +62,8 @@ Duplicate Transfer request method - completes
 #### Description
 
 Duplicate Transfer request method - ignored
+
+#### Flow Diagram
 
 ![Use Case - Perform Transfer - Duplicate POST (Ignore)](./assets/transfersDuplicatePOST_Ignore_20210716.png)
 >
@@ -66,6 +76,8 @@ Duplicate Transfer request method - ignored
 
 Transfer request rejected by Payee
 
+#### Flow Diagram
+
 ![Use Case - Perform Transfer - PayeeFSP Rejects Transfer](./assets/transfersPayeeFSPRejectsTransfer_20210716.png)
 >
 
@@ -74,6 +86,8 @@ Transfer request rejected by Payee
 #### Description
 
 Transfer prepare request timeout
+
+#### Flow Diagram
 
 ![Use Case - Perform Transfer - Timeout (Prepare)](./assets/transfersTimeout(Prepare)_20210716.png)
 >
@@ -84,6 +98,8 @@ Transfer prepare request timeout
 
 Pre-committed Transfer request timeout
 
+#### Flow Diagram
+
 ![Use Case - Perform Transfer - Timeout (Pre-Committed)](./assets/transfersTimeoutPre-Committed_20210716.png)
 >
 
@@ -92,6 +108,8 @@ Pre-committed Transfer request timeout
 #### Description
 
 Post-committed transfer request timeout
+
+#### Flow Diagram
 
 ![Use Case - Perform Transfer - Timeout (Post-Committed)](./assets/transfersTimeoutPost-Committed_20210716.png)
 >
@@ -102,6 +120,8 @@ Post-committed transfer request timeout
 
 Non-matching duplicate Transfer request timeout
 
+#### Flow Diagram
+
 ![Use Case - Perform Transfer - Duplicate POST (None Matching)](./assets/transfersDuplicatePOSTNoneMatching_20210716.png)
 >
 
@@ -110,6 +130,8 @@ Non-matching duplicate Transfer request timeout
 #### Description
 
 Transfer request fail due to insufficient liquidity (Payer)
+
+#### Flow Diagram
 
 ![Use Case - Perform Transfer - Payer FSP Insufficient Liquidity](./assets/transfersPayerFSPInsufficientLiquidity_20210719.png)
 >
@@ -120,6 +142,8 @@ Transfer request fail due to insufficient liquidity (Payer)
 
 Transfer prepare validation fail due to involid/non-existent Payer
 
+#### Flow Diagram
+
 ![Use Case - Perform Transfer - Transfer Prepare Validation Failure (Invalid Payer Participant)](./assets/transfersTransferPrepareValidationFailureInvalidPayerParticipant_20210719.png)
 >
 
@@ -128,6 +152,8 @@ Transfer prepare validation fail due to involid/non-existent Payer
 #### Description
 
 Transfer prepare validation fail due to involid/non-existent Payee
+
+#### Flow Diagram
 
 ![Use Case - Perform Transfer - Transfer Prepare Validation Failure (Invalid Payee Participant)](./assets/transfersTransferPrepareValidationFailureInvalidPayeeParticipant_20210719.png)
 >
@@ -138,6 +164,8 @@ Transfer prepare validation fail due to involid/non-existent Payee
 
 Transfer status query - validation fail - invalid/non-existent Payer
 
+#### Flow Diagram
+
 <!--![Use Case - Query (GET) Transfer - Validation Failure (Invalid Payer Participant)](./assets/useCaseExample.png) -->
 > UC Diagram TBC
 
@@ -147,6 +175,8 @@ Transfer status query - validation fail - invalid/non-existent Payer
 
 Transfer status query - validation fail - invalid/non-existent Payee
 
+#### Flow Diagram
+
 <!--![Use Case - Query (GET) Transfer - Validation Failure (Invalid Payee Participant)](./assets/useCaseExample.png) -->
 > UC Diagram TBC
 
@@ -155,6 +185,8 @@ Transfer status query - validation fail - invalid/non-existent Payee
 #### Description
 
 Transfer status query - validation fail - Transfer identifier token not found
+
+#### Flow Diagram
 
 <!--![Use Case - Query (GET) Transfer - Validation Failure (Transfer Identifier Not Found)](./assets/useCaseExample.png) -->
 > UC Diagram TBC
