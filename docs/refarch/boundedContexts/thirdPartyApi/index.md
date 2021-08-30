@@ -86,26 +86,30 @@ PISP User issues request to link to DFSP-held Accounts with an incorrect Account
 
 #### Flow Diagram
 
-![Use Case - Link Accounts - DFSP Rejects Consent Request](./assets/3PAL_LinkAccounts-ConsentRequestReject_20210830.png)
-> example image - replace
+![Use Case - Link Accounts - DFSP Rejects Consent Request](./assets/3PAL_PISPUserLinkAccounts-ConsentRequestReject_20210830.png)
+>
 
-### Perform Transfer (universal mode)
-
-#### Description
-
-#### Flow Diagram
-
-![Use Case - Example REPLACE ME](./assets/useCaseExample.png)
-> example image - replace
-
-### Perform Transfer (universal mode)
+### Credential Registration Error
 
 #### Description
 
+PISP requests User to create an authorisation credential consenting to PISP interaction with DFSP held Account scope.  The PISP is notified that the DFSP has rejected the Registration due to invalid data in the signed challege or metadata.  The PISP User is notified.
+
 #### Flow Diagram
 
-![Use Case - Example REPLACE ME](./assets/useCaseExample.png)
-> example image - replace
+![Use Case - Credential Registration Error](./assets/3PAL_PISPUserCredRegError_20210830.png)
+>
+
+### Unlink Accounts - Consent not found
+
+#### Description
+
+The PISP or DFSP receives a malformed request to unlink a PISP User Accounts.  The request is rejected upon inspection as the Account Lookup & Discovery Oracle reports that the Participant that owns the Account does not include the correct Consent ID.  The 3rd Party Initiated Payments BC issues a DeleteConsentFailed rejection message to the PISP/DFSP User.
+
+#### Flow Diagram
+
+![Use Case - Unlink Accounts - Consent not found](./assets/3PAL_PISP-DFSPUnlinkAccounts-ConsentNotFound_20210830.png)
+>
 
 ### Perform Transfer (universal mode)
 
