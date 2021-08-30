@@ -117,6 +117,7 @@ The canonical model stores the following details of quotations in the Quotes & A
    * Should a "GET" event be a simple Restful "GET", or does the system need to support the "GET" from duplicate posts?
    * Are we required to serve "GET" requests that include FSP details at a later date?
 
+
 <!--## Notes -->
 
 <!-- Footnotes themselves at the bottom. -->
