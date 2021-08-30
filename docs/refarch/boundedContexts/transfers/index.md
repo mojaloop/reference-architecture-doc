@@ -10,6 +10,8 @@ The following terms are used in this BC, also known as a domain.
 |---|---|
 | Accounts | Refers to accounts used in all transfer activities.  They are used to record credit and debit positions, either temporarily in the case of accounts allocated for transfer purposes, or permanently in the case of final transfer updates to participant accounts. |
 | Participant | Typically refers to DFSP Payer/Payee parties using Mojaloop. |
+| IGS | Transfer settle method - Immediate Gross Settlement.  This process is typically used in high volume environments such as retail, and is used by individual and shared accounts.  In shared account environments, the system is capable of updating Participants balances by updating the proportional value of each Participants holds of the total funds available in the account |
+| DNS | Transfer settlement method - Deferred Net Settlement. This process is frequently used in enviroments where a party of Participants engage in a single Transfer requiring settlement to all Participants. A typical example might include a scenario where raw materials are sold Participant A to Participant B to manufacture into a finished product, which is then sold back to Participant A. The switch calculates the proportional value that each Participant to the transaction is due, and settles this amount when the Settlement Window closes. |
 
 ## Functional Overview - Transfers - Bulk
 
