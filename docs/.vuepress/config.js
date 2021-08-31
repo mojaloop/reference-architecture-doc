@@ -76,7 +76,7 @@ module.exports = {
     editLinkText: 'Edit this page on GitHub',
     smoothScroll: true,
     logo: '/mojaloop_logo_med.png',
-    sidebarDepth: 2,
+    sidebarDepth: 1,
     lastUpdated: true,
     nav: [
       {
@@ -139,8 +139,8 @@ module.exports = {
                 // children: [ /* ... */ ],
               },
               {
-                title: 'Agreement',
-                path: '/refarch/boundedContexts/agreement/',      // optional, link of the title, which should be an absolute path and must exist
+                title: 'Quoting/Agreements',
+                path: '/refarch/boundedContexts/quotingAgreement/',      // optional, link of the title, which should be an absolute path and must exist
                 // children: [ /* ... */ ],
               },
               {
