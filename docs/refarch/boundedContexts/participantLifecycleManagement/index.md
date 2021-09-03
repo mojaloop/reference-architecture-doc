@@ -14,11 +14,13 @@ Terms with specific and commonly accepted meaning within the Bounded Context in 
 
 | Term        | Description  |
 | ----------- | ------------ |
-| Participant | Description1 |
-| Maker       | Description1 |
-| Checker     | Description1 |
+| Participant | Financial Service Provider that register on the Mojaloop ecosystem. Allowing said FSP to be able to transact with other Participants |
+| Maker       | Representative that is responsible for creating data structures through the use of request.   |
+| Checker     | Representative that is responsible for approving and accepting data that has been requested to be created. |
 
 ## Functional Overview
+
+Please review the common interfaces page to see how these interaction take place. [^1]
 
 ![Use Case - Example REPLACE ME](./assets/0-functional-overview.jpg)
 
