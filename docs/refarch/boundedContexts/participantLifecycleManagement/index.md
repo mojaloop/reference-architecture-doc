@@ -1,75 +1,192 @@
-# Participant Lifecycle BC
+# Participant Lifecycle Management BC
 
-The Participant Lifecycle Bounded Context's primary concern regards anything to do with the management of a Participant within the Mojaloop Environment. 
-TODO:
- Maker-Checker Process. [^1]
- Configuration & Bootstrapping
- Operations & Admin API
- Participant endpoints
- Participants can only have one account per allowed currency
+The Participant Lifecycle Bounded Context's primary concern regards anything to do with the management of a Participant within the Mojaloop Environment. When we are defining the Participant Lifecycle Management Bounded Context there are a few key concepts that should be clearly defined.
 
+**Maker-Checker Process**
+The Maker-Checker Process establishes the 6 eye verification and ensure that no write action takes place without being validated by some one with adiquite permissions. These permissions are defined by the Participant Lifecycle Management Bounded Context but are configurable and assignable as needed by the Scheme Rules. It is recommended that the users/roles that receive the maker permissions do not receive the checker permissions, and that the checker permissions are assigned to different users/roles. It will still be possible to assign both responsibilities to the same users/roles but this then voids the security that is provided by the maker-checker process that the system was built to support.
+
+**Participant States**
+The participant state management allows the admin operators to control permissions for a given participant based on their state. During the Platform Configuration phase, the Participant Lifecycle Management Bounded Context expects participant states to be defined and configured with either roles/permissions. The participant states can then be assigned to a given participant through the Participant Status Management process.
 
 ## Terms
 
 Terms with specific and commonly accepted meaning within the Bounded Context in which they are used.
 
-| Term | Description |
-|---|---|
-| Term1 | Description1 |
+| Term        | Description  |
+| ----------- | ------------ |
+| Participant | Description1 |
+| Maker       | Description1 |
+| Checker     | Description1 |
+
+## Functional Overview
+
+![Use Case - Example REPLACE ME](./assets/0-functional-overview.jpg)
+
+> Create Participant (Single Step Registration)
 
 ## Use Cases
 
-
 ### Create Participant (Single Step Registration)
 
+#### Description
+
+Process to create a Participant on the Mojaloop ecosystem, this usually requires all the information that relates to the participant and the initial accounts needed.
+
+#### Flow Diagram
+
 ![Use Case - Example REPLACE ME](./assets/1-create-participant.jpg)
+
 > Create Participant (Single Step Registration)
 
 ### Manage Funds
 
+#### Description
+
+Process to either withdraw or deposit funds to the Participant's account(s).
+
+#### Flow Diagram
+
 ![Use Case - Example REPLACE ME](./assets/2-manage-funds.jpg)
+
 > Manage Funds
 
 ### Update Endpoints
 
+#### Description
+
+Updates the endpoint of a given participant, when the request has been approved the endpoint will be called on a keep alive path to ensure connectivity.
+
+#### Flow Diagram
+
 ![Use Case - Example REPLACE ME](./assets/3-update-endpoints.jpg)
+
 > Update Endpoints
 
 ### Update Participant Status
 
+#### Description
+
+Changes the Status of a given participant to enforce different roles/scheme rules on the participant.
+
+#### Flow Diagram
+
 ![Use Case - Example REPLACE ME](./assets/4-participant-update-status.jpg)
+
 > Update Participant Status
 
 ### Get Participant
 
+#### Description
+
+Gets information with about a given participant.
+
+#### Flow Diagram
+
 ![Use Case - Example REPLACE ME](./assets/7-get-participant.jpg)
+
 > Get Participant
 
 ### Participant Accounts
 
-**Add Participant Account**
-**Update Participant Account Status (Enable/Disable)**
-**Update Liquidity Limits and Warning Thresholds**
+#### Description
+
+These process controls different aspects of a Participant's accounts, from creating an account, enabling/disabling and update the limits and threshold warnings of an account. sub-processes included in this use case are:
+
+-   Add Participant Account
+-   Update Participant Account Status (Enable/Disable)
+-   Update Liquidity Limits and Warning Thresholds
+
+#### Flow Diagram
 
 ![Use Case - Example REPLACE ME](./assets/5-participant-accounts.jpg)
+
 > Participant Accounts
 
 ### Reserve Liquidity Cover
 
+#### Description
+
+Reserves liquidity cover for a Participant and notifies the Accounts and Balances BC about the changes.
+
+#### Flow Diagram
+
 ![Use Case - Example REPLACE ME](./assets/6-liquidity-cover-reservations.jpg)
+
 > Reserve Liquidity Cover
 
 ### Liquidity Threshold Exceeded
 
+#### Description
+
+This process notifies the participant that the liquidity threshold,that has been set beforehand, has been reach and action might be required.
+
+#### Flow Diagram
+
 ![Use Case - Example REPLACE ME](./assets/8-liquidity-threshold-exceeded.jpg)
+
 > Liquidity Threshold Exceeded
+
+### Liquidity Limit Exceeded
+
+#### Description
+
+This process notifies the participant when ha reached the liquidity limit that was set.
+
+#### Flow Diagram
+
+![Use Case - Example REPLACE ME](./assets/10-liquidity-limit-exceeded.jpg)
+
+> Liquidity Limit Exceeded
+
+### Liquidity Threshold & Limit Reset
+
+#### Description
+
+This process resets the liquidity limit or threshold notification checks when successful transfers have been executed and the position is in a positive state.
+
+#### Flow Diagram
+
+![Use Case - Example REPLACE ME](./assets/11-liquidity-limit-and-threshold-reset.jpg)
+
+> Liquidity Limit Exceeded
 
 ### Liquidity Cover Queries
 
+#### Description
+
+Queries to check the current liquidity as well as other read operations that are related to Liquidity.
+
+#### Flow Diagram
+
 ![Use Case - Example REPLACE ME](./assets/9-liquidity-cover-queries.jpg)
+
 > Liquidity Cover Queries
 
+## Cononical Model
+
+-   Participant
+    -   id
+    -   participantAlias
+    -   endpointURL
+    -   state
+    -   Accounts
+        -   accountID
+        -   ledgerAccountType
+        -   accountCurrency
+        -   isActive
+        -   warningThreshold
+        -   limit
+            -   type
+            -   value
+
+## Concluding Comments
+
+**Participant Accounts:** Participants can only have one account per allowed currency.
+**Update Position Use Case:** Has been changed to the Manage Funds use case
+**Maker/Checker Operations:** Retry count has no effect on the way we process/re-process requests.
+
 <!-- Footnotes themselves at the bottom. -->
+
 ## Notes
 
 [^1]: Common Interfaces: [Mojaloop Common Interface List](../../commonInterfaces.md)
