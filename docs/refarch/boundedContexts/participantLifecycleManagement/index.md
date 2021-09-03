@@ -171,7 +171,7 @@ Queries to check the current liquidity as well as other read operations that are
     -   participantAlias
     -   endpointURL
     -   state
-    -   Accounts
+    -   Accounts[]
         -   accountID
         -   ledgerAccountType
         -   accountCurrency
