@@ -24,11 +24,11 @@ Terms with specific and commonly accepted meaning within the Bounded Context in 
 
 ### Send Asynchronous Notifications with Delivery Report
 
-![Use Case - Send Notifications with Delivery Report](./assets/sendAsyncNotificationWithDeliveryReport.png)
+![Use Case - Send Async Notifications with Delivery Report](./assets/sendAsyncNotificationWithDeliveryReport.png)
 
 ### Send Synchronous Notifications with Delivery Report
 
-![Use Case - Send Notifications with Delivery Report](./assets/sendSyncNotificationWithDeliveryReport.png)
+![Use Case - Send Sync Notifications with Delivery Report](./assets/sendSyncNotificationWithDeliveryReport.png)
 
 <!-- Footnotes themselves at the bottom. -->
 ## Notes
