@@ -22,9 +22,13 @@ Terms with specific and commonly accepted meaning within the Bounded Context in 
 
 ## Use Cases
 
-### Send Notifications with Delivery Report
+### Send Asynchronous Notifications with Delivery Report
 
-![Use Case - Send Notifications with Delivery Report](./assets/sendNotificationWithDeliveryReport.png)
+![Use Case - Send Notifications with Delivery Report](./assets/sendAsyncNotificationWithDeliveryReport.png)
+
+### Send Synchronous Notifications with Delivery Report
+
+![Use Case - Send Notifications with Delivery Report](./assets/sendSyncNotificationWithDeliveryReport.png)
 
 <!-- Footnotes themselves at the bottom. -->
 ## Notes
