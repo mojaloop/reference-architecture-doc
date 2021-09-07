@@ -15,7 +15,7 @@ Its main objectives are to:
 * Identify abstractions, interfaces and standardization opportunities
 * Propose solution patterns to common problems
 * Help enforcing technical design principles
-* Provide guidance to the actual implementation architecture
+* Provide guidance to the implementation architectures
 * Forster innovation and contribution, by defining what can be done and how
 
 ## Benefits of having a Reference Architecture
