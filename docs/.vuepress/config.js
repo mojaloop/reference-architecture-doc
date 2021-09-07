@@ -76,7 +76,7 @@ module.exports = {
     editLinkText: 'Edit this page on GitHub',
     smoothScroll: true,
     logo: '/mojaloop_logo_med.png',
-    sidebarDepth: 2,
+    sidebarDepth: 1,
     lastUpdated: true,
     nav: [
       {
