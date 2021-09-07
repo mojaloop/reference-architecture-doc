@@ -8,7 +8,7 @@ This concept can be further simplified:
 _**The Reference Architecture is the architectural vision of the perfect design.**_
 
 In normal conditions that perfect design is never achieved, partly because there is neither enough time nor resources to fully implement it, partly because that design can iterate and improve faster than it can be implemented. 
-It is the nature of a Reference Architecture to be constantly being updated and enhanced.        
+It is the nature of a Reference Architecture to be a living document that is continuously updated and enhanced.        
 
 ## Objectives
 Its main objectives are to:
