@@ -34,7 +34,7 @@ The Reference Architecture creation process has been guided by Domain-Driven Des
 
 The process of creating the initial version of the Reference Architecture followed these steps:
 * Problem Space mapping - document the different problem domains and subdomains, and how they are classified according to their importance 
-* Solution Space Context mapping - grouping similar problems together based on their purpose and context
+* Solution Space Context mapping - group similar problems together based on their purpose and context
 * Individual use case mapping - document use cases in detail taking into consideration the entire solution
 
 ### Problem Space mapping
