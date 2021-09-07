@@ -44,7 +44,7 @@ Considering that this initial version of the Reference Architecture focused excl
 According to Domain-Driven Design (_DDD_) we classify the problem subdomains as follows:
 * Core subdomains - we need to solve these problems ourselves to control the outcome. In practical terms, this is where we put the most effort. Examples are transfers, participant lifecycle management or keeping accounts and balances
 * Supporting subdomains - these are problems that can’t be easily solved by using off-the-shelf software, we’ll need some coding effort to solve them, it’s not just integration. Examples of this are Authorization and Access Policies or Reporting
-* Generic subdomains - these are usually problems that can be solved using of-the-shelf software, requiring only some integration effort. Examples are Authentication or Platform monitoring, we don’t need to code these solutions ourselves but we still to design accordingly
+* Generic subdomains - Similar to Supporting subdomains, except these problems are primarily solved by integrating off-the-shelf software that requires very little (if any at all) coding effort. Examples are Authentication or Platform monitoring, we don’t need to code these solutions ourselves but we still have to design accordingly
 
 ## How to keep it up-to-date
 The diagram below shows where a reference architecture exists in reference to other processes of the Mojaloop Platform; what it must incorporate and understand, not only the vision and the principles, but also the requirements, previous experience and even forster technical innovation.
