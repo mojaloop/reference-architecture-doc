@@ -12,7 +12,7 @@ It is the nature of a Reference Architecture to be a living document that is con
 
 ## Objectives
 Its main objectives are to:
-* Identify abstractions, interfaces and standardisation opportunities
+* Identify abstractions, interfaces and standardization opportunities
 * Propose solution patterns to common problems
 * Help enforcing technical design principles
 * Provide guidance to the actual implementation architecture
