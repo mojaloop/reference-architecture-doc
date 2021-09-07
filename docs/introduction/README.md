@@ -41,7 +41,7 @@ The process of creating the initial version of the Reference Architecture follow
 This exercise allows us to understand the different problem domains and subdomains, and how they are classified according to their importance.
 Considering that this initial version of the Reference Architecture focused exclusively on the Mojaloop Switch, we only have one domain. All internal problems are thus called problem subdomains.
 
-According to DDD we classified some problem subdomains as:
+According to Domain-Driven Design (_DDD_) we classify the problem subdomains as follows:
 * Core subdomains - we need to solve these problems ourselves to control the outcome. In practical terms, this is where we put the most effort. Examples are transfers, participant lifecycle management or keeping accounts and balances
 * Supporting subdomains - these are problems that can’t be easily solved by using off-the-shelf software, we’ll need some coding effort to solve them, it’s not just integration. Examples of this are Authorization and Access Policies or Reporting
 * Generic subdomains - these are usually problems that can be solved using of-the-shelf software, requiring only some integration effort. Examples are Authentication or Platform monitoring, we don’t need to code these solutions ourselves but we still to design accordingly
