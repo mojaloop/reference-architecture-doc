@@ -33,7 +33,7 @@ Last but not less important, it ensures alignment between the technical vision a
 The Reference Architecture creation process has been guided by Domain-Driven Design[1] principles and the solution space heavily inspired by SOLID's[2] single responsibility principle (SRP).
 
 The process of creating the initial version of the Reference Architecture followed these steps:
-* Problem Space mapping - what are the different problem domains and subdomains, and how they are classified according to their importance 
+* Problem Space mapping - document the different problem domains and subdomains, and how they are classified according to their importance 
 * Solution Space Context mapping - grouping similar problems together based on their purpose and context
 * Individual use case mapping - document use cases in detail taking into consideration the entire solution
 
