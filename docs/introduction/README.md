@@ -7,7 +7,7 @@ In a software system, a Reference Architecture is a set of software design docum
 This concept can be further simplified: 
 _**The Reference Architecture is the architectural vision of the perfect design.**_
 
-In normal conditions that perfect design is never achieved, partly because there is neirher enough time nor resources to fully implement it, partly because that design can iterate and improve faster than it can be implemented. 
+In normal conditions that perfect design is never achieved, partly because there is neither enough time nor resources to fully implement it, partly because that design can iterate and improve faster than it can be implemented. 
 It is the nature of a Reference Architecture to be constantly being updated and enhanced.        
 
 ## Objectives
