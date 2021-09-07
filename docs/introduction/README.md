@@ -23,7 +23,7 @@ The first benefit is that it is the perfect foundation for a Technical Roadmap. 
 
 Another important benefit is the guidance it provides to decision-making regarding technology choices and implementation strategies. 
 With the Reference Architecture in mind we can frame any development decision as tactical or strategic:
-- Tactical - something that is required right now and might ignore the reference architecture for the sake of an urgent value.
+- Tactical - something that is required right now which may have exceptions to the Reference Architecture for the sake of a high-value urgent requirement. These exceptions should be documented as technical debt which can be addressed in future.
 - Strategic - something that is long-lasting and should be implemented in accordance to the Reference Architecture - should take the implementation closer to it.
 
 Last but not less important, it ensures alignment between the technical vision and the more important product vision (see below regarding the process and ways of working).   
