@@ -11,6 +11,11 @@ The following terms are used in this BC, also known as a domain.
 | Accounts | Refers to accounts used in all transfer activities.  They are used to record credit and debit positions, either temporarily in the case of accounts allocated for transfer purposes, or permanently in the case of final transfer updates to participant accounts. |
 | Participant | Typically refers to DFSP Payer/Payee parties using Mojaloop. |
 
+## Functional Overview - Transfers - Bulk
+
+![Functional Overview - Transfers - Bulk](./assets/transfersPerformTransferBulk_20210827.png)
+>
+
 ## Use Cases
 
 ### Perform Transfer (universal mode)

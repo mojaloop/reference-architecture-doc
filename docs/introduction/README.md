@@ -4,11 +4,11 @@
 
 In a software system, a Reference Architecture is a set of software design documents, that capture the essence of the product and provide guidance to its technical evolution.
 
-This concept can be further simplified: 
+This concept can be further simplified:
 _**The Reference Architecture is the architectural vision of the perfect design.**_
 
-In normal conditions that perfect design is never achieved, partly because there is neither enough time nor resources to fully implement it, partly because that design can iterate and improve faster than it can be implemented. 
-It is the nature of a Reference Architecture to be a living document that is continuously updated and enhanced.        
+In normal conditions that perfect design is never achieved, partly because there is neither enough time nor resources to fully implement it, partly because that design can iterate and improve faster than it can be implemented.
+It is the nature of a Reference Architecture to be a living document that is continuously updated and enhanced.
 
 ## Objectives
 Its main objectives are to:
@@ -19,21 +19,21 @@ Its main objectives are to:
 * Forster innovation and contribution, by defining what can be done and how
 
 ## Benefits of having a Reference Architecture
-The first benefit is that it is the perfect foundation for a Technical Roadmap. By having the future vision in perspective, a phased Technical Roadmap can easily be created from it, ensuring resources and attention are focused on the long term value.   
+The first benefit is that it is the perfect foundation for a Technical Roadmap. By having the future vision in perspective, a phased Technical Roadmap can easily be created from it, ensuring resources and attention are focused on the long term value.
 
-Another important benefit is the guidance it provides to decision-making regarding technology choices and implementation strategies. 
+Another important benefit is the guidance it provides to decision-making regarding technology choices and implementation strategies.
 With the Reference Architecture in mind we can frame any development decision as tactical or strategic:
 - Tactical - something that is required right now which may have exceptions to the Reference Architecture for the sake of a high-value urgent requirement. These exceptions should be documented as technical debt which can be addressed in future.
 - Strategic - something that is long-lasting and should be implemented in accordance to the Reference Architecture - should take the implementation closer to it.
 
-Last but not less important, it ensures alignment between the technical vision and the more important product vision (see below regarding the process and ways of working).   
+Last but not less important, it ensures alignment between the technical vision and the more important product vision (see below regarding the process and ways of working).
 
 ## Process of creating and maintaining the Reference Architecture
 
 The Reference Architecture creation process has been guided by Domain-Driven Design[1] principles and the solution space heavily inspired by SOLID's[2] single responsibility principle (SRP).
 
 The process of creating the initial version of the Reference Architecture followed these steps:
-* Problem Space mapping - document the different problem domains and subdomains, and how they are classified according to their importance 
+* Problem Space mapping - document the different problem domains and subdomains, and how they are classified according to their importance
 * Solution Space Context mapping - group similar problems together based on their purpose and context
 * Individual use case mapping - document use cases in detail taking into consideration the entire solution
 
