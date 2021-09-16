@@ -1,23 +1,18 @@
-# {name} BC
+# Logging BC
 
-{overview}
+The Logging Bounded Context is used to store technical information to assist debugging, troubleshooting and problem resolution. Logs are consumed from any other Bounded Context [^1] and stored for querying and reporting. The log information is stored as "technicalities" and should any loss of data take place, then there should be no other consequence than losing technical ability to understand how the system behaves. All system activities are logged and persisted to allow the Auditing Bounded Context [^2] to perform queries against the log data.
 
-## Terms
-
-Terms with specific and commonly accepted meaning within the Bounded Context in which they are used.
-
-| Term | Description |
-|---|---|
-| Term1 | Description1 |
+Bounded Contexts should publish the events in a defined format and using whatever mechanism is available from the Logging Bounded Context. The structure implicitly has an abstraction layer built into the event received byt the Logging Bounded Context which in turn is then used to persist the log data.
 
 ## Use Cases
 
-### Perform Transfer (universal mode)
+### Event Based Logging
 
-![Use Case - Example REPLACE ME](./assets/useCaseExample.png)
-> example image - replace
+![Use Case - Example REPLACE ME](./assets/0-logging.png)
+> Event Based Logging
 
 <!-- Footnotes themselves at the bottom. -->
 ## Notes
 
-[^1]: Common Interfaces: [Mojaloop Common Interface List](../../commonInterfaces.md)
+[^1]: [Mojaloop Common Interface List](../../commonInterfaces.md)
+[^2]: [Auditing Bounded Context](../auditing/index.md)
