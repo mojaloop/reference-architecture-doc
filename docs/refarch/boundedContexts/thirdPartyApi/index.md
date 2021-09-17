@@ -268,13 +268,15 @@ The PISP system receives the challenge response from the PISP User's device indi
 ![Use Case - Third Party Transaction Request Rejected by user](./assets/3PAT_TxFail_UserRejected_20210914.png)
 >
 
-### Perform Transfer (universal mode)
+### Third Party Transaction Request Failed - DFSP timeout
 
 #### Description
 
+
+
 #### Flow Diagram
 
-![Use Case - Example REPLACE ME](./assets/useCaseExample.png)
+![Use Case - Third Party Transaction Request Failed - DFSP timeout](./assets/useCaseExample.png)
 > example image - replace
 
 <!-- Footnotes themselves at the bottom. -->
