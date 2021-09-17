@@ -1,4 +1,4 @@
-# {name} BC
+# Security BC
 
 {overview}
 
