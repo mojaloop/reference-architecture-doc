@@ -285,12 +285,14 @@ The PISP system receives the challenge response from the PISP User's device indi
 
 #### Description
 
+***Note:*** *The flow for this transaction journey follows that of the Third-Party Initiated/PISP Bulk  Transaction Request.  The difference in the flow for this transaction journey occurs during the Agreement/Quote process where the DFSP Account Holder issues a message to the PISP User requesting them agree to the terms of the transaction agreement and sign the challenge token.  Where the PISP User fails to respond to the message within the allowed time a timeout will occur and the DFSP Account Holder cancels the transaction, the DFSP System will cancel the transaction noting a Request Error has occured.*
 
+As per the note above, the DFSP Account Holder updates the 3rd-Party API BC that it has encountered a Transaction error via a Third Party request and provides the Transaction ID, along with the error code.  The participant/s account/s are updated via the 3rd-Party Initiated Payments BC and a notification is sent to the PISP via the Notification BC.  The PISP acknowledges receipt of the notification and notifies the PISP User that Transaction ID has failed.
 
 #### Flow Diagram
 
-![Use Case - Third Party Transaction Request Failed - DFSP timeout](./assets/useCaseExample.png)
-> example image - replace
+![Use Case - Third Party Transaction Request Failed - DFSP timeout](./assets/3PAT_TxRequestFail_DfspTimeout_20210916.png)
+>
 
 <!-- Footnotes themselves at the bottom. -->
 ## Notes
