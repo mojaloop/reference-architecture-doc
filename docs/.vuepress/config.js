@@ -80,8 +80,8 @@ module.exports = {
     lastUpdated: true,
     nav: [
       {
-        text: 'Getting Started',
-        link: '/gettingStarted/',
+        text: 'Introduction',
+        link: '/introduction/',
       },
       {
         text: 'Mojaloop',
@@ -89,24 +89,6 @@ module.exports = {
       }
     ],
     sidebar: [
-      {
-        title: 'Getting Started',   // required
-        path: '/gettingStarted/',      // optional, link of the title, which should be an absolute path and must exist
-        collapsable: false, // optional, defaults to true
-        sidebarDepth: 1,    // optional, defaults to 1
-        initialOpenGroupIndex: -1, // optional, defaults to 0, defines the index of initially opened subgroup,
-        children: [
-          {
-            title: 'Home',
-            path: '/',      // optional, link of the title, which should be an absolute path and must exist
-          },
-          {
-            title: 'Sub Menu',
-            path: '/gettingStarted/subMenu/',      // optional, link of the title, which should be an absolute path and must exist
-            // children: [ /* ... */ ],
-          },
-        ]
-      },
       {
         title: 'Introduction',
         path: '/introduction/',      // optional, link of the title, which should be an absolute path and must exist
