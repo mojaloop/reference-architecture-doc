@@ -20,18 +20,26 @@ The security BC will handle all request with regard to the following:
 
 Terms with specific and commonly accepted meaning within the Bounded Context in which they are used.
 
-| Term | Description |
+| Crypto providers | Adapter that will provide cryptographic services and Key Management System |
 |---|---|
-| Term1 | Description1 |
+| IAM | Identity and Access Management. Adapter that will provide services for menus, profiles, roles and permissions.  |
+|---|---|
+| FIDO | Fast Identification Online. Athentication and Authorization including second factor authentication. Used for Relying Paties clients |
+|---|---|
+| Audit | Signed log entries. Immutable DB  |
 
 ## Overview
 
 ![Use Case - Example REPLACE ME](./assets/securityBCv0.1.png)
-> example image - replace
+
 
 ## Use Cases
 
 ### Signature verification
+
+Eliptic Curve Cryptography Signature Verification.
+
+
 <!-- Footnotes themselves at the bottom. -->
 ## Notes
 
