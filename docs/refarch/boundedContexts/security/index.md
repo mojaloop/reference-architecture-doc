@@ -14,7 +14,7 @@ Terms with specific and commonly accepted meaning within the Bounded Context in 
 
 ### Perform Transfer (universal mode)
 
-![Use Case - Example REPLACE ME](./assets/useCaseExample.png)
+![Use Case - Example REPLACE ME](./assets/securityBCv0.1.png)
 > example image - replace
 
 <!-- Footnotes themselves at the bottom. -->
