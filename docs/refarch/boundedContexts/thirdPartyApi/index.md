@@ -9,7 +9,7 @@ The following common terms are used in this BC:
 | Term | Description  |
 | ---- | ------------ |
 | PISP | Payment Initiation Service Provider (e.g. PayPal, ApplePay, GooglePay, etc.) |
-| DFSP | Digital Financial Service Provider (e.g.: Bank) |
+| DFSP | Digital Financial Service Provider (e.g. Bank, Mobile Money Operator) |
 | User | DFSP/PISP client (as indicated) |
 
 ## Use Cases
