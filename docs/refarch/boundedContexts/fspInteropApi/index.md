@@ -16,7 +16,7 @@ Terms with specific and commonly accepted meaning within the Bounded Context in 
 
 | Term        | Description                                                                                                                                                      |
 | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Participant | Financial Service Provider that register on the Mojaloop ecosystem. Allowing said FSP to be able to transact with other Participants                             |
+| Participant | Financial Service Provider (FSP) that has registered on the Mojaloop ecosystem. Allowing said FSP to be able to transact with other Participants                             |
 | FSP IOP API | Financial Service Provider Interoperability Application Programming Interface, the API that provides access to functions and features of the Mojaloop Ecosystem. |
 | DFSP        | Digital Financial Service Provider                                                                                                                               |
 
