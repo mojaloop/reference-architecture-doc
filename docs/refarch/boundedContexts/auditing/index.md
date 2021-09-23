@@ -56,7 +56,7 @@ The Event Based Audit UC is triggered when a participating BC includes local aud
 
 #### Flow Diagram
 
-![Use Case - Example REPLACE ME](./assets/ML2RA_Audit_eventBasedAudit_20210920.png)
+![Use Case - Event Based Audit](./assets/ML2RA_Audit_eventBasedAudit_20210920.png)
 >
 
 <!-- Footnotes themselves at the bottom. -->
