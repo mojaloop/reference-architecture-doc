@@ -4,7 +4,7 @@ The Auditing BC is responsible for maintaining an immutable record of all of the
 
 * Central Forensic Logging Service
 * Services
-* Immutable Database
+* Immutable Datastore
 * Key Management System
 * Cryptographic[^1] Provider Modular
 
