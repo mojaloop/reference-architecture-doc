@@ -1,6 +1,6 @@
 # Auditing BC
 
-The Auditing BC is responsible for maintaining an immutable record of all of the transactions that take place on the Switch.  It is currently using "As-Is" Architecture and comprises five main components:
+The Auditing BC is responsible for maintaining an immutable record of all of the transactions that take place on the Switch.  The Architecture comprises of five main components:
 
 * Central Forensic Logging Service
 * Services
