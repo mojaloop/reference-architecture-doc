@@ -19,7 +19,7 @@ The following terms are used in this BC, also known as a domain.
 
 ### Calculate Quote - Happy Path
 
-This process obtains an array of relevant Participant data including status flags, calculates the cost of Transfer including fees, and provides it to the Participant/s.  It also notes and stores the Participant response, i.e.: accept or reject the quote.
+This process obtains an array of relevant Participant data including status flags, calculates the cost of Transfer including fees, and provides it to the Participant/s.  It also able to support the storing of Participants requests & responses (i.e. accept or reject the quote).
 
 ### Flow Diagram
 
@@ -32,14 +32,6 @@ Process to obtain and deliver existing Quote details to Participant/s on request
 ### Flow Diagram
 
 ![Use Case - Example REPLACE ME](./assets/qtaGetQuoteHappyPath.png)
-
-### Transfers Velocity Rule Evaluation/Trigger
-
-Process that maintains a counter to ensure that relevant transfer velocity rules are maintained and that events are recorded.
-
-### Flow Diagram
-
-![Use Case - Transfers Velocity Rule Evaluation/Trigger](./assets/qtaTransfersVelocityRuleEval-Trigger_20210825.png)
 
 ### Calculate Quote - Invalid Quote Request
 
