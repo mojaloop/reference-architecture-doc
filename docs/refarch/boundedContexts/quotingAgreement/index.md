@@ -77,7 +77,7 @@ The canonical model stores the following details of quotations in the Quotes & A
 - Payer
   - Participant
     - participantId
-    - roleType <-- payer
+    - roleType (e.g. payer)
   - Amount Requested (initial amount)
     - Value (number)
     - Currency (ISO currency code)
@@ -88,7 +88,7 @@ The canonical model stores the following details of quotations in the Quotes & A
   - '#'
     - Participant
       - participantId
-      - roleType <-- Identify why this "payee" is receiving this amount, i.e.: fee, recipient, etc.
+      - roleType (Identify why this "payee" is receiving this amount, i.e.: fee, recipient, etc.)
       - reason
       - Amount to receive
         - value (number)
