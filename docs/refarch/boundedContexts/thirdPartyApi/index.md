@@ -18,8 +18,8 @@ The following common terms are used in this BC:
 
 | Scenarios | Description |
 | --------- | ----------- |
-| Linking | PISP Housekeeping activities. |
-| Transfer | PISP Transfer initiation activities. |
+| [Linking](#linking-scenarios) | PISP Housekeeping activities. |
+| [Transfer](#transfer-scenarios) | PISP Transfer initiation activities. |
 
 ### Linking Scenarios
 
