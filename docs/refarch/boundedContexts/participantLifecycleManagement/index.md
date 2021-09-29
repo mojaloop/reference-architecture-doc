@@ -84,7 +84,7 @@ Gets information with about a given participant.
 
 #### Flow Diagram
 
-![Use Case - Example REPLACE ME](./assets/7-get-participant.jpg)
+![Use Case - Example REPLACE ME](./assets/5-get-participant.jpg)
 
 > Get Participant
 
@@ -100,7 +100,7 @@ These process controls different aspects of a Participant's accounts, from creat
 
 #### Flow Diagram
 
-![Use Case - Example REPLACE ME](./assets/5-participant-accounts.jpg)
+![Use Case - Example REPLACE ME](./assets/6-participant-accounts.jpg)
 
 > Participant Accounts
 
@@ -112,7 +112,7 @@ Reserves liquidity cover for a Participant and notifies the Accounts and Balance
 
 #### Flow Diagram
 
-![Use Case - Example REPLACE ME](./assets/6-liquidity-cover-reservations.jpg)
+![Use Case - Example REPLACE ME](./assets/7-liquidity-cover-reservations.jpg)
 
 > Reserve Liquidity Cover
 
@@ -136,7 +136,7 @@ This process notifies the participant when ha reached the liquidity limit that w
 
 #### Flow Diagram
 
-![Use Case - Example REPLACE ME](./assets/10-liquidity-limit-exceeded.jpg)
+![Use Case - Example REPLACE ME](./assets/9-liquidity-limit-exceeded.jpg)
 
 > Liquidity Limit Exceeded
 
@@ -148,7 +148,7 @@ This process resets the liquidity limit or threshold notification checks when su
 
 #### Flow Diagram
 
-![Use Case - Example REPLACE ME](./assets/11-liquidity-limit-and-threshold-reset.jpg)
+![Use Case - Example REPLACE ME](./assets/10-liquidity-limit-and-threshold-reset.jpg)
 
 > Liquidity Limit Exceeded
 
@@ -160,7 +160,7 @@ Queries to check the current liquidity as well as other read operations that are
 
 #### Flow Diagram
 
-![Use Case - Example REPLACE ME](./assets/9-liquidity-cover-queries.jpg)
+![Use Case - Example REPLACE ME](./assets/11-liquidity-cover-queries.jpg)
 
 > Liquidity Cover Queries
 
