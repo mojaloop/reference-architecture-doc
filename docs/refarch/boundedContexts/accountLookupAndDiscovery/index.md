@@ -1,6 +1,6 @@
 # Account Lookup And Discovery BC
 
-No additional notes in work session document.
+The Accounts Lookup and Discovery BC is responsible for locating and associating participants and parties with party or participant triggered transactions.
 
 ## Terms
 
@@ -22,7 +22,7 @@ The following terms are used in this BC, also known as a domain.
 
 #### Description
 
-Associate transfer/s Participant/s and/or parties.
+Where a Participant DFSP indicates Parties/Participants require association with a particular transaction, this UC is used by the Switch to validate the request and associate the Parties/Participants in accordance with the receipted request/instruction.
 
 #### Flow Diagram
 
@@ -33,7 +33,7 @@ Associate transfer/s Participant/s and/or parties.
 
 #### Description
 
-Disassociate transfer/s Participants and/or Parties.
+Where a Participant DFSP indicates Parties/Participants require disassociation with a particular transaction, this UC is used by the Switch to validate the request and disassociate the Parties/Participants in accordance with the receipted request/instruction.
 
 #### Flow Diagram
 
@@ -44,7 +44,7 @@ Disassociate transfer/s Participants and/or Parties.
 
 #### Description
 
-Get transfer/s Participant/s details.
+Where a participant DFSP requests Participant details, this UC is used by the switch to validate the request and provide the requested relevant participant data to the requesting DFSP.
 
 #### Flow Diagram
 
@@ -55,49 +55,12 @@ Get transfer/s Participant/s details.
 
 #### Description
 
-Get transfer/s Party/s details.
+Where a participant DFSP requests Party details, this UC is used by the switch to validate the request and provide the requested relevant Party data to the requesting DFSP.
 
 #### Flow Diagram
 
 ![Use Case - Get Party](./assets/aldGetParty_20210825.png)
 >
-## Canonical Quote Model
-
-The canonical model stores the following details of quotations in the Quotes & Agreements BC:
-
- - Quote ID
- - Transaction ID
- - Participants
-   - payerId
-   - payeeId
- - Payer
-   - Participant
-     - participantId
-     - roleType <-- payer
-   - Amount Requested (initial amount)
-     - Value (number)
-     - Currency (ISO currency code)
-    - Amount to send (including fees, etc.)
-      - Value (number)
-      - Currency (ISO currency code)
- - Payee(s) (one or more - should all be added to the "Amount to send")
-   - '#'
-     - Participant
-       - participantId
-       - roleType <-- Identify why this "payee" is receiving this amount, i.e.: fee, recipient, etc.
-       - reason
-       - Amount to receive
-         - value (number)
-         - currency (ISO currency code)
- - Extensions
-
-## Concluding comments
-
- * No red flag issues have been observed in the overall BC and Reference Architecture design.
- * We need to better understand/calrify the "GET" via "POST" pattern:
-   * Should a "GET" event be a simple Restful "GET", or does the system need to support the "GET" from duplicate posts?
-   * Are we required to serve "GET" requests that include FSP details at a later date?
-
 
 <!--## Notes -->
 <!-- Footnotes themselves at the bottom. -->
