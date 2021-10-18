@@ -18,9 +18,9 @@ The following terms are used in this BC, also known as a domain.  (TBC)
 
 | **UC** | **Description** |
 | :--- | :--- |
-| Create Account | Create new participant account in the System Ledger. <br/>Specify credit/debit Journal Entry limits.<br/>Ensure Account is unique. <br/> Create Account relationship links. <br/>Store limited user-data. |
+| Create Account | Create new participant account in the System Ledger. <br/>Specify credit/debit Journal Entry limits.<br/>Ensure Account is unique in the System Ledger. |
 | Close Account | Close a participant account in the System Ledger and prevent new journal entries from impacting it.<br/>(Still to be determined: Drain balance to another account atomically?) |
-| Insert Journal Entry | Insert a participant journal entry into the System Ledger specifying the debit and credit accounts.<br/>Respond with the updated account balance.<br/> Validate the following during transfer; <br/> * Ensure credit/debit limits are not exceeded. <br/> * Validate debit/credit accounts specified for Journal Entry. <br/> * Currencies for debit/credit Account and Journal Entry <br/> * Account status <br/>Store limited user-data. |
+| Insert Journal Entry | Insert a participant journal entry into the System Ledger specifying the debit and credit accounts.<br/>Respond with the updated account balance.<br/> Validate the following during transfer; <br/> • Ensure credit/debit limits are not exceeded. <br/> • Validate debit/credit accounts specified for Journal Entry. <br/> |
 | Query Account | Query the status of participant account. |
 | Query Journal Entries | Query Journal debit/credit Entries for an Account. |
 
