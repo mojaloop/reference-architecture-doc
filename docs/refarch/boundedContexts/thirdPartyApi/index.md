@@ -21,13 +21,13 @@ The following common terms are used in this BC:
 | [Linking](#linking-scenarios) | PISP Housekeeping activities |
 | [Transfer](#transfer-scenarios) | PISP Transfer initiation activities |
 
-### Linking Scenarios
+## Linking Scenarios
 
 ### PISP Gets supported DFSPs
 
 #### Description
 
-PISP requests a list of DFSPs supported by the system.
+The workflow provided by this UC, supports authorized PISP User requests to obtain a list of DFSPs supported by the system.
 
 #### Flow Diagram
 
@@ -38,7 +38,7 @@ PISP requests a list of DFSPs supported by the system.
 
 #### Description
 
-PISP requests a list of DFSP Accounts and Account Identifiers.
+The workflow provided by this UC supports authorized PISP User requests to obtain a list of Accounts and Identifiers for a DFSP supported by the system.
 
 #### Flow Diagram
 
@@ -49,7 +49,7 @@ PISP requests a list of DFSP Accounts and Account Identifiers.
 
 #### Description
 
-PISP requests access consent to specific (scoped) Accounts details.
+The workflow provided by this UC supports authorized PISP User requests for consent to obtain specific (scoped) Accounts details from DFSPs supported by the system.
 
 #### Flow Diagram
 
@@ -60,7 +60,10 @@ PISP requests access consent to specific (scoped) Accounts details.
 
 #### Description
 
-In order to fulfil the PISP request for consent to access a User's account details, the DFSP issues a Consent Request to the User asking them to indicate consent via their device.
+The workflow provided by this UC enables an authorised DFSP to:
+ - Firstly, issue a provisional Consent in consequence of a previous "PISP Consent Request" workflow
+  - Secondly, enable a PISP to attach Credential to the Consent
+  - And thirdly, enable a DFSP to validate the Credential and active the Consent.
 
 #### Flow Diagram
 
@@ -71,7 +74,7 @@ In order to fulfil the PISP request for consent to access a User's account detai
 
 #### Description
 
-A request is made via the DFSP to revoke PISP access consent for a User Account.  Both the DFSP and the User are provided with notification once access consent has been revoked.
+The workflow provided by this UC enables an authorised PISP/DFSP Account Holder to revoke consent for a DFSP Account to be linked to their PISP Profile, which the Switch acts upon by updating the system Account Lookup Service to disassociate the PISP Participant/DFSP Account association, and notifying both the DFSP Account Holder (who removes the ALS Participant entry and Link from their system), and the PISP Host who sends a fulfilment notification to the User.
 
 #### Flow Diagram
 
@@ -82,7 +85,7 @@ A request is made via the DFSP to revoke PISP access consent for a User Account.
 
 #### Description
 
-PISP User issues Account Discovery request containing the incorrect DFSP Identifier.  The User is notified and advised to check and retry.
+The workflow provided by this UC enables the Switch to correctly handle instances in which an authorised PISP User initiates a to link a DFSP Account to their PISP Profile using an invalid DFSP/Identifier pair not recognized by the DFSP. The DFSP messages the Switch with an error, which notifies the appropriate PISP, and the User receives a message to try another DFSP/Indentifier pair.
 
 #### Flow Diagram
 
@@ -93,7 +96,7 @@ PISP User issues Account Discovery request containing the incorrect DFSP Identif
 
 #### Description
 
-PISP User issues request to link to DFSP-held Accounts with an incorrect Account scope which the DFSP rejects, noting the reason for the rejection to the PISP User and suggesting that they check their request and retry.
+The workflow provided by this UC enables the Switch to correctly handle instances where an authorized PISP User requests one or more accounts to be linked to their PISP Profile by the DFSP Account Holder.  The DFSP denies consent for the link to go ahead for whatever reason, e.g.: a selected account does not support linking, and messages the Switch with an error condition.  The Switch notifies the appropriate PISP, and the PISP User receives a message, in-app or otherwise, to try again as their account linking request failed.
 
 #### Flow Diagram
 
@@ -104,7 +107,7 @@ PISP User issues request to link to DFSP-held Accounts with an incorrect Account
 
 #### Description
 
-PISP requests User to create an authorisation credential consenting to PISP interaction with DFSP held Account scope.  The PISP is notified that the DFSP has rejected the Registration due to invalid data in the signed challege or metadata.  The PISP User is notified.
+The workflow provided by this UC enables the Switch to handle instances where a DFSP Account Holder provides a PISP with a request for a (PISP) User to create a device-embedded credential in order to confirm a Consent Request, and where the credential, which when sent to the DFSP includes either an invalid signed challenge or signed metadata is rejected.  In this instance the DFSP messages the error condition to the Switch, which messages the appropriate PISP who notifies the (PISP) User that the Consent credential was rejected.
 
 #### Flow Diagram
 
@@ -115,7 +118,7 @@ PISP requests User to create an authorisation credential consenting to PISP inte
 
 #### Description
 
-The PISP or DFSP receives a request to unlink a PISP User Accounts.  The request is rejected upon inspection as the Account Lookup & Discovery Oracle reports that the Participant that owns the Account does not include the correct Consent ID.  The 3rd Party Initiated Payments BC issues a DeleteConsentFailed rejection message to the PISP/DFSP User.
+The workflow provided by this UC enables the Switch to handle instances where an authorized PISP User is asked to confirm a consent request issued via either the PISP or DFSP Account Holder to unlink their DFSP Account from their PISP Profile.  The Switch refers the consent request response to the Consent Oracle for confirmation of the Consent Owner ID.  In instances where the Oracle is unable to confirm the ID of the Consent Owner, the request is failed.  The PISP User is alerted via the DFSP Account Holder or PISP profile holder, that the DFSP Account that they sought to unlink from their PISP profile was not found.
 
 #### Flow Diagram
 
@@ -126,7 +129,7 @@ The PISP or DFSP receives a request to unlink a PISP User Accounts.  The request
 
 #### Description
 
-The User selects one or more bank accounts to link via their PISP and uses an out-of-bankdwidth service to complete the linking request using either an OTP, or Web Login flow.  Due to an expired or incorrect token being used, the link request is rejected.
+The workflow provided by this UC enables the Switch to handle instances where an authorised PISP User requests one or more of their DFSP Accounts to be linked to their PISP Profile.  The request is directed by the Switch to the DFSP Account Holder who issues an OTP/Web Login Flow to the PISP User for identification/confirmation purposes which is returned via the PISP to the Switch, and then to the DFSP Account Holder for consent.  In instances where the response token is altered or expired, the DFSP Account Holder issues a error condition message to the Switch and the PISP User is notified that the DFSP Account linking request failed.
 
 #### Flow Diagram
 
@@ -137,24 +140,30 @@ The User selects one or more bank accounts to link via their PISP and uses an ou
 
 #### Description
 
-The PISP/DFSP User receives a confirmation request  to unlink accounts from their profile.  Once the confirmation is sent, the system encounters an error in either the FSPIOP or Authentication step of the transaction, and the request is declined.
+The workflow provided by this UC enables the Switch to handle instances in which an authorised PISP User's DFSP Account unlink consent confirmation fails the Switch's Authentication/Authorisation process for whatever reason, example: a downstram FSPIOP API error.  The error is messaged by the Switch to the DFSP Account Holder who will review the error and determine how to respond.  Where an error has occured, the PISP User is notified by the Switch via the PISP that their request to unlink their DFSP Account failed.
 
 #### Flow Diagram
 
 ![Use Case - Unlink Accounts - Downstream Failure](./assets/3PAL_UnlinkAccounts-DownstreamFailure_20210908.png)
 >
 
-### Transfer Scenarios
+## Transfer Scenarios
+
+***Note:*** *In the interests of compacting this workflow description, the reader should note that the Third Party API and the 3rd-Party Initiated Payments BCs work in concert to maintain Participant Information.  The interaction between the two BCs will not be specifically noted, but is as follows: where the Third Party API BC updates the Transaction state, and where the Participant Information is not cached, the 3rd-Party Initiated Payments BC will request the missing Participant Information from the Participant Lifecycle Management BC and deliver it to the Third Party API BC for inclusion in the Transaction information being presented to the DFSP/PISP systems.*
 
 ### Third Party Initiated Transaction Request
 
 #### Description
 
-***Note:*** *In the interests of compacting this workflow description, the reader should note that the Third Party API and the 3rd-Party Initiated Payments BCs work in concert to maintain Participant Information.  The interaction between the two BCs will not be specifically noted, but is as follows: where the Third Party API BC updates the Transaction state, and where the Participant Information is not cached, the 3rd-Party Initiated Payments BC will request the missing Participant Information from the Participant Lifecycle Management BC and deliver it to the Third Party API BC for inclusion in the Transaction information being presented to the DFSP/PISP systems.*
+<!---***Note:*** *In the interests of compacting this workflow description, the reader should note that the Third Party API and the 3rd-Party Initiated Payments BCs work in concert to maintain Participant Information.  The interaction between the two BCs will not be specifically noted, but is as follows: where the Third Party API BC updates the Transaction state, and where the Participant Information is not cached, the 3rd-Party Initiated Payments BC will request the missing Participant Information from the Participant Lifecycle Management BC and deliver it to the Third Party API BC for inclusion in the Transaction information being presented to the DFSP/PISP systems.*--->
 
-The Third Party Initiated Transaction Request UC provides the workflow for PISP Users/Apps to issue a request to a DFSP to execute a transaction on behalf of an Account Holder, typically the PISP User/App, in favor of a third-party recipient or recipients.  The transaction is vetted via a DFSP confirmation request to the Account Holder, and concluded upon successful receipt of confirmation.  The Switch, per DFSP instructions, manages the transaction and updates all accounts accordingly.
+The workflow provided by this UC enables the Switch to permit authorized PISP Users/Apps to issue a request to a DFSP to execute a transaction on behalf of an Account Holder, typically the PISP User/App, in favor of a third-party recipient or recipients.  The transaction is vetted via a DFSP confirmation request to the Account Holder, and concluded upon successful receipt of confirmation.  The Switch, per DFSP instructions, manages the transaction and updates all accounts accordingly.
 
-Typical applications would include online and instore environments where a third-party platform such as PayPal is used to execute payments.
+Some suggested applications of Third Party Payment Initiation UC include:
+
+ - Peer to Peer Payments (e.g.: GPay in India)
+ - Online checkouts for seamless end-user user experience (UX) (e.g.: PayPal)
+ - Payroll Clearing Software
 
 #### Flow Diagram
 
@@ -165,51 +174,19 @@ Typical applications would include online and instore environments where a third
 
 #### Description
 
-***Note:*** *In the interests of compacting this workflow description, it is necessary for the reader to under that the 3rd-Party API BC and the 3rd-Party Initiated Payments BC work in concert to maintain the Bulk Transaction Participant Information.  The interaction between the two BCs will not be specifically noted, but will be assumed as follows: where the 3rd-Party API BC updates Participant Information, and where the Participant Information is not cached, the 3rd-Party Initiated Payments BC will request the missing data from the Participant Lifecycle Management BC and deliver it to the 3rd-Party API BC for inclusion in the Transaction information being presented to the DFSP/PISP systems.*
+<!---***Note:*** *In the interests of compacting this workflow description, the reader should note that the Third Party API and the 3rd-Party Initiated Payments BCs work in concert to maintain Participant Information.  The interaction between the two BCs will not be specifically noted, but will be assumed as follows: where the 3rd-Party API BC updates Participant Information, and where the Participant Information is not cached, the 3rd-Party Initiated Payments BC will request the missing data from the Participant Lifecycle Management BC and deliver it to the 3rd-Party API BC for inclusion in the Transaction information being presented to the DFSP/PISP systems.*--->
 
-A PISP User initiates a Bulk Transfer request via their PISP application/device. Upon receipt of the Transaction initiation request, the PISP system initiates the Bulk GET Parties workflow FSPIOP API BC. The PISP User is asked to confirm the Participants (Payee), whereafter the PISP system makes use of the 3rd-Party API BC to initiate the Transaction via the 3rd-Party Initiated Payments BC. Where the Participants information has not been cached, the 3rd-Party Initiated Payments BC requests it from the Participant Lifecycle Management BC, and passes it back to the 3rd-Party API BC.
-
-The 3rd-Party API BC sends a notification via the Notifications BC to the DFSP Payee system to check that the transaction request has a valid agreement. If a valid agreement is in place, the DFSP Payee system issues a Transaction ID and returns a transaction update to the Switch via the 3rd-Party API BC. The 3rd-Party API BC updates the Transaction state via the 3rd-Party Initiated Payment BC, and sends a notification to the PISP noting the Transaction state via the Notifications BC.
-
-The DFSP Account Holder initiates a Bulk Agreement/Quote process via the FSPIOP BC, updates the 3rd-Party API BC, and issues a message to the PISP User requesting them to agree to the terms of the Agreement/Quote by signing the message using their device-embedded private key. The PISP system is issued with a notification of the pending agreement via the Notifications BC.  Once the PISP User agrees to the terms of the DFSP Agreement/Quote, the signed agreement is returned to the PISP system which updates the Transaction state via the 3rd-Party API BC and issues an Authorisation Request.
-
-The 3rd-Party API BC issues the Authorisation Request to the DFSP Account Holder via the Notifications BC requesting verification of the signed Challenge.  The DFSP Account Holder acknowledges receipt of the Notification via the Notifications BC, and thereafter updates the Verification using a PUT instruction to the 3rd-Party API BC which updates the Transaction in concert with the 3rd-Party Initiated Payments BC.
-
-Once the Verification Request has been fulfilled, the 3rd-Party API BC sends an Authorisation Accepted notification to the DFSP Account Holder via the Notifications BC.  The DFSP Account Holder initiates a transfer per the Transation, via the FSPIOP BC Bulk Transfer flow.  The FSPIOP BC fulfils and ends the transfer process, and issues a final PUT status update to the DFSP Account Holder. On receipt of the final update, the DFSP Account Holder sends a PATCH update to the 3rd-Party API BC which in triggers it to update the Transaction in concert with the 3rd-Party Initiated Payments BC, and issue a Transaction Completed notification to the PISP User via the Notification BC.
+The The workflow provided by this UC enables the Switch to permit authorized PISP Users/Apps to issue a request to a DFSP to execute a transaction on behalf of an Account Holder, typically the PISP User/App, in favor of a group of third-party recipients.  The transaction is vetted via a DFSP confirmation request to the Account Holder, and concluded upon successful receipt of confirmation.  The Switch, per DFSP instructions, manages the transaction and updates all accounts accordingly.
 
 #### Flow Diagram
 
 ![Use Case - Example REPLACE ME](./assets/3PAT_PISPBulkTransfer_20210909.png)
 >
-
-The Third Party API BC sends a notification via the Notifications BC to the DFSP Payee system to check that the transaction request has a valid agreement. If a valid agreement is in place, the DFSP Payee system issues a Transaction ID and returns a transaction update to the Switch via the Third Party API BC. The Third Party API BC updates the Transaction state via the 3rd-Party Initiated Payment BC, and sends a notification to the PISP noting the Transaction state via the Notifications BC.
-
-The DFSP Account Holder initiates a Agreement/Quote process via the FSPIOP BC, updates the Third Party API BC, and issues a message to the PISP User requesting them to agree to the terms of the Agreement/Quote by signing the message using their device-embedded private key. The PISP system is issued with a notification of the pending agreement via the Notifications BC.  Once the PISP User agrees to the terms of the DFSP Agreement/Quote, the signed agreement is returned to the PISP system which updates the Transaction state via the Third Party API BC and issues an Authorisation Request.
-
-The Third Party API BC issues the Authorisation Request to the DFSP Account Holder via the Notifications BC requesting verification of the signed Challenge.  The DFSP Account Holder acknowledges receipt of the Notification via the Notifications BC, and runs through the Authentication/Authorization process (lookup transaction verification credential and validate against the private key on the PISP User's device), and thereafter updates the Verification using a PUT instruction to the Third Party API BC which updates the Transaction in concert with the 3rd-Party Initiated Payments BC.
-
-Once the Verification Request has been fulfilled, the Third Party API BC sends an Authorisation Accepted notification to the DFSP Account Holder via the Notifications BC.  The DFSP Account Holder initiates a transfer per the Transation instructions, via the FSPIOP BC Transfer flow.  The FSPIOP BC fulfils and ends the transfer process, and issues a final PUT status update to the DFSP Account Holder. On receipt of the final update, the DFSP Account Holder sends a PATCH update to the Third Party API BC which in turn triggers it to update the Transaction in concert with the 3rd-Party Initiated Payments BC.  Finally, the PISP User is issued with a Transaction Completed notification via the Notification BC.
-
-#### Flow Diagram
-
-![Use Case - Example REPLACE ME](./assets/3PAT_PISPBulkTransfer_20210909.png)
->
-
 ### Pay to a PISP - PISP as a Payee
 
 #### Description
 
-The DFSP User selects a PISP alias as a Payee.  There are a few steps that are potentially not clear.  They include the following:
-
- - Instead of being initiated via the PISP, this transaction is initiated via the DFSP.
-
- - Parties are selected by alias, for example, someone@domainname.tld.
-
- - DFSP is aware that the Payee is a PISP due to the Payee.partyIdType being "THIRD_PARTY_LINK" and Payee.partyIdValue is a unique identifier issued to the PISP during Account Linking.
-
- - PayeeDFSP requests a callback from the Switch by setting the transfer status to "RESERVED".
-
- - Once the transfer has been completed the PayeeDFSP informs the PISP that an account they hold has been credited.
+The workflow provided by this UC enables the Switch to permit authorized DFSP Users to initiate and execute payments in favor of PISPs as Payees via the Switch.  The workflow provides support for payments both single or multiple PISP Payee/s.
 
 #### Flow Diagram
 
@@ -220,7 +197,7 @@ The DFSP User selects a PISP alias as a Payee.  There are a few steps that are p
 
 #### Description
 
-A PISP User initiates a Transaction using a bad Party ID, resulting in a lookup failure.
+The workflow provided by this UC enables the Switch to handle instances where an authorised PISP User initiates a transaction using an invalid Participant Identifier.  The Switch encounters the error during the Get Parties stage of the transaction preparation, and automatically terminates the request with notification sent to the request originator indicating the failure and the reason.
 
 #### Flow Diagram
 
@@ -231,7 +208,7 @@ A PISP User initiates a Transaction using a bad Party ID, resulting in a lookup 
 
 #### Description
 
-A PISP User initiates Third Party Transaction, and correctly confirms the Payee details, however the DSFP fails to find a valid Agreement for the transaction.
+The workflow provided by this UC enables the Switch to handle instances where an authorised PISP User initiates a Third Party Transaction Request, correctly confirms the Payee details, but the Payee DSFP fails to locate a valid Agreement for the transaction.  The Switch rejects the request and sends notification to the request originating indicating the failure and suggested follow-up actions.
 
 #### Flow Diagram
 
@@ -242,7 +219,7 @@ A PISP User initiates Third Party Transaction, and correctly confirms the Payee 
 
 #### Description
 
-A PISP User initiates a Third Party Transaction, and confirms the Payee on request from the 3rd-Party API BC via the PISP.  The transaction is then forwarded to the DFSP for confirmation and to create a Transaction ID.  The DFSP successfully triggers the Agreement/Quotation Flow, however it fails for some reason.  The transaction is terminated and the PISP User notified via the 3rd-Party API BC via the Notifications BC.
+The workflow provided by this UC enables the Switch to handle instances in which an authorised PISP User's DFSP Account unlink consent confirmation fails the Switch's Authentication/Authorisation process for whatever reason, example: a downstram FSPIOP API error.  The error is messaged by the Switch to the DFSP Account Holder who will review the error and determine how to respond.  Where an error has confirmed, the PISP User is notified that their DFSP Account unlink transaction request failed via their PISP profile holder.
 
 #### Flow Diagram
 
@@ -253,9 +230,11 @@ A PISP User initiates a Third Party Transaction, and confirms the Payee on reque
 
 #### Description
 
-***Note:*** *The flow for this transaction journey follows that of the Third-Party Initiated Transaction Request.  The difference in the flow for this transaction journey occurs during the Authentication/Authorization process, where it fails due to an invalidly signed Challenge. (For a complete description of the transaction journey, please view the [Third Party Initiated Transaction Request journey](#third-party-initiated-transaction-request)*
+<!---***Note:*** *The flow for this transaction journey follows that of the Third-Party Initiated Transaction Request.  The difference in the flow for this transaction journey occurs during the Authentication/Authorization process, where it fails due to an invalidly signed Challenge.*--->
 
-The transaction journey is failed by the DFSP Account Holder due to the transaction containing an invalidly signed Challenge.  The DFSP Account Holder notifies the 3rd-Party API BC of the error condition via the Notifications BC.  The error is noted and the Participant Account updated via the 3rd-Party API BC working in concert with the 3rd-Party Initiated Payments BC, and the PISP User is notified via the Notifications BC that the transaction failed.
+<!---(For a complete description of the transaction journey, please view the [Third Party Initiated Transaction Request journey](#third-party-initiated-transaction-request)*--->
+
+The workflow provided by this UC enables the Switch to handle instances where a third-party transaction journey is initiated, then authorised by an PISP User on request from the DFSP Account Holder, and the Switch detects that the DFSP Challenge response received contained an invalid signature.  The Switch can then verify that the error has occurred and notify the DFSP Account Holder who in turn cancels the transaction and the notifies the PISP User via the Switch and their PISP profile holder.
 
 #### Flow Diagram
 
@@ -266,9 +245,9 @@ The transaction journey is failed by the DFSP Account Holder due to the transact
 
 #### Description
 
-***Note:*** *The flow for this transaction journey is very similar to the Third-Party Initiated Transaction Request up until the point at which the DFSP Account Holder issues a challenge to the PISP User requesting them to agree to the terms of the transaction return the signed challenge. At this point the PISP User indicates that they wish to cancel the transaction.*
+<!---***Note:*** *The flow for this transaction journey is very similar to the Third-Party Initiated Transaction Request up until the point at which the DFSP Account Holder issues a challenge to the PISP User requesting them to agree to the terms of the transaction return the signed challenge. At this point the PISP User indicates that they wish to cancel the transaction.*--->
 
-The PISP system receives the challenge response from the PISP User's device indicated that the respond is REJECTED.  The PISP system updates the transaction status via the 3rd-Party API BC noting that it has been REJECTED.  This triggers the 3rd-party API BC to update the Transaction status and issue a notification to the DFSP Account Holder via the Notifications BC that the Transaction has been rejected by the PISP User.  The DFSP Account Holder acknowledges the notification and updates the 3rd-Party API BC, which in turns updates the Transaction status to Complete.  The 3rd-Party API BC updates the Transaction status to CompleteAccepted, updates the Switch Accounts via the 3rd-Party Initiated Payments BC, and notifies the PISP System via the Notifications BC of the status change.  The PISP System issues a notification acknowledgement via the Notifications BC and the transaction is terminated by the 3rd-Party API BC.
+The workflow provided by this UC enables the Switch to handle instances where a PISP User declines to complete a transaction for whatever reason.  The transaction is established in the same way as all of the other transfer transaction related UCs, however, instead of approving the DFSP Account Holder terms and signing the challenge, the PISP User declines to continue with transaction.  The PISP receives the PISP User instruction and notifies the DFSP Account Holder via the Switch.  The Switch notifies the DFSP who cancels the transaction.  Participant (DFSP) Accounts are updated and the cancellation is noted to the PISP profile holder.
 
 #### Flow Diagram
 
@@ -279,7 +258,7 @@ The PISP system receives the challenge response from the PISP User's device indi
 
 #### Description
 
-***Note:*** *The flow for this transaction journey follows that of the Third-Party Initiated/PISP Bulk  Transaction Request.  The difference in the flow for this transaction journey occurs during the Agreement/Quote process where the DFSP Account Holder issues a message to the PISP User requesting them agree to the terms of the transaction agreement and sign the challenge token.  Where the PISP User fails to respond to the message within the allowed time a timeout will occur and the DFSP Account Holder cancels the transaction, the DFSP System will cancel the transaction noting a Request Error has occured.*
+<!---***Note:*** *The flow for this transaction journey follows that of the Third-Party Initiated/PISP Bulk  Transaction Request.  The difference in the flow for this transaction journey occurs during the Agreement/Quote process where the DFSP Account Holder issues a message to the PISP User requesting them agree to the terms of the transaction agreement and sign the challenge token.  Where the PISP User fails to respond to the message within the allowed time a timeout will occur and the DFSP Account Holder cancels the transaction, the DFSP System will cancel the transaction noting a Request Error has occured.*--->
 
 As per the note above, the DFSP Account Holder updates the 3rd-Party API BC that it has encountered a Transaction error via a Third Party request and provides the Transaction ID, along with the error code.  The participant/s account/s are updated via the 3rd-Party Initiated Payments BC and a notification is sent to the PISP via the Notification BC.  The PISP acknowledges receipt of the notification and notifies the PISP User that Transaction ID has failed.
 
