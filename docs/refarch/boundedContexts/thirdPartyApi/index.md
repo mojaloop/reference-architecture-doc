@@ -38,7 +38,7 @@ The workflow provided by this UC, supports authorized PISP User requests to obta
 
 #### Description
 
-The workflow provided by this UC supports authorized PISP User requests to obtain a list of Accounts and Identifiers for a DFSP supported by the system.
+The workflow provided by this UC enables the Switch to handle instances where  authorized PISP Users wish to lookup their DFSP Account Holder account details using their DFSP Account Holder Identifier to do so.  Typically the Identifier is embedded into a PISP-originated app or process.
 
 #### Flow Diagram
 
@@ -49,32 +49,31 @@ The workflow provided by this UC supports authorized PISP User requests to obtai
 
 #### Description
 
-The workflow provided by this UC supports authorized PISP User requests for consent to obtain specific (scoped) Accounts details from DFSPs supported by the system.
+The workflow provided by this UC enables the Switch to handle instances where an authorised PISP User notifies their DFSP Account Holder of their intention to link one or more their accounts to a PISP via a Consent Request.  The request if fulfilled via an out-of-band [Issue Consent](#dfsp-issue-consent) process upon receipt of an authorization confirmation request response.  The result of this process is a the establishment of a trust relationship between the PISP User, the PISP, and the DFSP Account Holder.  The Switch updates participant account details accordingly.
 
 #### Flow Diagram
 
-![Use Case - PISP Consent Request](./assets/3PAL_PISPConsentRequest_20210830.png)
+![Use Case - PISP Consent Request](./assets/3PAL_PISPConsentRequest_20211020.png)
 >
 
 ### DFSP Issue Consent
 
 #### Description
 
-The workflow provided by this UC enables an authorised DFSP to:
- - Firstly, issue a provisional Consent in consequence of a previous "PISP Consent Request" workflow
-  - Secondly, enable a PISP to attach Credential to the Consent
-  - And thirdly, enable a DFSP to validate the Credential and active the Consent.
+The workflow provided by this UC enables the Switch to handle instances in which a DFSP Account Holder responds to a Consent Request received from an authorised and authenticated PISP User.  The DFSP Account Holder issues a request to the PISP via the Switch for the PISP User to create an identifying Credential on their device.  Upon receipt of the identifying Credential, verified by the issuing DFSP Account Holder, both the Switch and the DFSP Account Holder Account records are updated with the PISP User Credential and linked Accounts, and the PISP User is notified that their DFSP Account Holder Account/s has/have been successfully linked to their PISP profile.
+
+***Note:*** *The Consent Issue is in response to a Consent Request made by an authorised PISP User to link one or more of their DFSP Account Holder Accounts to their PISP profile and follows the workflow noted in the [PISP Consent Request](#pisp-consent-request) UC above*
 
 #### Flow Diagram
 
 ![Use Case - DFSP Issue Consent](./assets/3PAL_PISP-DFSPIssueConsent_20210830.png)
-> 
+>
 
 ### Unlink Accounts - Hub Hosted Auth
 
 #### Description
 
-The workflow provided by this UC enables an authorised PISP/DFSP Account Holder to revoke consent for a DFSP Account to be linked to their PISP Profile, which the Switch acts upon by updating the system Account Lookup Service to disassociate the PISP Participant/DFSP Account association, and notifying both the DFSP Account Holder (who removes the ALS Participant entry and Link from their system), and the PISP Host who sends a fulfilment notification to the User.
+The workflow provided by this UC enables the Switch to handle an authorised PISP/DFSP Account Holder request to revoke consent for a DFSP Account Holder Account to be linked to their PISP Profile, which the Switch acts upon by updating the system Account Lookup Service to disassociate the PISP Participant/DFSP Account association, and notifying both the DFSP Account Holder (who removes the ALS Participant entry and Link from their system), and the PISP Host who sends a fulfilment notification to the User.
 
 #### Flow Diagram
 
@@ -85,7 +84,7 @@ The workflow provided by this UC enables an authorised PISP/DFSP Account Holder 
 
 #### Description
 
-The workflow provided by this UC enables the Switch to correctly handle instances in which an authorised PISP User initiates a to link a DFSP Account to their PISP Profile using an invalid DFSP/Identifier pair not recognized by the DFSP. The DFSP messages the Switch with an error, which notifies the appropriate PISP, and the User receives a message to try another DFSP/Indentifier pair.
+The workflow provided by this UC enables the Switch to handle instances in which an authorised PISP User initiates a request to link a DFSP Account to their PISP Profile using an invalid DFSP/Identifier pair not recognized by the DFSP. The DFSP messages the Switch with an error, which notifies the appropriate PISP, and the User receives a message to try another DFSP/Indentifier pair.
 
 #### Flow Diagram
 
@@ -96,7 +95,7 @@ The workflow provided by this UC enables the Switch to correctly handle instance
 
 #### Description
 
-The workflow provided by this UC enables the Switch to correctly handle instances where an authorized PISP User requests one or more accounts to be linked to their PISP Profile by the DFSP Account Holder.  The DFSP denies consent for the link to go ahead for whatever reason, e.g.: a selected account does not support linking, and messages the Switch with an error condition.  The Switch notifies the appropriate PISP, and the PISP User receives a message, in-app or otherwise, to try again as their account linking request failed.
+The workflow provided by this UC enables the Switch to correctly handle instances where an authorized PISP User requests one or more accounts to be linked to their PISP Profile by the DFSP Account Holder.  Where the DFSP Account Holder denies consent for the linking to go ahead for whatever reason, e.g.: a selected account does not support linking, it will message the Switch with an error condition.  The Switch notifies the appropriate PISP, and the PISP User receives a message, in-app or otherwise, to retry their request as the previous account linking request failed.
 
 #### Flow Diagram
 
@@ -129,7 +128,7 @@ The workflow provided by this UC enables the Switch to handle instances where an
 
 #### Description
 
-The workflow provided by this UC enables the Switch to handle instances where an authorised PISP User requests one or more of their DFSP Accounts to be linked to their PISP Profile.  The request is directed by the Switch to the DFSP Account Holder who issues an OTP/Web Login Flow to the PISP User for identification/confirmation purposes which is returned via the PISP to the Switch, and then to the DFSP Account Holder for consent.  In instances where the response token is altered or expired, the DFSP Account Holder issues a error condition message to the Switch and the PISP User is notified that the DFSP Account linking request failed.
+The workflow provided by this UC enables the Switch to handle instances where an authorised PISP User requests one or more of their DFSP Account Holder Accounts to be linked to their PISP Profile.  The request is directed by the Switch to the DFSP Account Holder who issues an OTP/Web Login Flow to the PISP User for verification purposes which is returned via the PISP to the Switch, and then to the DFSP Account Holder for consent.  In instances where the response token is altered or expired, the DFSP Account Holder issues a error condition message to the Switch and the PISP User is notified that the DFSP Account linking request failed.
 
 #### Flow Diagram
 
@@ -155,8 +154,6 @@ The workflow provided by this UC enables the Switch to handle instances in which
 
 #### Description
 
-<!---***Note:*** *In the interests of compacting this workflow description, the reader should note that the Third Party API and the 3rd-Party Initiated Payments BCs work in concert to maintain Participant Information.  The interaction between the two BCs will not be specifically noted, but is as follows: where the Third Party API BC updates the Transaction state, and where the Participant Information is not cached, the 3rd-Party Initiated Payments BC will request the missing Participant Information from the Participant Lifecycle Management BC and deliver it to the Third Party API BC for inclusion in the Transaction information being presented to the DFSP/PISP systems.*--->
-
 The workflow provided by this UC enables the Switch to permit authorized PISP Users/Apps to issue a request to a DFSP to execute a transaction on behalf of an Account Holder, typically the PISP User/App, in favor of a third-party recipient or recipients.  The transaction is vetted via a DFSP confirmation request to the Account Holder, and concluded upon successful receipt of confirmation.  The Switch, per DFSP instructions, manages the transaction and updates all accounts accordingly.
 
 Some suggested applications of Third Party Payment Initiation UC include:
@@ -174,9 +171,7 @@ Some suggested applications of Third Party Payment Initiation UC include:
 
 #### Description
 
-<!---***Note:*** *In the interests of compacting this workflow description, the reader should note that the Third Party API and the 3rd-Party Initiated Payments BCs work in concert to maintain Participant Information.  The interaction between the two BCs will not be specifically noted, but will be assumed as follows: where the 3rd-Party API BC updates Participant Information, and where the Participant Information is not cached, the 3rd-Party Initiated Payments BC will request the missing data from the Participant Lifecycle Management BC and deliver it to the 3rd-Party API BC for inclusion in the Transaction information being presented to the DFSP/PISP systems.*--->
-
-The The workflow provided by this UC enables the Switch to permit authorized PISP Users/Apps to issue a request to a DFSP to execute a transaction on behalf of an Account Holder, typically the PISP User/App, in favor of a group of third-party recipients.  The transaction is vetted via a DFSP confirmation request to the Account Holder, and concluded upon successful receipt of confirmation.  The Switch, per DFSP instructions, manages the transaction and updates all accounts accordingly.
+The workflow provided by this UC enables the Switch to permit authorized PISP Users/Apps to issue a request to a DFSP to execute a number of bulk transactions on behalf of an Account Holder, typically the PISP User/App, in favor of a group of third-party recipients.  The transaction is vetted via a DFSP confirmation request to the Account Holder, and concluded upon successful receipt of confirmation.  The Switch, per DFSP instructions, manages the transaction and updates all accounts accordingly.
 
 #### Flow Diagram
 
@@ -218,8 +213,7 @@ The workflow provided by this UC enables the Switch to handle instances where an
 ### Third Party Transaction Request Failed - downstream FSPIOP failure
 
 #### Description
-
-The workflow provided by this UC enables the Switch to handle instances in which an authorised PISP User's DFSP Account unlink consent confirmation fails the Switch's Authentication/Authorisation process for whatever reason, example: a downstram FSPIOP API error.  The error is messaged by the Switch to the DFSP Account Holder who will review the error and determine how to respond.  Where an error has confirmed, the PISP User is notified that their DFSP Account unlink transaction request failed via their PISP profile holder.
+The workflow provided by this UC enables the Switch to handle instances where an authorized PISP User requests and confirms a transaction request, which when forwarded to the DFSP Account Holder fails for some reason during the quote process.  The Switch is alerted to the failure, and provides a notification to the PISP User via their PISP App/Process.
 
 #### Flow Diagram
 
@@ -229,10 +223,6 @@ The workflow provided by this UC enables the Switch to handle instances in which
 ### Third Party Transaction Request Failed - authorization was invalid
 
 #### Description
-
-<!---***Note:*** *The flow for this transaction journey follows that of the Third-Party Initiated Transaction Request.  The difference in the flow for this transaction journey occurs during the Authentication/Authorization process, where it fails due to an invalidly signed Challenge.*--->
-
-<!---(For a complete description of the transaction journey, please view the [Third Party Initiated Transaction Request journey](#third-party-initiated-transaction-request)*--->
 
 The workflow provided by this UC enables the Switch to handle instances where a third-party transaction journey is initiated, then authorised by an PISP User on request from the DFSP Account Holder, and the Switch detects that the DFSP Challenge response received contained an invalid signature.  The Switch can then verify that the error has occurred and notify the DFSP Account Holder who in turn cancels the transaction and the notifies the PISP User via the Switch and their PISP profile holder.
 
@@ -245,9 +235,7 @@ The workflow provided by this UC enables the Switch to handle instances where a 
 
 #### Description
 
-<!---***Note:*** *The flow for this transaction journey is very similar to the Third-Party Initiated Transaction Request up until the point at which the DFSP Account Holder issues a challenge to the PISP User requesting them to agree to the terms of the transaction return the signed challenge. At this point the PISP User indicates that they wish to cancel the transaction.*--->
-
-The workflow provided by this UC enables the Switch to handle instances where a PISP User declines to complete a transaction for whatever reason.  The transaction is established in the same way as all of the other transfer transaction related UCs, however, instead of approving the DFSP Account Holder terms and signing the challenge, the PISP User declines to continue with transaction.  The PISP receives the PISP User instruction and notifies the DFSP Account Holder via the Switch.  The Switch notifies the DFSP who cancels the transaction.  Participant (DFSP) Accounts are updated and the cancellation is noted to the PISP profile holder.
+The workflow provided by this UC enables the Switch to handle instances where a PISP User initiates and confirms a transaction via their PISP, but then declines to complete it upon receipt of the DFSP Account Holder quotation acceptance and signature challenge.  Once the transaction is declined, the PISP notifies the DFSP Account Holder via the Switch, who proceeds to cancel the transaction and send a transaction cancellation confirmation notification to the originating PISP.
 
 #### Flow Diagram
 
@@ -258,9 +246,7 @@ The workflow provided by this UC enables the Switch to handle instances where a 
 
 #### Description
 
-<!---***Note:*** *The flow for this transaction journey follows that of the Third-Party Initiated/PISP Bulk  Transaction Request.  The difference in the flow for this transaction journey occurs during the Agreement/Quote process where the DFSP Account Holder issues a message to the PISP User requesting them agree to the terms of the transaction agreement and sign the challenge token.  Where the PISP User fails to respond to the message within the allowed time a timeout will occur and the DFSP Account Holder cancels the transaction, the DFSP System will cancel the transaction noting a Request Error has occured.*--->
-
-As per the note above, the DFSP Account Holder updates the 3rd-Party API BC that it has encountered a Transaction error via a Third Party request and provides the Transaction ID, along with the error code.  The participant/s account/s are updated via the 3rd-Party Initiated Payments BC and a notification is sent to the PISP via the Notification BC.  The PISP acknowledges receipt of the notification and notifies the PISP User that Transaction ID has failed.
+The workflow provided by this UC enables the Switch to handle instances where a PISP User initiates and confirms a transaction via their PISP, but then fails to respond to the DFSP Account Holder quotation acceptance and signature challenge within a predetermined timeout period.  Once the timeout is exceeded, the PISP notifies the DFSP Account Holder via the Switch that the required response was not received, and the DFSP cancels the transaction, sending a notification to the PISP User advising them that their transaction request failed.
 
 #### Flow Diagram
 
