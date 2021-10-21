@@ -27,7 +27,7 @@ The following common terms are used in this BC:
 
 #### Description
 
-The workflow provided by this UC, supports authorized PISP User requests to obtain a list of DFSPs supported by the system.
+The workflow provided by this UC enables the Switch to handle authorized PISP User requests to obtain a list of DFSPs supported by the system.
 
 #### Flow Diagram
 
