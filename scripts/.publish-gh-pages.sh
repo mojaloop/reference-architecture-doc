@@ -25,4 +25,4 @@ git add -A
 git commit -a -m "Publishing vue-pages on github..."
 
 # push to the gh-pages
-git push -u -f git@github.com:mojaloop/mojaloop-business-docs.git master:vue-pages
+git push -u -f git@github.com:$GITHUB_PROJECT_USERNAME/$GITHUB_PROJECT_REPONAME.git master:vue-pages
