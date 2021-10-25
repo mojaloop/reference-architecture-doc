@@ -121,7 +121,7 @@ workflows:
           filters:
             branches:
               only:
-                - master
+                - main
 
 
 ## Below is the script for publishing to the temp s3 bucket - to be removed in future
