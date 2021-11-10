@@ -14,6 +14,10 @@ Terms with specific and commonly accepted meaning within the Bounded Context in 
 
 ### Perform Transfer (universal mode)
 
+#### Description
+
+#### Flow Diagram
+
 ![Use Case - Example REPLACE ME](./assets/useCaseExample.png)
 > example image - replace
 
