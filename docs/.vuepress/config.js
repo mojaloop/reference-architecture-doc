@@ -107,6 +107,11 @@ module.exports = {
             // children: [ /* ... */ ],
           },
           {
+            title: 'Common Terms & Conventions Used',
+            path: '/refarch/commonTermsConventions',      // optional, link of the title, which should be an absolute path and must exist
+            // children: [ /* ... */ ],
+          },
+          {
             title: 'Bounded Contexts',
             path: '/refarch/boundedContexts/intro',      // optional, link of the title, which should be an absolute path and must exist
             children: [

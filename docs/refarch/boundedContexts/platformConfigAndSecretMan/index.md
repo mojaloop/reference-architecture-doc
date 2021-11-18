@@ -1,6 +1,6 @@
 # Platform Configuration And Secret Management BC
 
-{overview}
+The purpose of this BC is to provide a stable and secure platform through which to manage the configuration of
 
 ## Terms
 

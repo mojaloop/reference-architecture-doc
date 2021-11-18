@@ -1,10 +1,10 @@
-# Bounded Context
+# Glossary of Common Terms and Conventions Used
 
-In this section we take a deep dive into each of the identified Bounded Contexts indicating their purpose (description), Subdomains spanned, Use Cases that each Bounded Context addresses, and concluding remarks where they have been included.
+## Overview
+The following common terms and conventions are use in all of the Mojaloop Switch's Bounded Contexts and Use Cases.
 
-<!--## Common Terms and Conventions Used
+## Glossary
 
-| **Common Terms and Conventions (All Bounded Contexts and Use Cases**)||
 |    **Convention/Term**    |       **Description**       |
 | :------------------------ | :-------------------------- |
 | Actors                                                            | Human or external system Use Case participant. All Use Cases are driven by Actors.|
@@ -20,4 +20,3 @@ In this section we take a deep dive into each of the identified Bounded Contexts
 | 202 (Accepted)                                                    | HTTP Status code indicating that a request has been accepted for processing, but has not been completed. The request may or may not be acted upon when system allows as it may be disallowed when processing occurs. As the operation is asynchronous, there is also not facility for resending the status code, regardless of outcome. The 202 response is deliberately non-committal to enable a request to be processes without requiring the agent to remain connected until such time as it does. The response should include an indication of system status, and either a pointer to a monitoring platform, or an indication of when the request will be acted upon.<br/><br>(*Source: Restful API Tutor - see References and further reading*)|
 | OHS                                                               | Open Host Service: Describes documentation of methods to employ to successfully integrate downstream systems into an existing upstream system without requiring any mods to be made to the upstream platform. Typically support is provided for multiple client-types, and will have no particular interest in specific clients. The downstream system will be required to understand the upstream published documentation. OHS and PL are commonly paired by upstream systems.<br/><br/>Currently utilized in the following entities: FSPIOP External API; ISO External API; Notifications & Alerts BC; PISP ML External API; PISP ISO External API; Scheduling BC; Transfers & Transactions BC; Agreement (Quoting) BC; Accounts & Balances BC; Settlements BC; Participant Lifecycle Management; Account Lookup & Discovery BC)<br/><br/>(*Source: Strategic Domain-Driven Design - see References and further reading*)|
 | PL                                                                | Published Language: Described as the closest relative to open host service and often used together. PL uses a documented language, for example XML, for basic I/O operations to the system for which it is being utilized. No particular library or implementation spec is required for connecting to the system provided one conforms to the published language. It is not necessary to run only web services with a Published Language. One can also do things like upload a file to a particular folder, which then triggers an operation that stores the content of the file at an application specified location.<br/><br/>Currently utilized in the following entities: FSPIOP External API; ISO External API<br/><br/>(*Source: Strategic Domain-Driven Design - see References and further reading*)|
--->
