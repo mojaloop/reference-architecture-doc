@@ -1,6 +1,6 @@
 # Platform Configuration And Secret Management BC
 
-The purpose of this BC is to provide a stable and secure platform through which to manage the configuration of
+The purpose of this BC is to provide a stable and secure platform through which to manage the configuration and Secret Management of the Switch platform.
 
 ## Terms
 
