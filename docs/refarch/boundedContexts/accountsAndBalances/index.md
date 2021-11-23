@@ -10,8 +10,9 @@ Terms with specific and commonly accepted meaning within the Bounded Context in 
 
 | Term | Description |
 |---|---|
-| Account | Debit/Credit Ledger Account |
-| Journal Entry | Credit/Debit financial records against Account | 
+| Account | Refers to a General Ledger account, a record in an accounting system that records the debit or credit entries that represent a financial transaction. |
+| Journal Entry | Credit/Debit financial records against Account. | 
+| Balance | The amount available in an account, when the debits and credits have been factored in. | 
 
 ## Use Cases
 
@@ -72,16 +73,16 @@ Journal Entry insertion from [Settlements BC](../settlements/index.md) using `De
 Journal Entry insertion from [Settlements BC](../settlements/index.md) using `Immediate Gross Settlement` (IGS) model.
 ![Use Case - Settlements BC](../settlements/assets/settleImediateGross_20210827.png)
 
-## Cononical Model
+## Canonical Model
 
 - Account
-    - accountId
-    - ledgerAccountType
-    - ledgerAccountState
-    - debitLimit
-    - creditLimit
-    - debitBalance
-    - creditBalance
+  - accountId
+  - ledgerAccountType
+  - ledgerAccountState
+  - debitLimit
+  - creditLimit
+  - debitBalance
+  - creditBalance
 - Journal Entry
   - journalEntryId
   - debitAccountId
