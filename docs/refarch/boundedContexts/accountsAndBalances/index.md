@@ -19,7 +19,7 @@ Terms with specific and commonly accepted meaning within the Bounded Context in 
 
 #### Description
 
-Create new participant/transfer/settlement account in the System Ledger.
+Create new participant/transfer/settlement account in the System Ledger. <br/>Specify credit/debit Journal Entry limits.<br/>Ensure Account is unique in the System Ledger.
 
 #### Flow Diagram
 Account creation from [Participant Lifecycle Management BC](../participantLifecycleManagement/index.md).
@@ -46,6 +46,12 @@ Query the status and balance for participant account.
 
 Query liquidity CR/DR limits from [Participant Lifecycle Management BC](../participantLifecycleManagement/index.md).
 ![Use Case - PLCM BC](../participantLifecycleManagement/assets/11-liquidity-cover-queries.jpg)
+
+### Query Journal Entries
+
+#### Description
+
+Query Journal debit/credit Entries for an Account.
 
 ### Insert Journal Entry
 

@@ -5494,9 +5494,9 @@ markdown-it-footnote@^3.0.3:
   integrity sha512-YZMSuCGVZAjzKMn+xqIco9d1cLGxbELHZ9do/TSYVzraooV8ypsppKNmUJ0fVH5ljkCInQAtFpm8Rb3eXSrt5w==
 
 markdown-it-multimd-table@^4.1.0:
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/markdown-it-multimd-table/-/markdown-it-multimd-table-4.1.0.tgz#5c23eba9ceda580dc5c7301927a01610e0ee37b9"
-  integrity sha512-YNR7Td1gK3O+jLezL6Zfl80WNRn9iLAyXmCVAUSsTJ61drmJdHr7cWqr2CuWaSffBtnM0Zh0QBRUdmICoy+CDg==
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/markdown-it-multimd-table/-/markdown-it-multimd-table-4.1.1.tgz#255b7f93b17f09d33eeabc6fc5f8175552bd8107"
+  integrity sha512-FIgU3m6sw60XTouDdBd4ASZAc7Ba5ER5YkZOfGw+7PS/VsSzFFLYKCrGIwxTt6LscoXK6/TbMIu/4kJfykbgBg==
   dependencies:
     markdown-it "^11.0.0"
 

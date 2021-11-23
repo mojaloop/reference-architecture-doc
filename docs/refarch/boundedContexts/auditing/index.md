@@ -8,11 +8,11 @@ The Auditing BC is responsible for maintaining an immutable record of all of the
 * Key Management System
 * Cryptographic[^1] Provider Modular
 
-Authorized users are able to interrogate the Event Store (Immutable Datastore) for details of audit-worthy events.
+Authorized users are able to interrogate the Auditing BC via an Operation API exposed for this purpose for details of audit-worthy events.
 
 ## Functional Overview
 
-![Use Case - Auditing System Functional Overview](./assets/Mojaloop2RefArch_FunctionalOverview_09202021.png)
+![Use Case - Auditing System Functional Overview](./assets/ML2RA_FunctionalOverview_09282021.png)
 >
 
 ## Terms
