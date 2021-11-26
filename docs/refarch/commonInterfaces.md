@@ -1,3 +1,19 @@
+
+## Overview
+
+The following table contains a list of all the Mojaloop Switch Bounded Contexts' (BCs) Interfaces. The table has been divided into a matrix of rows and columns, where the rows represent all Interfaces provided by their BC's, and the columns represented the Bounded Contexts (BCs) that use that interface (identified by an "x" in the corresponding column).
+
+### How to read this matrix:
+- One row per published interface endpoint / event / remote call 
+- Columns
+  - Comm Style - interface communication style: msg/event based, HTTP/Rest or gRPC
+  - Publisher/Provider BC - bounded context that owns and exposes this interface
+  - Description - high level description of the objective, or motivations, for this interface, where applicable more details should be present
+- Client/Consumer BCs - these columns represent each bounded context, an X between means that the correspondent column Bounded Context uses the interface of the correspondent row.
+
+
+## Interface Matrix
+
 | Source / publisher - Interface                       |             |                                     |                                                                                                                                                                                                 | Client / consumer - Bounded Contexts |||                        |                                     |              |                        |                |                   |                        |                              |                           |               |           |                     |                     |                        |                      |                      |
 | :------------------------------------------------------ | :-------------: | :------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------: | :------------------------: | :-------------------------------------: | :--------------: | :------------------------: | :----------------: | :-------------------: | :------------------------: | :------------------------------: | :---------------------------: | :---------------: | :-----------: | :---------------------: | :---------------------: | :------------------------: | :----------------------: | :----------------------: |
 | **Event name OR endpoint**                               | **Comms Style** | **Publisher/Provider BC**               | **Description**                                                                                                                                                                                     | **FSP Interop API BC**                   | **Admin/Operation API BC** | **Participant Lifecycle Management BC** | **Transfers BC** | **Accounts & Balances BC** | **Settlements BC** | **Account Lookup BC** | **Agreements / Quotes BC** | **3rd Party Initiated Payments** | **Notifications & Alerts BC** | **Scheduling BC** | **Auding BC** | **Security - authZ BC** | **Security - authN BC** | **Security - auditing BC** | **Security - loging BC** | **Security - crypto BC** |
