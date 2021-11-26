@@ -3,7 +3,7 @@
 
 The following table contains a list of all the Mojaloop Switch Bounded Contexts' (BCs) Interfaces. The table has been divided into a matrix of rows and columns, where the rows represent all Interfaces provided by their BC's, and the columns represented the Bounded Contexts (BCs) that use that interface (identified by an "x" in the corresponding column).
 
-### How to read this matrix:
+### How to read this table:
 - One row per published interface endpoint / event / remote call 
 - Columns
   - Comm Style - interface communication style: msg/event based, HTTP/Rest or gRPC
@@ -12,7 +12,7 @@ The following table contains a list of all the Mojaloop Switch Bounded Contexts'
 - Client/Consumer BCs - these columns represent each bounded context, an X between means that the correspondent column Bounded Context uses the interface of the correspondent row.
 
 
-## Interface Matrix
+## Interface Table
 
 | Source / publisher - Interface                       |             |                                     |                                                                                                                                                                                                 | Client / consumer - Bounded Contexts |||                        |                                     |              |                        |                |                   |                        |                              |                           |               |           |                     |                     |                        |                      |                      |
 | :------------------------------------------------------ | :-------------: | :------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------: | :------------------------: | :-------------------------------------: | :--------------: | :------------------------: | :----------------: | :-------------------: | :------------------------: | :------------------------------: | :---------------------------: | :---------------: | :-----------: | :---------------------: | :---------------------: | :------------------------: | :----------------------: | :----------------------: |
