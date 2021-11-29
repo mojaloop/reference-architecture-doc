@@ -1,6 +1,6 @@
 # Accounts and Balances BC
 
-The Accounts and Balances BC acts as the "central ledger" for the system.  It interacts primarily with the Settlements and the Transfers BCs, and is a directed sub-system, which means that it is a dependency of the Settlements and Transfers BCs that use it as a "financial system of record" for the financial accounting.
+The Accounts and Balances BC acts as the "central ledger" for the system. It interacts primarily with the Settlements BC, Participants Lifecycle BC and Transfers BCs, and is a directed sub-system, which means that it is a dependency of the BCs that use it as a "financial system of record" for the financial accounting.
 
 **Note:** *The Accounts and Balances BC contains a limited amount of logic to ensure that (a) the correct relationships are created and maintained between entities when an external BC creates, updates, queries or closes accounts and (2) the correct account limits are not enforced (i.e. set and not exceeded) when an external BC attempts to create journal entries.*
 
