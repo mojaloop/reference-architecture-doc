@@ -130,4 +130,3 @@ A number of questions came up during the Reference Architecture Work Sessions an
 
     * Answer: This should be determined by the Client BC, based on its action on receipt of the Reminder.
 
-[^1]: For further information please view: [Link Name](https://...)
