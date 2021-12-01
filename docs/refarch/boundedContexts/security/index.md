@@ -30,7 +30,7 @@ Terms with specific and commonly accepted meaning within the Bounded Context in 
 
 ## Overview
 
-![Use Case - Example REPLACE ME](./assets/securityBCv0.1.png)
+![Use Case - Example REPLACE ME](./assets/securityBCv0.2.png)
 
 
 ## Use Cases
