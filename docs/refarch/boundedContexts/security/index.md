@@ -43,7 +43,6 @@ To use the access token, the client must set the Authorization HTTP header to Be
 
 The getRole function to the security layer will return a ROLE from the IAM. The returned ROLE will be used by the microservices to verify permissions. 
 
-URI =: /{context}/getRole
 
 ### GetCertificate
 
