@@ -13,10 +13,7 @@ Terms with specific and commonly accepted meaning within the Security Bounded Co
 | Crypto providers | Adapter that will provide cryptographic services and Key Management System |
 |---|---|
 | IAM | Identity and Access Management. Adapter that will provide services for menus, profiles, roles and permissions.  |
-|---|---|
-|  |  |
-|---|---|
-|  |   |
+
 
 ## Overview
 
