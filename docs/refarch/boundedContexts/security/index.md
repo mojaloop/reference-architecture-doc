@@ -14,9 +14,9 @@ Terms with specific and commonly accepted meaning within the Security Bounded Co
 |---|---|
 | IAM | Identity and Access Management. Adapter that will provide services for menus, profiles, roles and permissions.  |
 |---|---|
-| FIDO | Fast Identification Online. Athentication and Authorization including second factor authentication. Used for Relying Paties clients |
+|  |  |
 |---|---|
-| Audit | Signed log entries. Immutable DB  |
+|  |   |
 
 ## Overview
 
