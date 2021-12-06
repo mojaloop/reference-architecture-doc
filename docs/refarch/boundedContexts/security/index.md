@@ -3,10 +3,11 @@
 The security BC comprises a number of subsystems: 
 
 1. User / Operator login (AuthN)
-2. BC bootstrap 
-3. BC startup
-4. Role / Privilege association
-5. Example Query / call
+2. Authorization Model
+3. BC bootstrap 
+4. BC startup
+5. 6. Role / Privilege association
+7. Example Query / call
 
 
 ## Terms
@@ -31,6 +32,12 @@ The login function requires the user id and a secret key passed in the http body
 The login is performed by the IAM subsystem.
 
 ![Use Case - Example REPLACE ME](./assets/securityBCv0.3.png)
+
+### Authorization Model 
+
+This is done once per deployement of a new version.
+
+![Use Case - Example REPLACE ME](./assets/securityBCv0.8.png)
 
 ### BC Bootstrap 
 
