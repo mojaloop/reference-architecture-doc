@@ -20,7 +20,7 @@ Terms with specific and commonly accepted meaning within the Security Bounded Co
 The protocol is request and response based, and the used transport protocol is secure Hypertext Transfer Protocol Secure (HTTPS). All services use the HTTP POST and GET methods. Both the request and response bodies are encoded in JSON-formatted text.
 
 
-![Use Case - Example REPLACE ME](./assets/securityBCv0.2.png)
+![Use Case - Example REPLACE ME](./assets/securityBCv0.3.png)
 
 
 ## Use Cases
