@@ -4,6 +4,7 @@ The security BC comprises a number of subsystems:
 
 1. User / Operator login (AuthN)
 2. BC bootstrap 
+3. BC startup
 
 
 ## Terms
@@ -34,6 +35,12 @@ The login is performed by the IAM subsystem.
 This is done once per deployement of a new version.
 
 ![Use Case - Example REPLACE ME](./assets/securityBCv0.4.png)
+
+### BC Startup 
+
+This is done once per deployement of a new version.
+
+![Use Case - Example REPLACE ME](./assets/securityBCv0.5.png)
         
 ### Authoirzation (AuthZ)
 
