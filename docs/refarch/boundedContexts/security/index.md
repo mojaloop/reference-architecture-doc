@@ -49,6 +49,12 @@ This is done once per deployement of a new version.
 This is done once per deployement of a new version.
 
 ![Use Case - Example REPLACE ME](./assets/securityBCv0.6.png)
+
+### Example Query / call 
+
+This is done once per deployement of a new version.
+
+![Use Case - Example REPLACE ME](./assets/securityBCv0.7.png)
         
 ### Authoirzation (AuthZ)
 
