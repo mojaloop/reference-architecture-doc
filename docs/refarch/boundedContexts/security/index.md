@@ -5,6 +5,8 @@ The security BC comprises a number of subsystems:
 1. User / Operator login (AuthN)
 2. BC bootstrap 
 3. BC startup
+4. Role / Privilege association
+5. Example Query / call
 
 
 ## Terms
@@ -41,6 +43,12 @@ This is done once per deployement of a new version.
 This is done once per deployement of a new version.
 
 ![Use Case - Example REPLACE ME](./assets/securityBCv0.5.png)
+
+### Role / Privilege association 
+
+This is done once per deployement of a new version.
+
+![Use Case - Example REPLACE ME](./assets/securityBCv0.6.png)
         
 ### Authoirzation (AuthZ)
 
