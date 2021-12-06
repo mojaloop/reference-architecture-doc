@@ -34,7 +34,7 @@ The login is performed by the Authorization services or IAM.
 
 ### Authorization Model (AuthZ)
 
-IAM will provide users / groups, roles and privileges associations. Each BC will also have its own roles associations. When a function or microservice
+IAM will provide users / groups, roles and privileges associations. Each BC will also have a list of related roles. When a function or microservice
 is called, the role provided in the JWT will be compared with the roles associated with the BC, after signature verfication. 
 
 ![Use Case - Example REPLACE ME](./assets/securityBCv0.8.png)
@@ -47,8 +47,7 @@ At bootstrap, BC will send list of possible privileges. This is done once per de
 
 ### BC Startup 
 
-At startup the BC will request authentication issuer public keys (Crypto) and the list of roles / privileges (IAM). A local crypto library signature 
-verification function will verfiy the JWT signature and the roles in the JWT will be compared with the local list of roles. 
+At startup the BC will request authentication issuer public keys from Security BC Crypto / KMS subsystems and the list of roles / privileges Security BC IAM subsystem. A local crypto library signature verification function will verfiy the JWT signature and the roles in the JWT will be compared with the local list of roles obtained from the central authorization service. 
 
 
 ![Use Case - Example REPLACE ME](./assets/securityBCv0.5.png)
