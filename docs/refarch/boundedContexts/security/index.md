@@ -2,7 +2,7 @@
 
 1. Overview
 2. User / Operator login (AuthN)
-3. Authorization Model
+3. Authorization Model (AuthZ)
 4. BC bootstrap 
 5. BC startup
 6. Role / Privilege association
@@ -50,7 +50,7 @@ At bootstrap, BC will send list of possible privileges. This is done once per de
 At startup the BC will request authentication issuer public keys from Security BC Crypto / KMS subsystems and the list of roles / privileges Security BC IAM subsystem. A local crypto library signature verification function will verfiy the JWT signature and the roles in the JWT will be compared with the local list of roles obtained from the central authorization service. 
 
 
-![Use Case - Example REPLACE ME](./assets/securityBCv0.5.png)
+![Use Case - Example REPLACE ME](./assets/bc_start_up.png)
 
 ### Role / Privilege association 
 
