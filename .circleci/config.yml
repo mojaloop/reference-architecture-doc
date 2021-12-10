@@ -10,13 +10,6 @@ orbs:
   slack: circleci/slack@3.4.2
   pr-tools: mojaloop/pr-tools@0.1.8
 
-
-##
-# defaults
-#
-# YAML defaults templates, in alphabetical order
-##
-
 ##
 # Executors
 #
@@ -32,13 +25,52 @@ executors:
     machine:
       image: ubuntu-1604:201903-01
 
+defaults_working_directory: &defaults_working_directory
+  working_directory: /home/circleci/project
+
+defaults_docker_node: &defaults_docker_node
+  docker:
+    - image: node:10.15-alpine
+
+
+defaults_git_env_vars: &defaults_git_env_vars
+  name: setup environment vars
+  command: |
+    echo 'export GITHUB_TOKEN=$GITHUB_TOKEN' >> $BASH_ENV
+    echo 'export GITHUB_PROJECT_USERNAME=$CIRCLE_PROJECT_USERNAME' >> $BASH_ENV
+    echo 'export GITHUB_PROJECT_REPONAME=$CIRCLE_PROJECT_REPONAME' >> $BASH_ENV
+    echo 'export GITHUB_TAG=$CIRCLE_TAG' >> $BASH_ENV
+    echo 'export GIT_CI_USER=$GIT_CI_USER' >> $BASH_ENV
+    echo 'export GIT_CI_EMAIL=$GIT_CI_EMAIL' >> $BASH_ENV
+
+defaults_git_identity_setup: &defaults_git_identity_setup
+  name: Setup Git Identity
+  command: |
+    echo "Setting BASH_ENV..."
+    source $BASH_ENV
+    git config --global user.email "$GIT_CI_USER"
+    git config --global user.password "$GIT_CI_PASSWORD"
+    git config --global user.name "$GIT_CI_EMAIL"
+    git remote add $GITHUB_PROJECT_USERNAME https://$GIT_CI_USER:$GITHUB_TOKEN@github.com/$GITHUB_PROJECT_USERNAME/$GITHUB_PROJECT_REPONAME.git
+
+defaults_slack_announcement: &defaults_slack_announcement
+  name: Slack announcement for tag releases
+  command: |
+    curl -X POST \
+      $SLACK_WEBHOOK_ANNOUNCEMENT \
+      -H 'Content-type: application/json' \
+      -H 'cache-control: no-cache' \
+      -d "{
+      \"text\": \"*${CIRCLE_PROJECT_REPONAME}* - Release \`${CIRCLE_TAG}\`: https://github.com/mojaloop/${CIRCLE_PROJECT_REPONAME}/releases/tag/${CIRCLE_TAG}\"
+    }"
+
 ##
 # Jobs
 #
 # A map of CircleCI jobs
 ##
 jobs:
-  build_and_deploy_s3:
+  build_and_deploy:
     executor: default-docker
     steps:
       - checkout
@@ -55,15 +87,23 @@ jobs:
 
             pip3 install awscli
       - run:
-          name: test aws cli + permissions
-          command: |
-            aws --version
-            aws s3 ls s3://mojaloop-ref-arch-docs
+          <<: *defaults_git_env_vars
       - run:
-          name: run build and deploy script
-          command: ./scripts/_deploy_preview_s3.sh
+          <<: *defaults_git_identity_setup
+      - run:
+          name: run build and publish gh pages script
+          command: ./scripts/.publish-gh-pages.sh
+      ## Useful for s3 publishing
+      # - run:
+      #     name: test aws cli + permissions
+      #     command: |
+      #       aws --version
+      #       aws s3 ls s3://mojaloop-ref-arch-docs
+      # - run:
+      #     name: run build and deploy script
+      #     command: ./scripts/.deploy_preview_s3.sh
     
-      # TODO: announce preview docs are ready
+      ## TODO
       # - run:
       #     <<: *defaults_slack_announcement
 
@@ -76,9 +116,97 @@ workflows:
   version: 2
   build_and_test:
     jobs:
-      - build_and_deploy_s3:
+      - build_and_deploy:
           context: org-global
           filters:
             branches:
               only:
                 - main
+
+
+## Below is the script for publishing to the temp s3 bucket - to be removed in future
+
+# # CircleCI v2.1 Config
+# version: 2.1
+
+# ##
+# # orbs
+# #
+# # Orbs used in this pipeline
+# ##
+# orbs:
+#   slack: circleci/slack@3.4.2
+#   pr-tools: mojaloop/pr-tools@0.1.8
+
+
+# ##
+# # defaults
+# #
+# # YAML defaults templates, in alphabetical order
+# ##
+
+# ##
+# # Executors
+# #
+# # CircleCI Executors
+# ##
+# executors:
+#   default-docker:
+#     working_directory: /home/circleci/project
+#     docker:
+#       - image: node:12.16.1-alpine
+
+#   default-machine:
+#     machine:
+#       image: ubuntu-1604:201903-01
+
+# ##
+# # Jobs
+# #
+# # A map of CircleCI jobs
+# ##
+# jobs:
+#   build_and_deploy_s3:
+#     executor: default-docker
+#     steps:
+#       - checkout
+#       - run:
+#           name: Install default dependencies
+#           command: |
+#             apk --no-cache add git \
+#               ca-certificates \
+#               curl \
+#               openssh-client \
+#               make gcc g++ python libtool autoconf automake \
+#               python3 \
+#               py3-pip
+
+#             pip3 install awscli
+#       - run:
+#           name: test aws cli + permissions
+#           command: |
+#             aws --version
+#             aws s3 ls s3://mojaloop-ref-arch-docs
+#       - run:
+#           name: run build and deploy script
+#           command: ./scripts/.deploy_preview_s3.sh
+    
+#       # TODO: announce preview docs are ready
+#       # - run:
+#       #     <<: *defaults_slack_announcement
+
+# ##
+# # Workflows
+# #
+# # CircleCI Workflow config
+# ##
+# workflows:
+#   version: 2
+#   build_and_test:
+#     jobs:
+#       - build_and_deploy_s3:
+#           context: org-global
+#           filters:
+#             branches:
+#               only:
+#                 - main

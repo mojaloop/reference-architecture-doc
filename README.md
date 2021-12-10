@@ -38,22 +38,19 @@ The latest version will automatically be loaded when access the website, with a 
 
 We deploy these docs automatically with CircleCI upon merges to the `main` branch.
 
-Go to: https://ref-arch-docs.moja-lab.live/ to see the live site!
+Follow this link to see the live site: https://docs.mojaloop.io/reference-architecture-doc
 
-The deploy script does not currently take versioning into account, but will in the future.
-
-> Note: for this to work, we have temporarily disabled the "only build pull requests" setting on Circleci
-> Someone please remember to turn that back on!
+The live site is hosted using git-pages, and is served from the [vue-pages](https://github.com/mojaloop/reference-architecture-doc/tree/vue-pages) branch of this repository.
 
 ### Deploying Manually
 
 You can also deploy them manually, by running:
 
 ```bash
-./scripts/_deploy_preview_s3.sh
+sh ./scripts/.publish-gh-pages.sh
 ```
 
-Note that you need to have the `aws` cli, AWS access, and `aws-mfa` set up on your machine for this to work.
+Note that you will need write access to this Github repository.
 
 ## License
 

@@ -51,7 +51,6 @@ The diagram below shows where a reference architecture exists in reference to ot
 
 ![Perform Transfer (Universal Mode)](./assets/process.png)
 
-TBD
-
 ## Reference Architecture Artifacts
 
+TBD

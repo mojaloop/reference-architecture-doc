@@ -112,10 +112,15 @@ Access requirements for the Scheduling BC still require definition.
 #### Scheduling BC - Exceptions
 
 * Malformed instructions
+
   * Invalid date/time, including times in the past
+  
   * Invalid BC or command
+
 * Failed execution (identified through call-back)
+
 * Insufficient authority for the Client BC to perform the CRD operation
+
 * Failure to process/execute Reminder
 
 #### Questions
@@ -129,5 +134,3 @@ A number of questions came up during the Reference Architecture Work Sessions an
 * Is the Client BC or the person who scheduled a Reminder noted as the "User" by the Scheduling BC?  IOW, whose ID is stamped on the process audit trail?
 
   * Answer: This should be determined by the Client BC, based on its action on receipt of the Reminder.
-
-[^1]: For further information please view: [Link Name](https://...)
