@@ -33,10 +33,10 @@ The login function requires that the user id and a secret key be passed in the h
 
 ### Authorization Model (AuthZ)
 
-IAM will provide users / groups, roles and privileges associations. Each BC will also have a list of related roles. When a function or microservice
-is called, the role provided in the JWT will be compared with the roles associated with the BC, after signature verfication. 
+IAM will provide users / groups, roles and privileges associations. Each BC will also have a list of related roles. When an API function or microservice
+is called, the JWT signature is verified using the public key and the role provided in the JWT is compared to the role associated with the BC. If the signature verification and the role are successfully verified, the API function or microservice is executed.   
 
-![Use Case - Example REPLACE ME](./assets/securityBCv0.8.png)
+![Use Case - Example REPLACE ME](./assets/SecurityBCAuthZ.png)
 
 ### BC Bootstrap 
 
