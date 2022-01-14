@@ -55,7 +55,7 @@ At startup the BC will request authentication issuer public keys from Security B
 
 Roles are associated with a number of privileges.
 
-![Use Case - Example REPLACE ME](./assets/securityBCv0.6.png)
+![Use Case - Example REPLACE ME](./assets/SecurityBCRolePrivilegesAssociation.png)
 
 ### Example Query / call 
 
