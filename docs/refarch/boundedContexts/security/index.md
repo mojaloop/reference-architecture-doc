@@ -62,7 +62,7 @@ Roles are associated with a number of privileges.
 Client Authorization should be performed by using an access token. A client first needs to request the Authorization Service to create an access token for the user who requests to access the interface. The user is authenticated in the Authorization Service. The created access token is then used for authorization in the interface. 
 To use the access token, the client must set the Authorization HTTP header to Bearer [access_token] in each request to the interface.
 
-![Use Case - Example REPLACE ME](./assets/securityBCv0.7.png)
+![Use Case - Example REPLACE ME](./assets/SecurityBCExampleQueryCall.png)
         
 
 
