@@ -1,10 +1,6 @@
-# Bounded Context
+# Common Terms and Conventions Used
 
-In this section we take a deep dive into each of the identified Bounded Contexts indicating their purpose (description), Subdomains spanned, Use Cases that each Bounded Context addresses, and concluding remarks where they have been included.
-
-## Common Terms and Conventions Used
-
-| **Common Terms and Conventions (All Bounded Contexts and Use Cases**)||
+| **List of Common Terms and Conventions used in all Bounded Contexts and Use Cases in the Reference Architecture**||
 |    **Convention/Term**    |       **Description**       |
 | :------------------------ | :-------------------------- |
 | Actors                                                            | Human or external system Use Case participant. All Use Cases are driven by Actors.|
