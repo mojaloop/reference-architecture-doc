@@ -8,11 +8,11 @@ Bounded Contexts should publish the events in a defined format and using whateve
 
 ### Event Based Logging
 
-![Use Case - Example REPLACE ME](./assets/0-logging.png)
+![Use Case - Example REPLACE ME](assets/0-logging.png)
 > Event Based Logging
 
 <!-- Footnotes themselves at the bottom. -->
 ## Notes
 
-[^1]: [Mojaloop Common Interface List](../../commonInterfaces.md)
+[^1]: [Mojaloop Common Interface List](../../refarch/commonInterfaces.md)
 [^2]: [Auditing Bounded Context](../auditing/index.md)

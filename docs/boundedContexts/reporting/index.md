@@ -39,7 +39,7 @@ Terms with specific and commonly accepted meaning within the Bounded Context in 
 | Reporting or dashboard Tool  | External tools that use data in the Reporting Data Store as source to produce reports, dashboards or any other reporting related task |
 
 ## Functional Overview
-![Reporting Functional Overview diagram](./assets/reporting_functional_overview_24Sep2021.png)
+![Reporting Functional Overview diagram](assets/reporting_functional_overview_24Sep2021.png)
 
 
 ## Use Cases
@@ -47,22 +47,22 @@ Terms with specific and commonly accepted meaning within the Bounded Context in 
 ### Event based Reporting (preferred way)
 Strategy to feed the Reporting Data Store by having Client BC Reporting Component listening to the internal events and persisting the related reporting data.
 
-![Event Based Reporting use case diagram](./assets/event_based_reporting_24Sep2021.png)
+![Event Based Reporting use case diagram](assets/event_based_reporting_24Sep2021.png)
 
 ### Pull based Reporting
 Strategy to feed the Reporting Data Store by having Client BC Reporting Component fetching data from the Client BC API.
-![Pull Based Reporting use case diagram](./assets/pull_based_reporting_24Sep2021.png)
+![Pull Based Reporting use case diagram](assets/pull_based_reporting_24Sep2021.png)
 
 ### Push based Reporting
 Strategy to feed the Reporting Data Store by having the Client BC sending to the Client BC Reporting Component API the data to be reported, and the Client BC Reporting Component translating and persisting it.
-![Push Based Reporting use case diagram](./assets/push_based_reporting_24Sep2021.png)
+![Push Based Reporting use case diagram](assets/push_based_reporting_24Sep2021.png)
 
 ### User Report and Dashboard Consumption
 Example of how a user can consume reports nd dashboards
 
-![User Report and Dashboard Consumption diagram](./assets/user_reporting_consumption_24Sep2021.png)
+![User Report and Dashboard Consumption diagram](assets/user_reporting_consumption_24Sep2021.png)
 
 <!-- Footnotes themselves at the bottom. -->
 ## Notes
 
-[^1]: Common Interfaces: [Mojaloop Common Interface List](../../commonInterfaces.md)
+[^1]: Common Interfaces: [Mojaloop Common Interface List](../../refarch/commonInterfaces.md)

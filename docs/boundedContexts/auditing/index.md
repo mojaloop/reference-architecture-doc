@@ -12,7 +12,7 @@ Authorized users are able to interrogate the Auditing BC via an Operation API ex
 
 ## Functional Overview
 
-![Use Case - Auditing System Functional Overview](./assets/ML2RA_FunctionalOverview_09282021.png)
+![Use Case - Auditing System Functional Overview](assets/ML2RA_FunctionalOverview_09282021.png)
 >
 
 ## Terms
@@ -34,7 +34,7 @@ The Auditing BC Startup UC is triggered during startup (intervals or events) and
 
 #### Flow Diagram
 
-![Use Case - Auditing BC Startup](./assets/ML2RA_Audit_bcStartup_20210920.png)
+![Use Case - Auditing BC Startup](assets/ML2RA_Audit_bcStartup_20210920.png)
 >
 
 ### Sync/RPC Audit
@@ -45,7 +45,7 @@ The Sync/RPC Audit UC is activated for audit-worthy events triggered during a tr
 
 #### Flow Diagram
 
-![Use Case - Sync/RPC Audit](./assets/ML2RA_Audit_syncRpcAudit_20210920.png)
+![Use Case - Sync/RPC Audit](assets/ML2RA_Audit_syncRpcAudit_20210920.png)
 >
 
 ### Event Based Audit
@@ -56,7 +56,7 @@ The Event Based Audit UC is triggered when a participating BC includes local aud
 
 #### Flow Diagram
 
-![Use Case - Event Based Audit](./assets/ML2RA_Audit_eventBasedAudit_20210920.png)
+![Use Case - Event Based Audit](assets/ML2RA_Audit_eventBasedAudit_20210920.png)
 >
 
 <!-- Footnotes themselves at the bottom. -->
@@ -64,4 +64,4 @@ The Event Based Audit UC is triggered when a participating BC includes local aud
 
 [^1]: Cryptographic does not refer to Cryptocurrency.  It refers to algorithmic techniques and methodologies that are employed by systems to prevent unauthorised systems or persons from accessing, identifying, or using stored data. For further reading please refer to the accompanying Wikipedia article: [Cryptography, From Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/Cryptography)
 
-[^2]: Common Interfaces: [Mojaloop Common Interface List](../../commonInterfaces.md)
+[^2]: Common Interfaces: [Mojaloop Common Interface List](../../refarch/commonInterfaces.md)

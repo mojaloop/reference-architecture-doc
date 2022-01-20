@@ -15,7 +15,7 @@ The following terms are used in this BC, also known as a domain.
 
 ## Functional Overview - Transfers - Bulk
 
-![Functional Overview - Transfers - Bulk](./assets/transfersPerformTransferBulk_20210827.png)
+![Functional Overview - Transfers - Bulk](assets/transfersPerformTransferBulk_20210827.png)
 >
 
 ## Use Cases
@@ -28,7 +28,7 @@ Transfer method without Actor intervention.
 
 #### Flow Diagram
 
-![Perform Transfer (Universal Mode)](./assets/transfersUniversal_20210715.png)
+![Perform Transfer (Universal Mode)](assets/transfersUniversal_20210715.png)
 >
 
 ### Perform Transfer with Payee Confirmation
@@ -39,7 +39,7 @@ Transfer method with Actor intervention.
 
 #### Flow Diagram
 
-![Use Case - Perform Transfer with Payee Confirmation](./assets/transfersWithPayeeConfirm_20210715.png)
+![Use Case - Perform Transfer with Payee Confirmation](assets/transfersWithPayeeConfirm_20210715.png)
 >
 
 ### Query (GET) Transfer
@@ -50,7 +50,7 @@ Transfer status report query.
 
 #### Flow Diagram
 
-![Use Case - Query (GET) Transfer](./assets/transfersQuery_GET_20210716.png)
+![Use Case - Query (GET) Transfer](assets/transfersQuery_GET_20210716.png)
 >
 
 ### Perform Transfer - Duplicate POST (Resend)
@@ -61,7 +61,7 @@ Duplicate Transfer request method - completes
 
 #### Flow Diagram
 
-![Use Case - Perform Transfer - Duplicate POST (Resend)](./assets/transfersDuplicatePOSTResend_20210716.png)
+![Use Case - Perform Transfer - Duplicate POST (Resend)](assets/transfersDuplicatePOSTResend_20210716.png)
 >
 
 ### Perform Transfer - Duplicate POST (Ignore)
@@ -72,7 +72,7 @@ Duplicate Transfer request method - ignored
 
 #### Flow Diagram
 
-![Use Case - Perform Transfer - Duplicate POST (Ignore)](./assets/transfersDuplicatePOST_Ignore_20210716.png)
+![Use Case - Perform Transfer - Duplicate POST (Ignore)](assets/transfersDuplicatePOST_Ignore_20210716.png)
 >
 
 ## Non-Happy Path Use Case Variations
@@ -85,7 +85,7 @@ Transfer request rejected by Payee
 
 #### Flow Diagram
 
-![Use Case - Perform Transfer - PayeeFSP Rejects Transfer](./assets/transfersPayeeFSPRejectsTransfer_20210716.png)
+![Use Case - Perform Transfer - PayeeFSP Rejects Transfer](assets/transfersPayeeFSPRejectsTransfer_20210716.png)
 >
 
 ### Perform Transfer - Timeout (Prepare)
