@@ -16,7 +16,7 @@ Terms with specific and commonly accepted meaning within the Bounded Context in 
 
 ## Functional Overview - Accounts and Balances
 
-![Functional Overview - Accounts and Balances](./assets/functionalOverview.png)
+![Functional Overview - Accounts and Balances](./assets/ML2RA_AccBal_Functional_20220124-2.png)
 >
 
 ## Use Cases
@@ -25,16 +25,18 @@ Terms with specific and commonly accepted meaning within the Bounded Context in 
 
 #### Description
 
-Create new participant/transfer/settlement account in the System Ledger. <br/>Specify credit/debit Journal Entry limits.<br/>Ensure Account is unique in the System Ledger.
+Create new participant/transfer/settlement account in the System Ledger.  (Participant Account creation occurs from both the Participant Lifecycle Management and the Settlement BCs.  Examples of both have been provided in the Flow Diagrams below)
+Specify credit/debit Journal Entry limits
+Ensure Account is unique in the System Ledger.
 
 #### Flow Diagram
-Account creation from [Participant Lifecycle Management BC](../participantLifecycleManagement/index.md).
-![Use Case - PLCM BC](../participantLifecycleManagement/assets/6-participant-accounts.jpg)
-###
+Account creation from [Participant Lifecycle Management BC](../participantLifecycleManagement/index.md):
 
-Account creation from [Settlements BC](../settlements/index.md).
-![Use Case - Settlements BC](../settlements/assets/settleBootSettleModel_20210827.png)
-###
+![Use Case - PLCM BC](../participantLifecycleManagement/assets/ML2RA_PartLife_addParticipant-Init_20220124.png)
+
+Account creation from [Settlements BC](../settlements/index.md):
+
+![Use Case - Settlements BC](../settlements/assets/ML2RA_BootSettleModelViaConfig_settlements_20220124.png)
 
 ### Close Account
 
@@ -63,7 +65,8 @@ Query Journal debit/credit Entries for an Account.
 
 #### Description
 
-Insert a participant journal entry into the System Ledger specifying the debit and credit accounts.<br/>Respond with the updated account balance.
+Insert a participant journal entry into the System Ledger specifying the debit and credit accounts (There are three ways through which participant journal entries can be made.  See the Flow Diagrams below for a description of each.)
+Respond with the updated account balance.
 
 #### Flow Diagram
 

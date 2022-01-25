@@ -12,7 +12,7 @@ Authorized users are able to interrogate the Auditing BC via an Operation API ex
 
 ## Functional Overview
 
-![Use Case - Auditing System Functional Overview](assets/ML2RA_FunctionalOverview_09282021.png)
+![Use Case - Auditing System Functional Overview](./assets/ML2RA_FunctionalOverview_09282021.png)
 >
 
 ## Terms
@@ -21,8 +21,8 @@ Terms with specific and commonly accepted meaning within the Bounded Context in 
 
 | Term | Description |
 |---|---|
-| KMS | Key Management System - Provides encryption/decription and Certificate Authority services to the Switch environment (issue, sign, and verification via the Security BC)  |
-| CPM | Crypto Provider Module - Manages the cryptographic techniques and methodologies employed by the Switch to provide end-to-end encryption and decryption services for any stored or transmitted data. |
+| **KMS** | Key Management System - Provides encryption/decription and Certificate Authority services to the Switch environment (issue, sign, and verification via the Security BC)  |
+| **CPM** | Crypto Provider Module - Manages the cryptographic techniques and methodologies employed by the Switch to provide end-to-end encryption and decryption services for any stored or transmitted data. |
 
 ## Use Cases
 
@@ -34,7 +34,7 @@ The Auditing BC Startup UC is triggered during startup (intervals or events) and
 
 #### Flow Diagram
 
-![Use Case - Auditing BC Startup](assets/ML2RA_Audit_bcStartup_20210920.png)
+![Use Case - Auditing BC Startup](./assets/ML2RA_Audit_bcStartup_20210920.png)
 >
 
 ### Sync/RPC Audit
@@ -45,7 +45,7 @@ The Sync/RPC Audit UC is activated for audit-worthy events triggered during a tr
 
 #### Flow Diagram
 
-![Use Case - Sync/RPC Audit](assets/ML2RA_Audit_syncRpcAudit_20210920.png)
+![Use Case - Sync/RPC Audit](./assets/ML2RA_Audit_syncRpcAudit_20210920.png)
 >
 
 ### Event Based Audit
@@ -56,7 +56,7 @@ The Event Based Audit UC is triggered when a participating BC includes local aud
 
 #### Flow Diagram
 
-![Use Case - Event Based Audit](assets/ML2RA_Audit_eventBasedAudit_20210920.png)
+![Use Case - Event Based Audit](./assets/ML2RA_Audit_eventBasedAudit_20210920.png)
 >
 
 <!-- Footnotes themselves at the bottom. -->

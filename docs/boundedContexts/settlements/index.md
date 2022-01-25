@@ -8,9 +8,11 @@ The following terms are used in this BC, also known as a domain.
 
 | Term     | Description  |
 | -------- | ------------ |
-| Operator | Person or System issuing instructions/requests |
-| Participant | FSP/PISP or FSP Customer |
-| Account | Ledger Journal Account (Cr/Dr) |
+| **DNS** | Deferred Net Settlement |
+| **IGS/RTGS** | Immediate Gross Settlement/Real-Time Gross Settlement |
+| **Operator** | Person or System issuing instructions/requests |
+| **Participant** | FSP/PISP or FSP Customer |
+| **Account** | Ledger Journal Account (Cr/Dr) |
 
 ## Functional Overview
 
@@ -32,7 +34,7 @@ Method of deferring payments to enable settlement on multiple batches according 
 ### Immediate Gross Settlement (IGS)
 
 #### Description
-Method to enable immediate settlement of batches.  This is useful for SME environments where quick payment turnarounds are often desirable in order to maximize liquidity.  IGS is also known as Real Time Gross Settlement (RTGS)
+Method to enable immediate settlement of batches.  This is useful for SME environments where quick payment turnarounds are often desirable in order to maximize their liquidity.  IGS is also known as Real-Time Gross Settlement (RTGS)
 
 #### Flow Diagram
 
@@ -66,7 +68,7 @@ Method that configures the Settlement Method (DNS/IGS) based upon the system sta
 
 #### Flow Diagram
 
-![Use Case - Bootstrap (Startup) Settlement Model via Configuration](./assets/settleBootSettleModel_20210827.png)
+![Use Case - Bootstrap (Startup) Settlement Model via Configuration](./assets/ML2RA_BootSettleModelViaConfig_settlements_20220124.png)
 >
 
 ### Create Settlement related accounts for newly created Particpants

@@ -12,21 +12,21 @@ The following common term/s are in use in this BC:
 
 | Term | Description |
 |---|---|
-| Client BC | Any other BC making use of the Scheduling BC Services |
+| **Client BC** | Any other BC making use of the Scheduling BC Services |
 
 ## Use Cases
 
-***Note:*** *An "Update Reminder" UC has not been provided. The recommended course of action to follow is to Delete and Create a new Reminder.*
-
+<!--***Note:*** *An "Update Reminder" UC has not been provided. The recommended course of action to follow is to Delete and Create a new Reminder.*
+-->
 The status of the UCs for the Scheduling BC is as follows:
 
 | Available UCs |  |  | Planned UCs |  |
 | --- | :-- | --- | --- | :-- |
 | **Use Case** | **Description** | | **Use Case** | **Description** |
-| Create Reminder | Client BC requests a reminder to be created | | Client Reminder Query | Client BC queries its own reminders |
-| Delete Reminder | Client BC requests a reminder to be deleted | | Admin Reminder Query | Platform Admin queries all reminders |
-| Reminder Trigger | Scheduling BC executes reminder trigger when the time comes | | |
-| Update Reminder | *Not provided.  Recommended solution: delete and create a new Reminder* | | |  |  |
+| **Create Reminder** | Client BC requests a reminder to be created | | **Client Reminder Query** | Client BC queries its own reminders |
+| **Delete Reminder** | Client BC requests a reminder to be deleted | | **Admin Reminder Query** | Platform Admin queries all reminders |
+| **Reminder Trigger** | Scheduling BC executes reminder trigger when the time comes | | |
+| **Update Reminder** | *Not provided.  Recommended solution: delete and create a new Reminder* | | |  |  |
 
 <!---The following UCs are planned for inclusion in the Scheduling BC -
 
@@ -73,13 +73,13 @@ The Create Reminder request needs to include the following data:
 
 | Data | Description |
 | --- | ---- |
-| *Identifier* | name/id |
-| *Cron Definition* | recurring?, time interval? |
-| *Trigger Transport* | HTTP Callback/Event; Callback URL or Event Topic |
-| *Special Payload* | opaque for the scheduling BC |
-| *Recovery Conditions* | retry, reschedule, abort, abandon |
-| *Alerts* | notification, logging on exceptions |
-| *Actions* | register of automatable/schedulable BC processes |
+| **Identifier** | name/id |
+| **Cron Definition** | recurring?, time interval? |
+| **Trigger Transport** | HTTP Callback/Event; Callback URL or Event Topic |
+| **Special Payload** | opaque for the scheduling BC |
+| **Recovery Conditions** | retry, reschedule, abort, abandon |
+| **Alerts** | notification, logging on exceptions |
+| **Actions** | register of automatable/schedulable BC processes |
 
 #### Scheduling BC - Requirements
 
@@ -129,4 +129,3 @@ A number of questions came up during the Reference Architecture Work Sessions an
 * Is the Client BC or the person who scheduled a Reminder noted as the "User" by the Scheduling BC?  IOW, whose ID is stamped on the process audit trail?
 
     * Answer: This should be determined by the Client BC, based on its action on receipt of the Reminder.
-

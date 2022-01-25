@@ -104,10 +104,12 @@ module.exports = {
       {
         title: 'Bounded Contexts',
         path: '/boundedContexts/',      // optional, link of the title, which should be an absolute path and must exist
+        //collapsable: false,
+        initialOpenGroupIndex: -1,
         children: [
           {
             title: 'Common Terms & Conventions',
-            path: '/boundedContexts/',      // optional, link of the title, which should be an absolute path and must exist
+            path: '/boundedContexts/commonTermsConventions/',      // optional, link of the title, which should be an absolute path and must exist
             // children: [ /* ... */ ],
           },
           {
@@ -150,11 +152,11 @@ module.exports = {
             path: '/boundedContexts/participantLifecycleManagement/',      // optional, link of the title, which should be an absolute path and must exist
             // children: [ /* ... */ ],
           },
-          {
-            title: 'Platform Monitoring',
-            path: '/boundedContexts/platformMonitoring/',      // optional, link of the title, which should be an absolute path and must exist
-            // children: [ /* ... */ ],
-          },
+          //{
+          //  title: 'Platform Monitoring',
+          //  path: '/boundedContexts/platformMonitoring/',      // optional, link of the title, which should be an absolute path and must exist
+          // children: [ /* ... */ ],
+          //},
           {
             title: 'Reporting',
             path: '/boundedContexts/reporting/',      // optional, link of the title, which should be an absolute path and must exist
@@ -165,11 +167,11 @@ module.exports = {
             path: '/boundedContexts/scheduling/',      // optional, link of the title, which should be an absolute path and must exist
             // children: [ /* ... */ ],
           },
-          {
-            title: 'Security',
-            path: '/boundedContexts/security/',      // optional, link of the title, which should be an absolute path and must exist
-            // children: [ /* ... */ ],
-          },
+          //{
+          //  title: 'Security',
+          //  path: '/boundedContexts/security/',      // optional, link of the title, which should be an absolute path and must exist
+          // children: [ /* ... */ ],
+          //},
           {
             title: 'Settlements',
             path: '/boundedContexts/settlements/',      // optional, link of the title, which should be an absolute path and must exist
@@ -189,7 +191,7 @@ module.exports = {
       },
       {
         title: 'Common Interface List',
-        path: '/refarch/commonInterfaces',      // optional, link of the title, which should be an absolute path and must exist
+        path: '/boundedContexts/commonInterfaces/',      // optional, link of the title, which should be an absolute path and must exist
         // children: [ /* ... */ ],
       },
 

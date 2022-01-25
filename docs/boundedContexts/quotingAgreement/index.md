@@ -8,8 +8,8 @@ The following terms are used in this BC, also known as a domain.
 
 | Term | Description |
 |---|---|
-| (D)FSP | (Digital) Financial Services Provider |
-| Participant | Financial Services Provider |
+| **(D)FSP** | (Digital) Financial Services Provider |
+| **Participant** | Financial Services Provider |
 
 ## Functional Overview
 
@@ -19,49 +19,61 @@ The following terms are used in this BC, also known as a domain.
 
 ### Calculate Quote - Happy Path
 
+#### Description
+
 This process obtains an array of relevant Participant data including status flags, calculates the cost of Transfer including fees, and provides it to the Participant/s.  It also able to support the storing of Participants requests & responses (i.e. accept or reject the quote).
 
-### Flow Diagram
+#### Flow Diagram
 
 ![Use Case - Calculate Quote - Happy Path](./assets/qtaCalculateQuoteHappyPath_20210825.png)
 
 ### Get Quote - Happy Path
 
+#### Description
+
 Process to obtain and deliver existing Quote details to Participant/s on request.
 
-### Flow Diagram
+#### Flow Diagram
 
 ![Use Case - Example REPLACE ME](./assets/qtaGetQuoteHappyPath.png)
 
 ### Calculate Quote - Invalid Quote Request
 
+#### Description
+
 Process that enables the system to invalidate quote requests by monitoring and responding to invalid Request Events, FSPs, or duplicate requests.
 
-### Flow Diagram
+#### Flow Diagram
 
 ![Use Case - Calculate Quote - Invalid Quote Request](./assets/qtaCalculateQuoteInvalidQuoteRequest_20210825.png)
 
 ### Calculate Quote - Invalid FSPs
 
+#### Description
+
 Process that enables the system to invalidate FSP quote requests where the FSP details mismatch the original Quote for either one or both Participants.
 
-### Flow Diagram
+#### Flow Diagram
 
 ![Use Case - Calculate Quote - Invalid FSPs](./assets/qtaCalculateQuoteInvalidFSPs_20210825.png)
 
 ### Calculate Quote - Invalid Scheme Rules Detected In Request
 
+#### Description
+
 Process to enable the system to invalidate quote requests where Scheme Rules are violated, by one or more Participants, for example where Quote Period Limit reached.
 
-### Flow Diagram
+#### Flow Diagram
 
 ![Use Case - Calculate Quote - Invalid Scheme Rules detected in Request](./assets/qtaCalculateQuoteInvalidSchemeRulesRequest_20210825.png)
 
 ### Calculate Quote - Invalid Scheme Rules Detected In Response
 
+#### Desciption
+
 Process to enable the system to invalidate quote reponses where Scheme Rules are violated by one or more Participants, for example, where invalid terms are detected.
 
-### Flow Diagram
+#### Flow Diagram
 
 ![Use Case - Calculate Quote - Invalid Scheme Rules detected in response](./assets/qtaCalculateQuoteInvalidSchemeRulesResponse_20210825.png)
 

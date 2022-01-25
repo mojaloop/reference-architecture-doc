@@ -80,7 +80,6 @@ The following Cross cutting concerns have been identified in Mojaloop:
 | Technical Platform Management BC         | Manage platform monitoring, and platform management. Planned solutions will fit into the Generic category.                                                                                                                                                                                                                                                                                                                                |
 
 <!-- Footnotes themselves at the bottom. -->
-### Notes
+<!--### Notes
 
-
-[^6]: “AS-IS” - refers to the current Mojaloop system, as in, “The system architects have identified problems in the system as is.”, or in its current state
+[^6]: “AS-IS” - refers to the current Mojaloop system, as in, “The system architects have identified problems in the system as is.”, or in its current state-->

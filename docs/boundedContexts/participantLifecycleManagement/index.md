@@ -2,10 +2,10 @@
 
 The Participant Lifecycle Bounded Context's primary concern regards anything to do with the management of a Participant within the Mojaloop Environment. When we are defining the Participant Lifecycle Management Bounded Context there are a few key concepts that should be clearly defined.
 
-**Maker-Checker Process**
+#### Maker-Checker Process
 The Maker-Checker Process establishes the 6 eye verification and ensure that no write action takes place without being validated by some one with adiquite permissions. These permissions are defined by the Participant Lifecycle Management Bounded Context but are configurable and assignable as needed by the Scheme Rules. It is recommended that the users/roles that receive the maker permissions do not receive the checker permissions, and that the checker permissions are assigned to different users/roles. It will still be possible to assign both responsibilities to the same users/roles but this then voids the security that is provided by the maker-checker process that the system was built to support.
 
-**Participant States**
+#### Participant States
 The participant state management allows the admin operators to control permissions for a given participant based on their state. During the Platform Configuration phase, the Participant Lifecycle Management Bounded Context expects participant states to be defined and configured with either roles/permissions. The participant states can then be assigned to a given participant through the Participant Status Management process.
 
 ## Terms
@@ -14,9 +14,9 @@ Terms with specific and commonly accepted meaning within the Bounded Context in 
 
 | Term        | Description  |
 | ----------- | ------------ |
-| Participant | Financial Service Provider that register on the Mojaloop ecosystem. Allowing said FSP to be able to transact with other Participants |
-| Maker       | Representative that is responsible for creating data structures through the use of request.   |
-| Checker     | Representative that is responsible for approving and accepting data that has been requested to be created. |
+| **Participant** | Financial Service Provider that register on the Mojaloop ecosystem. Allowing said FSP to be able to transact with other Participants |
+| **Maker**       | Representative that is responsible for creating data structures through the use of request.   |
+| **Checker**     | Representative that is responsible for approving and accepting data that has been requested to be created. |
 
 ## Functional Overview
 
@@ -24,7 +24,7 @@ Please review the common interfaces page to see how these interaction take place
 
 ![Use Case - Example REPLACE ME](./assets/0-functional-overview.jpg)
 
-> Create Participant (Single Step Registration)
+>
 
 ## Use Cases
 
@@ -36,9 +36,9 @@ Process to create a Participant on the Mojaloop ecosystem, this usually requires
 
 #### Flow Diagram
 
-![Use Case - Example REPLACE ME](./assets/1-create-participant.jpg)
+![Use Case - Example REPLACE ME](./assets/ML2RA_PartLife_addParticipant-Init_20220124.png)
 
-> Create Participant (Single Step Registration)
+>
 
 ### Manage Funds
 
@@ -50,7 +50,7 @@ Process to either withdraw or deposit funds to the Participant's account(s).
 
 ![Use Case - Example REPLACE ME](./assets/2-manage-funds.jpg)
 
-> Manage Funds
+>
 
 ### Update Endpoints
 
@@ -62,7 +62,7 @@ Updates the endpoint of a given participant, when the request has been approved 
 
 ![Use Case - Example REPLACE ME](./assets/3-update-endpoints.jpg)
 
-> Update Endpoints
+>
 
 ### Update Participant Status
 
@@ -74,7 +74,7 @@ Changes the Status of a given participant to enforce different roles/scheme rule
 
 ![Use Case - Example REPLACE ME](./assets/4-participant-update-status.jpg)
 
-> Update Participant Status
+>
 
 ### Get Participant
 
@@ -86,7 +86,7 @@ Gets information with about a given participant.
 
 ![Use Case - Example REPLACE ME](./assets/5-get-participant.jpg)
 
-> Get Participant
+>
 
 ### Participant Accounts
 
@@ -102,7 +102,7 @@ These process controls different aspects of a Participant's accounts, from creat
 
 ![Use Case - Example REPLACE ME](./assets/6-participant-accounts.jpg)
 
-> Participant Accounts
+>
 
 ### Reserve Liquidity Cover
 
@@ -114,7 +114,7 @@ Reserves liquidity cover for a Participant and notifies the Accounts and Balance
 
 ![Use Case - Example REPLACE ME](./assets/7-liquidity-cover-reservations.jpg)
 
-> Reserve Liquidity Cover
+>
 
 ### Liquidity Threshold Exceeded
 
@@ -126,7 +126,7 @@ This process notifies the participant that the liquidity threshold,that has been
 
 ![Use Case - Example REPLACE ME](./assets/8-liquidity-threshold-exceeded.jpg)
 
-> Liquidity Threshold Exceeded
+>
 
 ### Liquidity Limit Exceeded
 
@@ -138,7 +138,7 @@ This process notifies the participant when ha reached the liquidity limit that w
 
 ![Use Case - Example REPLACE ME](./assets/9-liquidity-limit-exceeded.jpg)
 
-> Liquidity Limit Exceeded
+>
 
 ### Liquidity Threshold & Limit Reset
 
@@ -150,7 +150,7 @@ This process resets the liquidity limit or threshold notification checks when su
 
 ![Use Case - Example REPLACE ME](./assets/10-liquidity-limit-and-threshold-reset.jpg)
 
-> Liquidity Limit Exceeded
+>
 
 ### Liquidity Cover Queries
 
@@ -162,9 +162,9 @@ Queries to check the current liquidity as well as other read operations that are
 
 ![Use Case - Example REPLACE ME](./assets/11-liquidity-cover-queries.jpg)
 
-> Liquidity Cover Queries
+>
 
-## Cononical Model
+## Canonical Model
 
 -   Participant
     -   id

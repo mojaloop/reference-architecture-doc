@@ -8,9 +8,9 @@ The following common terms are used in this BC:
 
 | Term | Description  |
 | ---- | ------------ |
-| PISP | Payment Initiation Service Provider (e.g. PayPal, ApplePay, GooglePay, etc.) |
-| DFSP | Digital Financial Service Provider (e.g. Bank, Mobile Money Operator) |
-| User | DFSP/PISP client (as indicated) |
+| **PISP** | Payment Initiation Service Provider (e.g. PayPal, ApplePay, GooglePay, etc.) |
+| **DFSP** | Digital Financial Service Provider (e.g. Bank, Mobile Money Operator) |
+| **User** | DFSP/PISP client (as indicated) |
 
 ## Use Cases
 
@@ -239,7 +239,7 @@ The workflow provided by this UC enables the Switch to handle instances where a 
 
 #### Flow Diagram
 
-![Use Case - Third Party Transaction Request Rejected by user](./assets/3PAT_TxFail_UserRejected_20210914.png)
+![Use Case - Third Party Transaction Request Rejected by user](./assets/3PAT_TxFail_UserRejected_20210914a.png)
 >
 
 ### Third Party Transaction Request Failed - DFSP timeout
@@ -254,6 +254,7 @@ The workflow provided by this UC enables the Switch to handle instances where a 
 >
 
 <!-- Footnotes themselves at the bottom. -->
-## Notes
+<!--## Notes
 
 [^1]: Common Interfaces: [Mojaloop Common Interface List](../../commonInterfaces.md)
+-->

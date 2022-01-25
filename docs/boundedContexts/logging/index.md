@@ -8,8 +8,10 @@ Bounded Contexts should publish the events in a defined format and using whateve
 
 ### Event Based Logging
 
-![Use Case - Example REPLACE ME](assets/0-logging.png)
-> Event Based Logging
+#### Flow Diagram
+
+![Use Case - Example REPLACE ME](./assets/0-logging.png)
+>
 
 <!-- Footnotes themselves at the bottom. -->
 ## Notes

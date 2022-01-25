@@ -8,14 +8,14 @@ The following terms are used in this BC, also known as a domain.
 
 | Term | Description |
 |---|---|
-| Accounts | Refers to accounts used in all transfer activities.  They are used to record credit and debit positions, either temporarily in the case of accounts allocated for transfer purposes, or permanently in the case of final transfer updates to participant accounts. |
-| Participant | Typically refers to DFSP Payer/Payee parties using Mojaloop. |
-| IGS | Transfer settle method - Immediate Gross Settlement.  This process is typically used in high volume environments such as retail, and is used by individual and shared accounts.  In shared account environments, the system is capable of updating Participants balances by updating the proportional value of each Participants holds of the total funds available in the account |
-| DNS | Transfer settlement method - Deferred Net Settlement. This process is frequently used in enviroments where a party of Participants engage in a single Transfer requiring settlement to all Participants. A typical example might include a scenario where raw materials are sold Participant A to Participant B to manufacture into a finished product, which is then sold back to Participant A. The switch calculates the proportional value that each Participant to the transaction is due, and settles this amount when the Settlement Window closes. |
+| **Accounts** | Refers to accounts used in all transfer activities.  They are used to record credit and debit positions, either temporarily in the case of accounts allocated for transfer purposes, or permanently in the case of final transfer updates to participant accounts. |
+| **Participant** | Typically refers to DFSP Payer/Payee parties using Mojaloop. |
+| **IGS** | Transfer settle method - Immediate Gross Settlement.  This process is typically used in high volume environments such as retail, and is used by individual and shared accounts.  In shared account environments, the system is capable of updating Participants balances by updating the proportional value of each Participants holds of the total funds available in the account |
+| **DNS** | Transfer settlement method - Deferred Net Settlement. This process is frequently used in enviroments where a party of Participants engage in a single Transfer requiring settlement to all Participants. A typical example might include a scenario where raw materials are sold Participant A to Participant B to manufacture into a finished product, which is then sold back to Participant A. The switch calculates the proportional value that each Participant to the transaction is due, and settles this amount when the Settlement Window closes. |
 
 ## Functional Overview - Transfers - Bulk
 
-![Functional Overview - Transfers - Bulk](assets/transfersPerformTransferBulk_20210827.png)
+![Functional Overview - Transfers - Bulk](./assets/transfersPerformTransferBulk_20210827.png)
 >
 
 ## Use Cases
@@ -28,7 +28,7 @@ Transfer method without Actor intervention.
 
 #### Flow Diagram
 
-![Perform Transfer (Universal Mode)](assets/transfersUniversal_20210715.png)
+![Perform Transfer (Universal Mode)](./assets/transfersUniversal_20210715.png)
 >
 
 ### Perform Transfer with Payee Confirmation
@@ -39,7 +39,7 @@ Transfer method with Actor intervention.
 
 #### Flow Diagram
 
-![Use Case - Perform Transfer with Payee Confirmation](assets/transfersWithPayeeConfirm_20210715.png)
+![Use Case - Perform Transfer with Payee Confirmation](./assets/transfersWithPayeeConfirm_20210715.png)
 >
 
 ### Query (GET) Transfer
@@ -50,7 +50,7 @@ Transfer status report query.
 
 #### Flow Diagram
 
-![Use Case - Query (GET) Transfer](assets/transfersQuery_GET_20210716.png)
+![Use Case - Query (GET) Transfer](./assets/transfersQuery_GET_20210716.png)
 >
 
 ### Perform Transfer - Duplicate POST (Resend)
@@ -61,7 +61,7 @@ Duplicate Transfer request method - completes
 
 #### Flow Diagram
 
-![Use Case - Perform Transfer - Duplicate POST (Resend)](assets/transfersDuplicatePOSTResend_20210716.png)
+![Use Case - Perform Transfer - Duplicate POST (Resend)](./assets/transfersDuplicatePOSTResend_20210716.png)
 >
 
 ### Perform Transfer - Duplicate POST (Ignore)
@@ -72,7 +72,7 @@ Duplicate Transfer request method - ignored
 
 #### Flow Diagram
 
-![Use Case - Perform Transfer - Duplicate POST (Ignore)](assets/transfersDuplicatePOST_Ignore_20210716.png)
+![Use Case - Perform Transfer - Duplicate POST (Ignore)](./assets/transfersDuplicatePOST_Ignore_20210716.png)
 >
 
 ## Non-Happy Path Use Case Variations
@@ -85,7 +85,7 @@ Transfer request rejected by Payee
 
 #### Flow Diagram
 
-![Use Case - Perform Transfer - PayeeFSP Rejects Transfer](assets/transfersPayeeFSPRejectsTransfer_20210716.png)
+![Use Case - Perform Transfer - PayeeFSP Rejects Transfer](./assets/transfersPayeeFSPRejectsTransfer_20210716.png)
 >
 
 ### Perform Transfer - Timeout (Prepare)
