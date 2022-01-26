@@ -13,9 +13,14 @@
 
 Terms with specific and commonly accepted meaning within the Security Bounded Context.
 
-| Crypto providers | Adapter that will provide cryptographic services and Key Management System |
+| Module | Description |
 |---|---|
-| IAM | Identity and Access Management. Adapter that will provide services for menus, profiles, roles and permissions.  |
+| Crypto providers | Adapter that will provide cryptographic services and Key Management Services |
+| IAM | Identity and Access Management. Adapter that will provide services for user management, menus, profiles, roles and permissions.  |
+| AuthN | Authentication module. Requires userid and password and returns a JWT token  |
+| AuthZ | Authorization module. Requires JWT and certificate (public key). Verifies JWT ROLES and signature  |
+| JWT | JSON Web Token. Returned after a successful user authentication. Contains user details, ROLES and signature.   |
+| KMS | Key Management System. Manages cryptographic keys lifecycle (definition, creation and retirement). It is part of the Cyrpto subsystem |
 
 
 ## Overview
