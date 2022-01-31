@@ -1,11 +1,2 @@
-# Title3
+# TBD Placeholder for vNext Implementation architecture
 
-Some text.
-
-## Sub title 1
-
-Some more text.
-
-## Sub title 2
-
-Some more text.
