@@ -167,11 +167,11 @@ module.exports = {
             path: '/boundedContexts/scheduling/',      // optional, link of the title, which should be an absolute path and must exist
             // children: [ /* ... */ ],
           },
-          //{
-          //  title: 'Security',
-          //  path: '/boundedContexts/security/',      // optional, link of the title, which should be an absolute path and must exist
-          // children: [ /* ... */ ],
-          //},
+          {
+            title: 'Security',
+            path: '/boundedContexts/security/',      // optional, link of the title, which should be an absolute path and must exist
+            // children: [ /* ... */ ],
+          },
           {
             title: 'Settlements',
             path: '/boundedContexts/settlements/',      // optional, link of the title, which should be an absolute path and must exist
