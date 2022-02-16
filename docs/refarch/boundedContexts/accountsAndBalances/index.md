@@ -1,17 +1,22 @@
 # Accounts and Balances BC
 
-The Accounts and Balances BC acts as the "central ledger" for the system.  It interacts primarily with the Settlements and the Transfers BCs, and is a directed sub-system, which means that it is a dependency of the Settlements and Transfers BCs that use it as a "financial system of record" for the financial accounting.
+The Accounts and Balances BC acts as the "central ledger" for the system. 
+It interacts primarily with the Settlements and the Transfers BCs, and is a directed sub-system, which means that it is a dependency of the Settlements and Transfers BCs that use it as a "financial system of record" for the financial accounting.
+Duplicate ledger entries avoided via unique Journal Entries UUID *(Universal Unique Identifiers)*
 
-**Note:** *The Accounts and Balances BC does not contain any Mojaloop business logic.  The only logic included in the BC is to ensure that when and external BC attempts to create new journal entries, that they do not cause an account balance to exceed its limits.*
+**Notes:** 
+* The Accounts and Balances BC does not contain any Mojaloop business logic. 
+* The only logic included in the BC is to ensure that when and external BC attempts to create new journal entries, that they do not cause an account balance to exceed its limits.
+
 
 ## Terms
 
 Terms with specific and commonly accepted meaning within the Bounded Context in which they are used.
 
-| Term | Description |
-|---|---|
-| Account | Debit/Credit Ledger Account |
-| Journal Entry | Credit/Debit financial records against Account | 
+| Term              | Description                                    |
+|-------------------|------------------------------------------------|
+| **Account**       | Debit/Credit Ledger Account                    |
+| **Journal Entry** | Credit/Debit financial records against Account | 
 
 ## Use Cases
 
@@ -68,15 +73,15 @@ Journal Entry insertion from [Settlements BC](../settlements/index.md) using `Im
 
 ## Cononical Model
 
-- Account
-    - accountId
-    - ledgerAccountType
-    - ledgerAccountState
-    - debitLimit
-    - creditLimit
-    - debitBalance
-    - creditBalance
-- Journal Entry
+- **Account**
+  - accountId
+  - ledgerAccountType
+  - ledgerAccountState
+  - debitLimit
+  - creditLimit
+  - debitBalance
+  - creditBalance
+- **Journal Entry**
   - journalEntryId
   - debitAccountId
   - creditAccountId
