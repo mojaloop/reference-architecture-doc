@@ -1,7 +1,14 @@
 # Further Reading
 
 ## Team Resources
-The Team made use of a number of different resources in order to build the Reference Architecture proposal and high-level documentation.
+
+During the Reference Architecture planning work sessions, the Team made use of different resources to build and retain a record of discussions and to build the Use Case Models required to support all of the possible stakeholder requirements for the new architecture.
+
+Please feel free to visit the Team’s resources using the links provided.
+
+**P.S.** One resource that you might find particularly useful is Miro, where we keep a record of all of the Bounded Context Use Cases in use by the system.
+
+***Note:** Please bear in mind that the Reference Architecture document is a living document, and as a result is updated from time to time for various reasons.  This means that the resources that we have shared with you are still in use and will change occasionally.*  
 
 | Resource | Purpose | Link/URL |
 | --- | --- | --- |
@@ -19,6 +26,7 @@ The resources below are inclusions to the Mojaloop Technical Convenings by the R
 | PI-14 | April 2021 | Opening and Mojaloop Reference Architecture and TigerBeetle | [PI-14 Recording (YouTube)](https://www.youtube.com/watch?v=UHxULJXIzj8) |
 | PI-15 | July 2021 | Reference Architecture v1.0 | [PI-15 Resources](https://mojaloopcommunitymeeting.us2.pathable.com/meetings/virtual/ookcbEc6aDZgwyo2n) / [PI-15 Video Library (YouTube)](https://www.youtube.com/playlist?list=PLSamWCIlxVXujHm4CWfyl6uLzcXJE1Zi_) |
 | PI-16 | October 2021 | Reference Architecture and V2 update | [PI-16 Agenda](https://github.com/mojaloop/documentation-artifacts/tree/master/presentations/pi_16_october_2021) / [PI-16 Video Library](https://mojaloop.io/video/pi-16-mojaloop-community-meeting-technical-sessions-october-2021/) |
+| PI-17 | January 2022 | Reference Architecture: Documentation and v.Next Updates | [PI-17 Reference Architecture Presentation (YouTube)](https://youtu.be/kqbEVbglBEM) |
 
 <!--# Title2
 
