@@ -31,8 +31,8 @@ The workflow provided by this UC enables the Switch to handle authorized PISP Us
 
 #### Flow Diagram
 
-![Use Case - PISP Gets supported DFSPs](./assets/3PAL_PISPGetSupportedDFSPs_20210830.png)
->
+![Use Case - PISP Gets supported DFSPs](./assets/ML2RA_3PaL_ucPispGetSupportedDFSPs_Feb22a.png)
+>UC Workflow Diagram: PISP Gets supported DFSPs
 
 ### PISP Gets list of accounts for a DFSP + Identifier
 
@@ -42,8 +42,8 @@ The workflow provided by this UC enables the Switch to handle instances where  a
 
 #### Flow Diagram
 
-![Use Case - PISP Gets list of accounts for a DFSP + Identifier](./assets/3PAL_PISPGetsDFSPAccountList_20210830.png)
->
+![Use Case - PISP Gets list of accounts for a DFSP + Identifier](./assets/ML2RA_3PaL-ucPispGetDfspAccList&Id_Feb22-a.png)
+>UC Workflow Diagram: PISP Gets list of accounts for a DFSP + Identifier
 
 ### PISP Consent Request
 
@@ -53,8 +53,8 @@ The workflow provided by this UC enables the Switch to handle instances where an
 
 #### Flow Diagram
 
-![Use Case - PISP Consent Request](./assets/3PAL_PISPConsentRequest_20211020.png)
->
+![Use Case - PISP Consent Request](./assets/ML2RA_3PaL_ucPispConsentRequest_Feb22a.png)
+>UC Workflow Diagram: PISP Consent Request
 
 ### DFSP Issue Consent
 
@@ -66,10 +66,10 @@ The workflow provided by this UC enables the Switch to handle instances in which
 
 #### Flow Diagram
 
-![Use Case - DFSP Issue Consent](./assets/3PAL_PISP-DFSPIssueConsent_20210830.png)
->
+![Use Case - DFSP Issue Consent](./assets/ML2RA_3PaL_ucDfspIssueConsent_Feb22a_P1&2.png)
+>UC Worflow Diagram - DFSP Issue Consent
 
-### Unlink Accounts - Hub Hosted Auth
+### Unlink Accounts: Hub Hosted Auth
 
 #### Description
 
@@ -77,8 +77,8 @@ The workflow provided by this UC enables the Switch to handle an authorised PISP
 
 #### Flow Diagram
 
-![Use Case - Unlink Accounts - Hub Hosted Auth](./assets/3PAL_PISP-UnlinkAccountsRequest_20210830.png)
->
+![Use Case - Unlink Accounts - Hub Hosted Auth](./assets/ML2RA_3PaL_ucUnlinkAccounts-HubHostAuth_Feb22-a_P1&2.png)
+>UC Workflow Diagram: Unlink Accounts - Hub Hosted Auth
 
 ### Link Accounts - Account Discovery Failure
 
@@ -88,8 +88,8 @@ The workflow provided by this UC enables the Switch to handle instances in which
 
 #### Flow Diagram
 
-![Use Case - Link Accounts - Account Discovery Failure](./assets/3PAL_LinkAccounts-AccountDiscoveryFailure_20210830.png)
->
+![Use Case - Link Accounts - Account Discovery Failure](./assets/ML2RA_3PaL-ucLinkAccnts-AccntDiscoveryFail_Mar22-a.png)
+>UC Workflow Diagram: Link Accounts - Account Discovery Failure
 
 ### Link Accounts - DFSP Rejects Consent Request
 
@@ -99,8 +99,8 @@ The workflow provided by this UC enables the Switch to correctly handle instance
 
 #### Flow Diagram
 
-![Use Case - Link Accounts - DFSP Rejects Consent Request](./assets/3PAL_PISPUserLinkAccounts-ConsentRequestReject_20210830.png)
->
+![Use Case - Link Accounts - DFSP Rejects Consent Request](./assets/ML2RA_3PaL-ucLinkAccnts-DfspRejectConsentReq_Mar22-a.png)
+>UC Workflow Diagram: Link Accounts - DFSP Rejects Consent Request
 
 ### Credential Registration Error
 
@@ -110,8 +110,8 @@ The workflow provided by this UC enables the Switch to handle instances where a 
 
 #### Flow Diagram
 
-![Use Case - Credential Registration Error](./assets/3PAL_PISPUserCredRegError_20210830.png)
->
+![Use Case - Credential Registration Error](./assets/ML2RA_3PaL-ucCredentialRegError_Mar22-a_P1&2.png)
+>UC Workflow Diagram: Credential Registration Error
 
 ### Unlink Accounts - Consent not found
 
@@ -121,8 +121,8 @@ The workflow provided by this UC enables the Switch to handle instances where an
 
 #### Flow Diagram
 
-![Use Case - Unlink Accounts - Consent not found](./assets/3PAL_PISP-DFSPUnlinkAccounts-ConsentNotFound_20210830.png)
->
+![Use Case - Unlink Accounts - Consent not found](./assets/ML2RA_3PaL-ucUnlinkAccnts-ConsentNotFound_Mar22a.png)
+>UC Workflow Diagram: Unlink Accounts - Consent Not Found
 
 ### DSPF Rejects OTP/Auth Token from PISP
 
@@ -132,8 +132,8 @@ The workflow provided by this UC enables the Switch to handle instances where an
 
 #### Flow Diagram
 
-![Use Case - DSPF Rejects OTP/Auth Token from PISP](./assets/3PAL_DFSPRejectsPISPUserToken_20210907.png)
->
+![Use Case - DSPF Rejects OTP/Auth Token from PISP](./assets/ML2RA_3PaL-ucDfspRejectsOtpAuthTokenFromPisp_Mar22-a_P1&2.png)
+>UC Workflow Diagram: DFSP Rejects OTP/Auth Token from PISP
 
 ### Unlink Accounts - Downstream Failure
 
@@ -143,8 +143,8 @@ The workflow provided by this UC enables the Switch to handle instances in which
 
 #### Flow Diagram
 
-![Use Case - Unlink Accounts - Downstream Failure](./assets/3PAL_UnlinkAccounts-DownstreamFailure_20210908.png)
->
+![Use Case - Unlink Accounts - Downstream Failure](./assets/ML2RA_3PaL-ucUnlinkAccntsDownstrmFail_Mar22-a_P1&2.png)
+>UC Workflow Diagram: Unlink Accounts - Downstream Failure
 
 ## Transfer Scenarios
 
