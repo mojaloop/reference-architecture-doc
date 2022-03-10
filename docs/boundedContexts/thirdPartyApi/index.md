@@ -132,7 +132,7 @@ The workflow provided by this UC enables the Switch to handle instances where an
 
 #### Flow Diagram
 
-![Use Case - DSPF Rejects OTP/Auth Token from PISP](./assets/ML2RA_3PaL-ucDfspRejectsOtpAuthTokenFromPisp_Mar22-a_P1&2.png)
+![Use Case - DFSP Rejects OTP/Auth Token from PISP](./assets/ML2RA_3PaL-ucDfspRejectsOtpAuthTokenFromPisp_Mar22-a_P1&2.png)
 >UC Workflow Diagram: DFSP Rejects OTP/Auth Token from PISP
 
 ### Unlink Accounts - Downstream Failure
@@ -204,7 +204,7 @@ The workflow provided by this UC enables the Switch to handle instances where an
 
 #### Description
 
-The workflow provided by this UC enables the Switch to handle instances where an authorised PISP User initiates a Third Party Transaction Request, correctly confirms the Payee details, but the Payee DSFP fails to locate a valid Agreement for the transaction.  The Switch rejects the request and sends notification to the request originating indicating the failure and suggested follow-up actions.
+The workflow provided by this UC enables the Switch to handle instances where an authorised PISP User initiates a Third Party Transaction Request, correctly confirms the Payee details, but the Payee DFSP fails to locate a valid Agreement for the transaction.  The Switch rejects the request and sends notification to the request originating indicating the failure and suggested follow-up actions.
 
 #### Flow Diagram
 
