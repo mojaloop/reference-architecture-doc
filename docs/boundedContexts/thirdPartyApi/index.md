@@ -49,7 +49,7 @@ The workflow provided by this UC enables the Switch to handle instances where  a
 
 #### Description
 
-The workflow provided by this UC enables the Switch to handle instances where an authorised PISP User notifies their DFSP Account Holder of their intention to link one or more their accounts to a PISP via a Consent Request.  The request if fulfilled via an out-of-band [Issue Consent](#dfsp-issue-consent) process upon receipt of an authorization confirmation request response.  The result of this process is a the establishment of a trust relationship between the PISP User, the PISP, and the DFSP Account Holder.  The Switch updates participant account details accordingly.
+The workflow provided by this UC enables the Switch to handle instances where an authorised PISP User notifies their DFSP Account Holder of their intention to link one or more of their accounts to a PISP via a Consent Request.  The request is fulfilled via an out-of-band [Issue Consent](#dfsp-issue-consent) process upon receipt of an authorization confirmation request response.  The result of this process is the establishment of a trust relationship between the PISP User, the PISP, and the DFSP Account Holder.  The Switch updates participant account details accordingly.
 
 #### Flow Diagram
 
@@ -106,7 +106,7 @@ The workflow provided by this UC enables the Switch to correctly handle instance
 
 #### Description
 
-The workflow provided by this UC enables the Switch to handle instances where a DFSP Account Holder provides a PISP with a request for a (PISP) User to create a device-embedded credential in order to confirm a Consent Request, and where the credential, which when sent to the DFSP includes either an invalid signed challenge or signed metadata is rejected.  In this instance the DFSP messages the error condition to the Switch, which messages the appropriate PISP who notifies the (PISP) User that the Consent credential was rejected.
+The workflow provided by this UC enables the Switch to handle instances where a DFSP Account Holder provides a PISP with a request for a (PISP) User to create a device-embedded credential in order to confirm a Consent Request, and where the credential, which when sent to the DFSP includes either an invalid signed challenge or signed metadata that is rejected.  In this instance the DFSP messages the error condition to the Switch, which messages the appropriate PISP who notifies the (PISP) User that the Consent credential was rejected.
 
 #### Flow Diagram
 
@@ -139,7 +139,7 @@ The workflow provided by this UC enables the Switch to handle instances where an
 
 #### Description
 
-The workflow provided by this UC enables the Switch to handle instances in which an authorised PISP User's DFSP Account unlink consent confirmation fails the Switch's Authentication/Authorisation process for whatever reason, example: a downstram FSPIOP API error.  The error is messaged by the Switch to the DFSP Account Holder who will review the error and determine how to respond.  Where an error has occured, the PISP User is notified by the Switch via the PISP that their request to unlink their DFSP Account failed.
+The workflow provided by this UC enables the Switch to handle instances in which an authorised PISP User's DFSP Account unlink consent confirmation fails the Switch's Authentication/Authorisation process for whatever reason, example: a downstream FSPIOP API error.  The error is messaged by the Switch to the DFSP Account Holder who will review the error and determine how to respond.  Where an error has occured, the PISP User is notified by the Switch via the PISP that their request to unlink their DFSP Account failed.
 
 #### Flow Diagram
 
@@ -171,7 +171,7 @@ Some suggested applications of Third Party Payment Initiation UC include:
 
 #### Description
 
-The workflow provided by this UC enables the Switch to permit authorized PISP Users/Apps to issue a request to a DFSP to execute a number of bulk transactions on behalf of an Account Holder, typically the PISP User/App, in favor of a group of third-party recipients.  The transaction is vetted via a DFSP confirmation request to the Account Holder, and concluded upon successful receipt of confirmation.  The Switch, per DFSP instructions, manages the transaction and updates all accounts accordingly.
+The workflow provided by this UC enables the Switch to permit authorized PISP Users/Apps to issue a request to a DFSP to execute a number of bulk transactions on behalf of an Account Holder, typically the PISP User/App, in favor of a group of third-party recipients.  The transaction is vetted via a DFSP confirmation request sent to the Account Holder, and concluded upon successful receipt of confirmation.  The Switch, per DFSP instructions, manages the transaction and updates all accounts accordingly.
 
 #### Flow Diagram
 
@@ -182,7 +182,7 @@ The workflow provided by this UC enables the Switch to permit authorized PISP Us
 
 #### Description
 
-The workflow provided by this UC enables the Switch to permit authorized DFSP Users to initiate and execute payments in favor of PISPs as Payees via the Switch.  The workflow provides support for payments both single or multiple PISP Payee/s.
+The workflow provided by this UC enables the Switch to permit authorized DFSP Users to initiate and execute payments in favor of PISPs as Payees via the Switch.  The workflow provides support for payments for both single or multiple PISP Payee/s.
 
 #### Flow Diagram
 
@@ -193,22 +193,22 @@ The workflow provided by this UC enables the Switch to permit authorized DFSP Us
 
 #### Description
 
-The workflow provided by this UC enables the Switch to handle instances where an authorised PISP User initiates a transaction using an invalid Participant Identifier.  The Switch encounters the error during the Get Parties stage of the transaction preparation, and automatically terminates the request with notification sent to the request originator indicating the failure and the reason.
+The workflow provided by this UC enables the Switch to handle instances where an authorised PISP User initiates a transaction using an invalid Participant Identifier.  The Switch encounters the error during the Get Parties stage of the transaction preparation, and automatically terminates the request with notification sent to the request originating User indicating the failure and the reason.
 
 #### Flow Diagram
 
-![Use Case - Example REPLACE ME](./assets/ML2RA_3PaT-ucTransactReqFail-BadPartyLookup_Mar22-a.png)
+![Use Case - Example REPLACE ME](./assets/ML2RA_3PaT-ucTransactReqFail-BadPartyLookup_Mar22-b.png)
 >UC Workflow Diagram: Third Party Transaction Request Failed - Bad Party Lookup
 
 ### Third Party Transaction Request Failed - Bad Transaction Request
 
 #### Description
 
-The workflow provided by this UC enables the Switch to handle instances where an authorised PISP User initiates a Third Party Transaction Request, correctly confirms the Payee details, but the Payee DFSP fails to locate a valid Agreement for the transaction.  The Switch rejects the request and sends notification to the request originating indicating the failure and suggested follow-up actions.
+The workflow provided by this UC enables the Switch to handle instances where an authorised PISP User initiates a Third Party Transaction Request, correctly confirms the Payee details, but the Payee DFSP fails to locate a valid Agreement for the transaction.  The Switch rejects the request and sends notification to the request originating User indicating the failure and suggested follow-up actions.
 
 #### Flow Diagram
 
-![Use Case - Third Party Transaction Request Failed - Bad Transaction Request](./assets/ML2RA_3PaT-ucTransactReqFail-BadTransactReq_Mar22-a.png)
+![Use Case - Third Party Transaction Request Failed - Bad Transaction Request](./assets/ML2RA_3PaT-ucTransactReqFail-BadTransactReq_Mar22-b.png)
 >UC Workflow Diagram: Third Party Transaction Request Failed - Bad Transaction Request
 
 ### Third Party Transaction Request Failed - Downstream FSPIOP Failure
@@ -218,14 +218,14 @@ The workflow provided by this UC enables the Switch to handle instances where an
 
 #### Flow Diagram
 
-![Use Case - Third Party Transaction Request Failed - downstream FSPIOP failure](./assets/ML2RA_3PaT-ucTransactReqFail-DownStreamFspiopFail_Mar22-a-P1-2.png)
+![Use Case - Third Party Transaction Request Failed - downstream FSPIOP failure](./assets/ML2RA_3PaT-ucTransactReqFail-DownStreamFspiopFail_Mar22-b-P1-2.png)
 >UC Workflow Diagram: Third Party Transaction Request Failed - Downstream FSPIOP Failure
 
 ### Third Party Transaction Request Failed - Authorization Was Invalid
 
 #### Description
 
-The workflow provided by this UC enables the Switch to handle instances where a third-party transaction journey is initiated, then authorised by an PISP User on request from the DFSP Account Holder, and the Switch detects that the DFSP Challenge response received contained an invalid signature.  The Switch can then verify that the error has occurred and notify the DFSP Account Holder who in turn cancels the transaction and the notifies the PISP User via the Switch and their PISP profile holder.
+The workflow provided by this UC enables the Switch to handle instances where a third-party transaction journey is initiated, then authorised by a PISP User on request from the DFSP Account Holder, and the Switch detects that the DFSP Challenge response received contained an invalid signature.  The Switch can then verify that the error has occurred and notify the DFSP Account Holder who in turn cancels the transaction and the notifies the PISP User via the Switch and their PISP profile holder.
 
 #### Flow Diagram
 
