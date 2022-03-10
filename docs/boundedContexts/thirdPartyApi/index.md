@@ -164,8 +164,8 @@ Some suggested applications of Third Party Payment Initiation UC include:
 
 #### Flow Diagram
 
-![Use Case - Third Party Initiated Transaction Request](./assets/3PAT_3PartyInitTransferRequest_20210908n.png)
->
+![Use Case - Third Party Initiated Transaction Request](./assets/ML2RA_3PaT-ucThirdPartyInitTransactReq_Mar22-a_P1P2P3bP4.png)
+>UC Workflow Diagram: Third Party Initiated Transaction Request
 
 ### PISP Bulk Transaction Request
 
@@ -175,9 +175,10 @@ The workflow provided by this UC enables the Switch to permit authorized PISP Us
 
 #### Flow Diagram
 
-![Use Case - Example REPLACE ME](./assets/3PAT_PISPBulkTransfer_20210909.png)
->
-### Pay to a PISP - PISP as a Payee
+![Use Case - Example REPLACE ME](./assets/ML2RA_3PaT-ucThirdPartyInitTransactReq_Mar22-a_P1P2P3bP4.png)
+>UC Workflow Diagram: PISP Bulk Transaction Request
+
+### Pay To A PISP - PISP As A Payee
 
 #### Description
 
@@ -185,8 +186,8 @@ The workflow provided by this UC enables the Switch to permit authorized DFSP Us
 
 #### Flow Diagram
 
-![Use Case - Pay to a PISP - PISP as a Payee](./assets/3PAT_PayToPISP-PISPAsPayee_20210913.png)
->
+![Use Case - Pay to a PISP - PISP as a Payee](./assets/ML2RA_3PaT-ucPayToPisp-PispAsPayee_Mar22-b_P1-2.png)
+>UC Workflow Diagram: Pay To A PISP - PISP As Payee
 
 ### Third Party Transaction Request Failed - Bad Party Lookup
 
@@ -196,8 +197,8 @@ The workflow provided by this UC enables the Switch to handle instances where an
 
 #### Flow Diagram
 
-![Use Case - Example REPLACE ME](./assets/3PAT_TxRequestFail-BadPartyLookup_20210913.png)
->
+![Use Case - Example REPLACE ME](./assets/ML2RA_3PaT-ucTransactReqFail-BadPartyLookup_Mar22-a.png)
+>UC Workflow Diagram: Third Party Transaction Request Failed - Bad Party Lookup
 
 ### Third Party Transaction Request Failed - Bad Transaction Request
 
@@ -207,20 +208,20 @@ The workflow provided by this UC enables the Switch to handle instances where an
 
 #### Flow Diagram
 
-![Use Case - Third Party Transaction Request Failed - Bad Transaction Request](./assets/3PAT_TxRequestFail-BadTxRequest_20210913.png)
->
+![Use Case - Third Party Transaction Request Failed - Bad Transaction Request](./assets/ML2RA_3PaT-ucTransactReqFail-BadTransactReq_Mar22-a.png)
+>UC Workflow Diagram: Third Party Transaction Request Failed - Bad Transaction Request
 
-### Third Party Transaction Request Failed - downstream FSPIOP failure
+### Third Party Transaction Request Failed - Downstream FSPIOP Failure
 
 #### Description
 The workflow provided by this UC enables the Switch to handle instances where an authorized PISP User requests and confirms a transaction request, which when forwarded to the DFSP Account Holder fails for some reason during the quote process.  The Switch is alerted to the failure, and provides a notification to the PISP User via their PISP App/Process.
 
 #### Flow Diagram
 
-![Use Case - Third Party Transaction Request Failed - downstream FSPIOP failure](./assets/3PAT_TxRequestFail-DownstreamFSPIOPFailure_20210913.png)
->
+![Use Case - Third Party Transaction Request Failed - downstream FSPIOP failure](./assets/ML2RA_3PaT-ucTransactReqFail-DownStreamFspiopFail_Mar22-a-P1-2.png)
+>UC Workflow Diagram: Third Party Transaction Request Failed - Downstream FSPIOP Failure
 
-### Third Party Transaction Request Failed - authorization was invalid
+### Third Party Transaction Request Failed - Authorization Was Invalid
 
 #### Description
 
@@ -228,8 +229,8 @@ The workflow provided by this UC enables the Switch to handle instances where a 
 
 #### Flow Diagram
 
-![Use Case - Third Party Transaction Request Failed - authorization was invalid](./assets/3PAT-TxFail_InvalidAuth_20210914.png)
->
+![Use Case - Third Party Transaction Request Failed - authorization was invalid](./assets/ML2RA_3PaT-ucTransactReqFail-AuthInvalid_Mar22-a-P1-3.png)
+>UC Workflow Diagram: Third Party Transaction Request Failed - Authorization Was Invalid
 
 ### Third Party Transaction Request Rejected by user
 
@@ -239,8 +240,8 @@ The workflow provided by this UC enables the Switch to handle instances where a 
 
 #### Flow Diagram
 
-![Use Case - Third Party Transaction Request Rejected by user](./assets/3PAT_TxFail_UserRejected_20210914a.png)
->
+![Use Case - Third Party Transaction Request Rejected by user](./assets/ML2RA_3PaT-ucTransactReqFail-rejectedByUser_Mar22-a-P1-3.png)
+>UC Workflow Diagram: Third Party Transaction Request Rejected By User
 
 ### Third Party Transaction Request Failed - DFSP timeout
 
@@ -250,8 +251,8 @@ The workflow provided by this UC enables the Switch to handle instances where a 
 
 #### Flow Diagram
 
-![Use Case - Third Party Transaction Request Failed - DFSP timeout](./assets/3PAT_TxRequestFail_DfspTimeout_20210916.png)
->
+![Use Case - Third Party Transaction Request Failed - DFSP timeout](./assets/ML2RA_3PaT-ucTransactReqFail-dfspTimeout_Mar22-a-P1-3.png)
+>UC Workflow Diagram: Third Party Transaction Request Failed - DFSP Timeout
 
 <!-- Footnotes themselves at the bottom. -->
 <!--## Notes
