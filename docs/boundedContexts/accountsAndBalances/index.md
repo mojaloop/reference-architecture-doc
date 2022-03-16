@@ -4,7 +4,7 @@ The Accounts and Balances BC acts as the "central ledger" for the system. It int
 
 **Note:**
 
-The Accounts and Balances BC contains a limited amount of logic to ensure that **( a )** the correct relationships are created and maintained between entities when an external BC creates, updates, queries or closes accounts and **( b )** the correct account limits are enforced (i.e. set and not exceeded) when an external BC attempts to create journal entries and **( c )** avoids duplicate ledger entries by using *Universal Unique Identifiers (UUID)* for unique journal entry identifiers.
+The Accounts and Balances BC contains a limited amount of logic to ensure that **(a)** the correct relationships are created and maintained between entities when an external BC creates, updates, queries or closes accounts and **(b)** the correct account limits are enforced (i.e. set and not exceeded) when an external BC attempts to create journal entries and **\(c\)** avoids duplicate ledger entries by using *Universal Unique Identifiers (UUID)* for unique journal entry identifiers.
 
 ## Terms
 
