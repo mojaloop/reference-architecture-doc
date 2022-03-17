@@ -28,8 +28,8 @@ Transfer method without Actor intervention.
 
 #### Flow Diagram
 
-![Perform Transfer (Universal Mode)](./assets/transfersUniversal_20210715.png)
->
+![Perform Transfer (Universal Mode)](./assets/ML2RA_TFR-ucPerformUniversalTransfer_Mar22-a1.png)
+>UC Workflow Diagram: Perform Transfer (Universal Mode)
 
 ### Perform Transfer with Payee Confirmation
 

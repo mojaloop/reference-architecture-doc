@@ -28,8 +28,8 @@ Method of deferring payments to enable settlement on multiple batches according 
 
 #### Flow Diagram
 
-![Use Case - Deferred Net Settlement (DNS)](./assets/settleDeferredNet_20210827.png)
->
+![Use Case - Deferred Net Settlement (DNS)](./assets/ML2RA_SET-ucDeferNetSettle_Mar22-a-P1-2.png)
+>UC Workflow Diagram: Deferred Net Settlement - 19/10/2021
 
 ### Immediate Gross Settlement (IGS)
 
@@ -38,8 +38,8 @@ Method to enable immediate settlement of batches.  This is useful for SME enviro
 
 #### Flow Diagram
 
-![Use Case - Immediate Gross Settlement (IGS)](./assets/settleImediateGross_20210827.png)
->
+![Use Case - Immediate Gross Settlement (IGS)](./assets/ML2RA_SET-ucInstantGrossSettle_Mar22-a.png)
+>UC Workflow Diagram: Immediate Gross Settlement
 
 ### Abort Settlement
 
@@ -68,8 +68,8 @@ Method that configures the Settlement Method (DNS/IGS) based upon the system sta
 
 #### Flow Diagram
 
-![Use Case - Bootstrap (Startup) Settlement Model via Configuration](./assets/ML2RA_BootSettleModelViaConfig_settlements_20220124.png)
->
+![Use Case - Bootstrap (Startup) Settlement Model via Configuration](./assets/ML2RA_SET-ucBootStrapSettleModViaConfig_Mar22-b.png)
+>UC Workflow Diagram: Bootstrap (Startup) Settlement Model via Configuration
 
 ### Create Settlement related accounts for newly created Particpants
 

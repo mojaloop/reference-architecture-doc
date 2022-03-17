@@ -36,9 +36,8 @@ Process to create a Participant on the Mojaloop ecosystem, this usually requires
 
 #### Flow Diagram
 
-![Use Case - Example REPLACE ME](./assets/ML2RA_PartLife_addParticipant-Init_20220124.png)
-
->
+![Use Case - Example REPLACE ME](./assets/ML2RA_PLM-ucCreateParticipant_Mar22-a_P1&2.png)
+>UC Workflow Diagram: Create Participant
 
 ### Manage Funds
 
@@ -100,9 +99,8 @@ These process controls different aspects of a Participant's accounts, from creat
 
 #### Flow Diagram
 
-![Use Case - Example REPLACE ME](./assets/6-participant-accounts.jpg)
-
->
+![Use Case - Example REPLACE ME](./assets/ML2RA_PLM-ucAddParticipant_Mar22-a_P1-2.png)
+>UC Workflow Diagram: Add Participant Accounts
 
 ### Reserve Liquidity Cover
 
@@ -160,9 +158,8 @@ Queries to check the current liquidity as well as other read operations that are
 
 #### Flow Diagram
 
-![Use Case - Example REPLACE ME](./assets/11-liquidity-cover-queries.jpg)
-
->
+![Use Case - Example REPLACE ME](./assets/ML2RA_PLM-ucLiquidityCoverQueries_Mar22-a.png)
+>UC Workflow Diagram: Liquidity Cover Queries
 
 ## Canonical Model
 
