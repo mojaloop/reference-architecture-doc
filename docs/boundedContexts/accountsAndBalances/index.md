@@ -79,7 +79,7 @@ Respond with the updated account balance.
 
 Journal Entry insertion from [Transfers BC](../transfers/index.md)
 
-![Use Case - Transfers BC](../transfers/assets/ML2RA_TFR-ucPerformUniversalTransfer_Mar22-a1.png)
+![Use Case - Transfers BC](../transfers/assets/ML2RA_Trf_ucPerformTrfUniMode_Mar22a.png)
 >UC Workflow Diagram: Perform Transfer (Universal Mode)
 
 Journal Entry insertion from [Settlements BC](../settlements/index.md) using `Deferred Net Settlement` (DNS) model
