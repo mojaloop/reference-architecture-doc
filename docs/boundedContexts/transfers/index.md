@@ -107,7 +107,7 @@ The workflow provided by this UC enables the BC to effect a method through which
 
 #### Flow Diagram
 
-![Use Case - Perform Transfer - Timeout (Pre-Committed)](./assets/ML2RA_Trf_ucPerformTrfTimeoutPreCommit_Mar22a-P1-2.png)
+![Use Case - Perform Transfer - Timeout (Pre-Committed)](./assets/ML2RA_Trf_ucPerformTrfTimeoutPreCommit_Mar22b-P1-2.png)
 >UC Workflow Diagram: Perform Transfer - Timeout (Pre-Committed)
 
 ### Perform Transfer - Timeout (Post-Committed)
