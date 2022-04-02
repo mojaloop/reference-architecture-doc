@@ -82,10 +82,10 @@ The DDD Inspired architecture implementation for Mojaloop includes the following
 
   Typically, and definitely in the Mojaloop environment, solutions are designed and implemented without knowledge of specific infrastructure dependencies or other inner workings of other Bounded Contexts.  This approach aids security, amongst other things by ensuring that each Bounded Context is only aware of its own environment, and its interfaces.  Communications between Bounded Contexts are all conducted via APIs and secured messaging.  Examples of Bounded Contexts (BCs) from the Mojaloop environment include Accounts \& Balances, Transfers \& Transactions, etc.
 
-* **_Ubiquitous Language_** is an approach to encourage explicit, and commonly understood, language that everyone uses when describing problems and solutions, from end users to developers. It has two main objectives:
+* **_Ubiquitous Language_** is an approach to encourage explicit, and commonly understood, language that everyone uses when describing problems and solutions, from end users to developers. There are two main objectives for a Ubiquitous Language:
 
-  * It ensures that unique terms are identified and understood to have a single meaning by all parties within its Bounded Context.  An example might include the word, “Account”, which could be understood as an Account Profile by one party, and a reference to an Accounting System Account by another. This is not a recommendation to search for an impossible, project or company-wide, universal set of unambiguous terms; instead it assures that each Bounded Context has its own set of terms.
-  * The second benefit that the terms of the Ubiquitous Language should be present from the user interface, to documetation, to other project related materials, and even in the code. This ubiquitous usage of the same terms everywhere, including in code, guarantees that everyone has the same understanding of the problems and solutions being described and solved. 
+  1. It ensures that unique terms are identified and understood to have a single meaning by all parties within its Bounded Context.  An example might include the word, “Account”, which could be understood as an Account Profile by one party, and a reference to an Accounting System Account by another. This is not a recommendation to search for an impossible, project or company-wide, universal set of unambiguous terms; instead it assures that each Bounded Context has its own set of terms.
+  2. It ensures that the terms of the Ubiquitous Language are present from the user interface, to documentation, to other project related materials, and even in the code. The ubiquitous usage of the same terms everywhere, including in code, guarantees that everyone has the same understanding of the problems and solutions being described and solved.
 
 * **_Cross Cutting Concerns_**[^3] are aspects of a software solution that must be solved by multiple Bounded Contexts (or functions/modules) and include items such as auditing, security, authentication, and platform (Business and Technical) configuration management. Our approach to these Cross Cutting Concerns, was to separate them from the BC's. Most Cross Cutting Concerns have a distributed nature in this design, with central components and client libraries. These are represented in this documentation as equivalent to Bounded Contexts.
 
@@ -99,10 +99,8 @@ In addition to DDD-architecture, Mojaloop’s architecture approach has also bee
 * Several client-specific interfaces are better than a single all-purpose interface
 * Build dependencies on abstractions, not concretions
 
-
 <!-- Footnotes themselves at the bottom. -->
 ### Notes
-
 
 [^1]: Further reading: [Domain-driven design From Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/Domain-driven_design)
 
