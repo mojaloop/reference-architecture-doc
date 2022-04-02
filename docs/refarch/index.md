@@ -1,4 +1,4 @@
-# Reference architecture
+# Mojaloop 2.0 Reference Architecture Overview
 
 ## Problem Space (_Problem space identification and map)_
 
@@ -6,55 +6,85 @@ As noted in the DDD-architecture overview, the Problem Space contains a number o
 
 ### Core Problems
 
-![Core Problems](./assets/images/DDD_ProblemSpace-1_20210630.png "Core Problems")
+#### Description
 
 A number of Core Problems (improvements) have been identified by (Business/Developers/Both Business & Developers).  In order to implement the improvements, “internal” development teams will be tasked with developing the required solutions.  Typically the Subdomains thus identified generate significant value for the Mojaloop system, therefore care is taken to ensure that the services they provide are not compromised.  Examples of Core Problem Subdomains include: Participant Lifecycle Management, Settlements, and Scheduling.
 
+#### High-Level Map
+
+![Core Problems](./assets/ML2RA_in_RefArchOver_Core_Apr22c_1670.png)
+> Reference Architecture (Mojaloop 2.0): Core Problems
+
 ### Generic Problems
 
-![Generic Problems](./assets/images/DDD_ProblemSpace-2_20210630.png "Generic Problems")
+#### Description
 
 A number of Generic Problems (improvements) have been identified by (Business/Developers/Both Business & Developers).  In order to implement the improvements, off-the-shelf solutions will be implemented that require no further customization.  They will require integration with the Mojaloop.  Examples of Generic problem subdomains include Authentication, FRMS, and Platform Monitoring.
 
+#### High-Level Map
+
+![Generic Problems](./assets/ML2RA_in_RefArchOver_Generic_Apr22c_1670.png)
+> Reference Architecture (Mojaloop 2.0): Generic Problems
+
 ### Supporting Problems
 
-![Supporting Problems](./assets/images/DDD_ProblemSpace-3_20210630.png "Supporting Problems")
+#### Description
 
 A number of Supporting Problems (improvements) have been identified by (Business/Developers/Both Business & Developers).  In order to implement the improvements, off-the-shelf solutions will be implemented, however in order to fully integrate them with the Mojaloop system and satisfy the identified problems (improvements) additional customization will be required for each of the integrated solutions.  Examples of Supporting Problem Subdomains include Access Policy Management, Reporting, and Authorization (Access Policy content verification).
 
+#### High-Level Map
+
+![Supporting Problems](./assets/ML2RA_in_RefArchOver_Supporting_Apr22c_1670.png)
+> Reference Architecture (Mojaloop 2.0): Supporting Problems
+
 ### Non-Functional Requirements
+
+#### Description
 
 A number of Non-Functional Requirements have been identified by (Business/Developers/Both Business & Developers).  Whilst they do not add direct value to Mojaloop, they are required in order to fulfil a number of business-related problems (improvements).  Examples of Non-Functional Requirements include security which does not occupy its own subdomain.  All system Subdomains will need to include elements of code pertaining to security in fulfillment of this requirement, alternatively, a central security management service will be implemented that includes centrally managed and constructed security profiles for each Subdomain in the system which they will download upon joining the Domain, or upon initiation, and/or which will be pushed down to them from the central service when updates occur.
 
-*[Space for diagram/map]*
+#### High-Level Map
+
+![Non-Functional Requirements](./assets/ML2RA_in_RefArchOver_NFRs_Apr22c_1670.png)
+> Reference Architecture (Mojaloop 2.0): Non-Functional Requirements
 
 ### New and Unclassified (non-domain)
 
-![New & Unclassified Problems](./assets/images/DDD_ProblemSpace-4_20210630.png "New & Unclassified Problems")
+#### Description
 
-A number of New and Unclassified (non-domain) problems have been identified by (Business/Developers/Both Business & Developers).  Once Business and the System Architects have identified the required solution in order to solve the problem, they will be classified into one of the Problem containers and fulfilled in accordance with its processes.
+A number of New and Unclassified (non-domain) problems have been identified by both Business and Developers).  Once Business and the System Architects have identified the required solution in order to solve the problem, they will be classified into one of the Problem containers and fulfilled in accordance with its processes.
+
+#### High-Level Map
+
+![New & Unclassified Problems](./assets/ML2RA_in_RefArchOver_newUnclassified_Apr22c_1670.png)
+> Reference Architecture (Mojaloop 2.0): New and Unclassified Problems
 
 ## Solution Space (_High level description and the context map)_
 
+#### Description
+
 The Solution Space defined by DDD-architecture is focused on how the business problems (improvements) identified in the Problem Space are going to be solved.  As a result it necessarily contains more information and technical details than the Problem Space.  It includes elements such as Ubiquitous Language, Bounded Contexts, and Cross-Cutting Concerns.
 
-![Solution Space](./assets/images/BC-overview.png "Solution Space")
+#### High-Level Map
+
+![Solution Space](./assets/ML2RA_in_RefArchOver_SolutionSpace_Apr22a.png)
+> Reference Architecture (Mojaloop 2.0): Solution Space
 
 ### Ubiquitous Language
+
+#### Description
 
 A challenge that most teams face is maintaining a clear understanding of terms that may not be unique with a particular Domain.  A classic example of a non-unique term is “account”: this term could refer to a set of financial accounts, entity profile, or a login name.
 
 As noted in the overview, Ubiquitous Language is used to aid in the elimination of confusion and miscommunication between business and technical teams working to solve a business problem or group of business problems.  Whilst it is possible that that each Domain/Subdomain may contain terms that are not unique, as noted above, within a particular context, and in the instance of DDD-architecture, that would be a Bounded Context, it is important to ensure that all terms are unique, clearly understood by all participants, and correctly applied.
 
-In the instance of Mojaloop, the naming convention for Ubiquitous Language terms is as follows:
-
-> (To be completed post discussion with the members of the Reference Architecture team on 07/19 or 07/20, 2021)
+For insights and a description of each of the unique language terms used in the Mojaloop Domain, please refer to the [Glossary](../glossary/README.md) appended to this document.
 
 ### Bounded Contexts
 
 The following Bounded Contexts have been identified and implemented in Mojaloop:
 
-(This is a high-level description of each Bounded Context.  A more detailed view follows later in this document)
+> This is a high-level description of each of the Bounded Contexts that have been identified and included in the Mojaloop 2.0 Reference Architecture.  A more detailed view follows in the [Bounded Context](../boundedContexts/index.md) section of this document.
 
 | Bounded Context            | Purpose                                                                                                                                                                         | Bounded Context                                       | Purpose                                                                                                                                                    |
 | -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -69,8 +99,6 @@ The following Bounded Contexts have been identified and implemented in Mojaloop:
 
 The following Cross cutting concerns have been identified in Mojaloop:
 
-> (This is a high-level description of each Bounded Context.  A more detailed view follows later in this document)
-
 | Cross Cutting Concern BC                 | Purpose                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | ---------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | AuthZ & AuthN and Identity Management BC | Manage all aspects of both user and system authentication (AuthN) and authorization (AuthZ). Planned solutions will fit into the Generic and Supporting categories                                                                                                                                                                                                                                                                        |
@@ -82,4 +110,4 @@ The following Cross cutting concerns have been identified in Mojaloop:
 <!-- Footnotes themselves at the bottom. -->
 <!--### Notes
 
-[^6]: “AS-IS” - refers to the current Mojaloop system, as in, “The system architects have identified problems in the system as is.”, or in its current state-->
+[^?]: Note goes here - "?" denotes a Footnote Reference-->
