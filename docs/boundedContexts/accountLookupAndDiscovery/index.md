@@ -8,13 +8,13 @@ The following terms are used in this BC, also known as a domain.
 
 | Term | Description |
 |---|---|
-| Participant | Financial Services Provider |
-| Party | FSP Customer |
+| **Participant** | Financial Services Provider |
+| **Party** | FSP Customer |
 
 ## Functional Overview
 
-![Use Case - Functional Overview](./assets/aldFunctionalFlow20210825.png)
->
+![Use Case - Functional Overview](./assets/ML2RA_bc_accLookDiscvry_Apr22-b400.png)
+>BC Functional Diagram: Account Lookup and Discovery Overview
 
 ## Use Cases
 
@@ -29,7 +29,7 @@ Where a Participant DFSP indicates Parties/Participants require association with
 #### Flow Diagram
 
 ![Use Case - Party/Participant Associate](./assets/aldPartyParticipantAssoc_20210825.png)
->
+>UC Flow Diagram: Party/Participant Associate
 
 ### Party/Participant Disassociate
 
@@ -40,7 +40,9 @@ Where a Participant DFSP indicates Party/Participant identity(s)require disassoc
 #### Flow Diagram
 
 ![Use Case - Party/Participant Disassociate](./assets/aldPartyParticipantDisassoc_20210825.png)
->
+>UC Workflow Diagram: Party/Participant Disassociate
+
+
 
 ### Get Participant
 
@@ -51,7 +53,7 @@ Where a Participant DFSP requests Participant association information based on a
 #### Flow Diagram
 
 ![Use Case - Get Participant](./assets/aldGetParticipant_20210825.png)
->
+>UC Flow Diagram: Get Participant
 
 ### Get Party
 
@@ -62,7 +64,7 @@ Where a participant DFSP queries another participant DFSP for the details of a P
 #### Flow Diagram
 
 ![Use Case - Get Party](./assets/aldGetParty_20210825.png)
->
+>UC Flow Diagram: Get Party
 
 <!--## Notes -->
 <!-- Footnotes themselves at the bottom. -->
