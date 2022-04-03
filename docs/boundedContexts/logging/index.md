@@ -10,8 +10,8 @@ Bounded Contexts should publish the events in a defined format and using whateve
 
 #### Flow Diagram
 
-![Use Case - Example REPLACE ME](./assets/0-logging.png)
->
+![Use Case - Event Based Logging](./assets/ML2RA_Logging_ucEventBasedLogging_Apr22-b-1450.png)
+>UC Workflow Diagram: Event Based Logging
 
 <!-- Footnotes themselves at the bottom. -->
 ## Notes
