@@ -24,17 +24,25 @@ Terms with specific and commonly accepted meaning within the Bounded Context in 
 
 ### Send Asynchronous Notifications with Delivery Report
 
+#### Description
+
+The workflow provided by this UC enables the switch to provide Notifications including transaction Delivery Reports to DFSPs asynchronously.
+
 #### Flow Diagram
 
-![Use Case - Send Async Notifications with Delivery Report](./assets/sendAsyncNotificationWithDeliveryReport.png)
+![Use Case - Send Async Notifications with Delivery Report](./assets/ML2RA_Notifications_ucSendAsyncNoteReport_Apr22-a-1350.png)
+> UC Workflow Diagram: Send Async Notifications With Delivery Report
 
 ### Send Synchronous Notifications with Delivery Report
 
+#### Description
+
+The workflow provided by this UC enables the switch to provide Notifications including transaction Delivery Reports to DFSPs synchronously.
+
 #### Flow Diagram
 
-![Use Case - Send Sync Notifications with Delivery Report](./assets/sendSyncNotificationWithDeliveryReport.png)
-
-<!-- Footnotes themselves at the bottom. -->
+![Use Case - Send Sync Notifications with Delivery Report](./assets/ML2RA_Notifications_ucSendSyncNoteReport_Apr22-a-1350.png)
+> UC Workflow Diagram: Send Sync Notifications With Delivery Report
 
 ### Alert Registration
 
@@ -48,13 +56,19 @@ Hub Operators or Sub-systems will be able to call the Alert Registration API to 
 
 #### Flow Diagram
 
-![Use Case - Send Sync Notifications with Delivery Report](./assets/alertRegistration.png)
+![Use Case - Send Alert Registration](./assets/ML2RA_Notifications_ucAlertRegistration_Apr22-a-1350.png)
+> UC Workflow Diagram: Send Alert Registration
 
 ### Alert Notifications
 
+#### Description
+
+The workflow provided by this UC enables the switch to provide subscribed Alert Notifications to DFSPs.
+
 #### Flow Diagram
 
-![Use Case - Send Sync Notifications with Delivery Report](./assets/alertNotification.png)
+![Use Case - Send Alert Notifications](./assets/ML2RA_Notifications_ucAlertNotification_Apr22-a-1350.png)
+> UC Workflow Diagram: Send Alert Notification
 
 <!-- Footnotes themselves at the bottom. -->
 <!--## Notes
