@@ -1,4 +1,4 @@
-# Mojaloop 2.0 Reference Architecture Overview
+# Mojaloop Reference Architecture Overview
 
 ## Problem Space (_Problem space identification and map)_
 
@@ -13,7 +13,7 @@ A number of Core Problems (improvements) have been identified by (Business/Devel
 #### High-Level Map
 
 ![Core Problems](./assets/ML2RA_in_RefArchOver_Core_Apr22c_1670.png)
-> Reference Architecture (Mojaloop 2.0): Core Problems
+> Reference Architecture (Mojaloop): Core Problems
 
 ### Generic Problems
 
@@ -24,7 +24,7 @@ A number of Generic Problems (improvements) have been identified by (Business/De
 #### High-Level Map
 
 ![Generic Problems](./assets/ML2RA_in_RefArchOver_Generic_Apr22c_1670.png)
-> Reference Architecture (Mojaloop 2.0): Generic Problems
+> Reference Architecture (Mojaloop): Generic Problems
 
 ### Supporting Problems
 
@@ -35,7 +35,7 @@ A number of Supporting Problems (improvements) have been identified by (Business
 #### High-Level Map
 
 ![Supporting Problems](./assets/ML2RA_in_RefArchOver_Supporting_Apr22c_1670.png)
-> Reference Architecture (Mojaloop 2.0): Supporting Problems
+> Reference Architecture (Mojaloop): Supporting Problems
 
 ### Non-Functional Requirements
 
@@ -46,7 +46,7 @@ A number of Non-Functional Requirements have been identified by (Business/Develo
 #### High-Level Map
 
 ![Non-Functional Requirements](./assets/ML2RA_in_RefArchOver_NFRs_Apr22c_1670.png)
-> Reference Architecture (Mojaloop 2.0): Non-Functional Requirements
+> Reference Architecture (Mojaloop): Non-Functional Requirements
 
 ### New and Unclassified (non-domain)
 
@@ -57,7 +57,7 @@ A number of New and Unclassified (non-domain) problems have been identified by b
 #### High-Level Map
 
 ![New & Unclassified Problems](./assets/ML2RA_in_RefArchOver_newUnclassified_Apr22c_1670.png)
-> Reference Architecture (Mojaloop 2.0): New and Unclassified Problems
+> Reference Architecture (Mojaloop): New and Unclassified Problems
 
 ## Solution Space (_High level description and the context map)_
 
@@ -68,7 +68,7 @@ The Solution Space defined by DDD-architecture is focused on how the business pr
 #### High-Level Map
 
 ![Solution Space](./assets/ML2RA_in_RefArchOver_SolutionSpace_Apr22a.png)
-> Reference Architecture (Mojaloop 2.0): Solution Space
+> Reference Architecture (Mojaloop): Solution Space
 
 ### Ubiquitous Language
 
@@ -84,7 +84,7 @@ For insights and a description of each of the unique language terms used in the 
 
 The following Bounded Contexts have been identified and implemented in Mojaloop:
 
-> This is a high-level description of each of the Bounded Contexts that have been identified and included in the Mojaloop 2.0 Reference Architecture.  A more detailed view follows in the [Bounded Context](../boundedContexts/index.md) section of this document.
+> This is a high-level description of each of the Bounded Contexts that have been identified and included in the Mojaloop Reference Architecture.  A more detailed view follows in the [Bounded Context](../boundedContexts/index.md) section of this document.
 
 | Bounded Context            | Purpose                                                                                                                                                                         | Bounded Context                                       | Purpose                                                                                                                                                    |
 | -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
