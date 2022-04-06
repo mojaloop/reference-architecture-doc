@@ -6,11 +6,11 @@
 
 The Reporting strategy for this Reference Architecture, is to describe the generic mechanisms by which client BCs' data can be persisted, and kept up to date, in a Reporting Data Store, so users and systems, can later consume this data directly from the Reporting Data Store, or through any Reporting and/or Dashboarding tools connected to the Reporting Data Store.  
 
- - This Reporting Data Store must be write-only from the switch's perspective and read-only by external components.
- - The data models on the Reporting Data Store can be different from the internal operational data models that the switch uses; where relevant, for performance or other reasons, multiple models of the same data can be made available in the Reporting Data Store - akin to multiple projections or views.
- - A Client BC Reporting Component provided by the switch, will be translating internal events and internal data models to the external data store models - This component can be replaced or, there can even exist many of these for a single Client BC.
- - Such component must exists in the Reporting BC for any Client BC's who's data is made available in the Reporting Data Store. 
- - Any direct data sending, or fetching, from the source Client BC, or its internal data stores, to the Reporting Data Store, constitutes a violation of the decoupling principle and will negatively affect the maintainability of the system by virtue of its tight coupling.
+- This Reporting Data Store must be write-only from the switch's perspective and read-only by external components.
+- The data models on the Reporting Data Store can be different from the internal operational data models that the switch uses; where relevant, for performance or other reasons, multiple models of the same data can be made available in the Reporting Data Store - akin to multiple projections or views.
+- A Client BC Reporting Component provided by the switch, will be translating internal events and internal data models to the external data store models - This component can be replaced or, there can even exist many of these for a single Client BC.
+- Such component must exists in the Reporting BC for any Client BC's who's data is made available in the Reporting Data Store.
+- Any direct data sending, or fetching, from the source Client BC, or its internal data stores, to the Reporting Data Store, constitutes a violation of the decoupling principle and will negatively affect the maintainability of the system by virtue of its tight coupling.
 
 ### Reporting strategies:
 
@@ -22,10 +22,10 @@ The Reporting strategy for this Reference Architecture, is to describe the gener
 
 ### Absolutely minimum rules to observe:
 
-- Only the Reporting Data Store can be used for reporting and dashboarding. External systems are forbidden direct access to Bounded Contexts' own data stores. Operational access for external systems will be available via the Operational or [Interop APIs](/refarch/boundedContexts/fspInteropApi/). 
+- Only the Reporting Data Store can be used for reporting and dashboarding. External systems are forbidden direct access to Bounded Contexts' own data stores. Operational access for external systems will be available via the Operational or [Interop APIs](/refarch/boundedContexts/fspInteropApi/).
 - Client BC's internal source data cannot be "passed" directly to the Reporting Data Store - There must be a translation between the source data structure and the reporting data structure, even if there are no structure changes. Objective is to not have a dependency on the source BC data structure on the reporting side.
 
-### To Do:
+### To Do
 
 - Decide which initial reports and dashboards should be included as part of the base reporting functionality
 - Chose a open source reporting and dashboarding tools to deliver this base functionality
@@ -46,7 +46,8 @@ Terms with specific and commonly accepted meaning within the Bounded Context in 
 
 ## Functional Overview
 
-![Reporting Functional Overview diagram](./assets/reporting_functional_overview_24Sep2021.png)
+![Reporting Functional Overview diagram](./assets/ML2RA_Rpts_functionalOverview_Apr22-b.png)
+> BC Function Diagram: Functional Overview
 
 ## Use Cases
 
@@ -58,7 +59,8 @@ Strategy to feed the Reporting Data Store by having Client BC Reporting Componen
 
 #### Flow Diagram
 
-![Event Based Reporting use case diagram](./assets/event_based_reporting_24Sep2021.png)
+![Event Based Reporting use case diagram](./assets/ML2RA_Rpts_eventBasedReporting_Apr22-b.png)
+> UC Workflow Diagram: Event Based Reporting (Preferred Way)
 
 ### Pull based Reporting
 
@@ -68,7 +70,8 @@ Strategy to feed the Reporting Data Store by having Client BC Reporting Componen
 
 #### Flow Diagram
 
-![Pull Based Reporting use case diagram](./assets/pull_based_reporting_24Sep2021.png)
+![Pull Based Reporting use case diagram](./assets/ML2RA_Rpts_pullReporting_Apr22-b.png)
+> UC Workflow Diagram: Pull Reporting
 
 ### Push based Reporting
 
@@ -78,7 +81,8 @@ Strategy to feed the Reporting Data Store by having the Client BC sending to the
 
 #### Flow Diagram
 
-![Push Based Reporting use case diagram](./assets/push_based_reporting_24Sep2021.png)
+![Push Based Reporting use case diagram](./assets/ML2RA_Rpts_pushReporting_Apr22-b.png)
+> UC Workflow Diagram: Push Reporting
 
 ### User Report and Dashboard Consumption
 
@@ -88,7 +92,8 @@ Example of how a user can consume reports nd dashboards
 
 #### Flow Diagram
 
-![User Report and Dashboard Consumption diagram](./assets/user_reporting_consumption_24Sep2021.png)
+![User Report and Dashboard Consumption diagram](./assets/ML2RA_Rpts_reportDashboardConsumption_Apr22-b.png)
+> UC Workflow Diagram: User Reporting & Consumption Dashboard
 
 <!-- Footnotes themselves at the bottom. -->
 ## Notes
