@@ -43,8 +43,8 @@ The workflow provided by this UC enables the Switch to handle authorised Client 
 
 #### Flow Diagram
 
-![Create Reminder](./assets/schedulingCreateReminder_20211021.png)
->
+![Create Reminder](./assets/ML2RA_Scheduling_ucCreateReminder_Apr22_1816.png)
+>UC Workflow Diagram: Create Reminder
 ### Reminder Triggered
 
 #### Description
@@ -52,8 +52,8 @@ The workflow provided by this UC enables the Switch to handle reminders messaged
 
 #### Flow Diagram
 
-![Reminder Triggered](./assets/schedulingReminderTriggered_20211021.png)
->
+![Reminder Triggered](./assets/ML2RA_Scheduling_ucReminderTriggered_Apr22_1816.png)
+>UC Workflow Diagram: Reminder Triggered
 ### Delete (Recurring) Reminder
 
 #### Description
@@ -61,8 +61,8 @@ The workflow provided by this UC enables the switch to handle messages from auth
 
 #### Flow Diagram
 
-![Delete (Recurring) Reminder](./assets/schedulingDeleteRecurringReminder_20211021.png)
->
+![Delete (Recurring) Reminder](./assets/ML2RA_Scheduling_ucDelete(Recurring)Reminder_Apr22_1816.png)
+>UC Workflow Diagram: Delete (Recurring) Reminder
 
 <!-- Footnotes themselves at the bottom. -->
 ## Notes
@@ -91,7 +91,7 @@ The Scheduling BC must meet the following requirements:
 
 * BC must keep track of Create/Read/Delete actions
 
-    * Updates will be facilitated through Delete/Create actions as noted in the [Use Case Available UCs](#use-cases) list
+  * Updates will be facilitated through Delete/Create actions as noted in the [Use Case Available UCs](#use-cases) list
 
 * Job batches
 
@@ -112,8 +112,8 @@ Access requirements for the Scheduling BC still require definition.
 #### Scheduling BC - Exceptions
 
 * Malformed instructions
-    * Invalid date/time, including times in the past
-    * Invalid BC or command
+  * Invalid date/time, including times in the past
+  * Invalid BC or command
 * Failed execution (identified through call-back)
 * Insufficient authority for the Client BC to perform the CRD operation
 * Failure to process/execute Reminder
@@ -124,8 +124,8 @@ A number of questions came up during the Reference Architecture Work Sessions an
 
 * After the scheduled task has been initiated, does the Scheduling BC remain responsible for tracking its progress?
 
-    * Answer: No. When the Reminder is due, it is communicated to the Client BC using the precribed method, and thereafter, the Scheduling BC responsibility for the reminder is passed back to the Client BC.
+  * Answer: No. When the Reminder is due, it is communicated to the Client BC using the precribed method, and thereafter, the Scheduling BC responsibility for the reminder is passed back to the Client BC.
 
 * Is the Client BC or the person who scheduled a Reminder noted as the "User" by the Scheduling BC?  IOW, whose ID is stamped on the process audit trail?
 
-    * Answer: This should be determined by the Client BC, based on its action on receipt of the Reminder.
+  * Answer: This should be determined by the Client BC, based on its action on receipt of the Reminder.
