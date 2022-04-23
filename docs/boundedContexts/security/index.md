@@ -35,7 +35,7 @@ The login function requires that the user id and a secret key be passed in the h
 
 #### Flow Diagram
 
-![Use Case - BC User / Operator Login (AuthN)](./assets/ML2RA_SecAuth-ucUserOpsLogin(AuthN)_Apr22_1821.png)
+![Use Case - BC User / Operator Login (AuthN)](./assets/ML2RA_SecAuth-ucUserOpsLogin(AuthN)_Apr22_1829.png)
 > UC Workflow Diagram: BC User/Operator Login (AuthN)
 
 ### BC Authorization Model (AuthZ)
@@ -47,7 +47,7 @@ is called, the JWT signature is verified using the public key and the role provi
 
 #### Flow Diagram
 
-![Use Case - BC Authorization Model (AuthZ)](./assets/ML2RA_SecAuth-ucAuthModel_Apr22_1821.png)
+![Use Case - BC Authorization Model (AuthZ)](./assets/ML2RA_SecAuth-ucAuthModel_Apr22_1829.png)
 > UC Workflow Diagram: BC Authorization Model (AuthZ)
 
 ### BC Bootstrap
@@ -58,7 +58,7 @@ At bootstrap, the BC will send the list of possible privileges. This is done onc
 
 #### Flow Diagram
 
-![Use Case - BC Bootstrap](./assets/ML2RA_SecAuth-ucBcBootstrap-OncePerNewVer_Apr22_1821.png)
+![Use Case - BC Bootstrap](./assets/ML2RA_SecAuth-ucBcBootstrap-OncePerNewVer_Apr22_1829.png)
 > UC Workflow Diagram: BC Bootstrap
 
 ### BC Startup
@@ -69,7 +69,7 @@ At startup the BC will request authentication issuer public keys from Security B
 
 ##### Flow Diagram
 
-![Use Case - BC Startup](./assets/ML2RA_SecAuth-ucBcStartup_Apr22_1821.png)
+![Use Case - BC Startup](./assets/ML2RA_SecAuth-ucBcStartup_Apr22_1829.png)
 > UC Workflow Diagram: BC Startup
 
 ### Role / Privilege association
@@ -80,7 +80,7 @@ Roles are associated with a number of privileges.
 
 #### Flow Diagram
 
-![Use Case - BC Startup](./assets/ML2RA_SecAuth-ucRolePriviledgeAssoc_Apr22_1821.png)
+![Use Case - BC Startup](./assets/ML2RA_SecAuth-ucRolePriviledgeAssoc_Apr22_1829.png)
 > UC Workflow Diagram: Role / Priviledge Association
 
 ### Example Query / call
@@ -92,7 +92,7 @@ To use the access token, the client must set the Authorization HTTP header to Be
 
 #### Flow Diagram
 
-![Use Case - Example API Query/Call](./assets/ML2RA_SecAuth-ucExampleApiQueryCall_Apr22_1821.png)
+![Use Case - Example API Query/Call](./assets/ML2RA_SecAuth-ucExampleApiQueryCall_Apr22_1829.png)
 > UC Workflow Diagram: Example API Query/Call
 
 <!-- Footnotes themselves at the bottom. -->
