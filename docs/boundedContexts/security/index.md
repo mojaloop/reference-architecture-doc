@@ -1,12 +1,8 @@
 # Security BC
 
-1. Overview
-2. User / Operator login (AuthN)
-3. Authorization Model (AuthZ)
-4. BC bootstrap
-5. BC startup
-6. Role / Privilege association
-7. Example Query / call
+## Overview
+
+The protocol is request and response based, and the used transport protocol is secure Hypertext Transfer Protocol Secure (HTTPS). All services use the HTTP POST and GET methods. Both the request and response bodies are encoded in JSON-formatted text.
 
 ## Terms
 
@@ -20,10 +16,6 @@ Terms with specific and commonly accepted meaning within the Security Bounded Co
 | **AuthZ** | Authorization module. Requires JWT and certificate (public key). Verifies JWT ROLES and signature  |
 | **JWT** | JSON Web Token. Returned after a successful user authentication. Contains user details, ROLES and signature.   |
 | **KMS** | Key Management System. Manages cryptographic keys lifecycle (definition, creation and retirement). It is part of the Cyrpto subsystem |
-
-## Overview
-
-The protocol is request and response based, and the used transport protocol is secure Hypertext Transfer Protocol Secure (HTTPS). All services use the HTTP POST and GET methods. Both the request and response bodies are encoded in JSON-formatted text.
 
 ## Use Cases
 
