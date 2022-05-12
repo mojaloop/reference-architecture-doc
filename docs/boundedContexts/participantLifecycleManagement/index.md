@@ -22,9 +22,8 @@ Terms with specific and commonly accepted meaning within the Bounded Context in 
 
 Please review the common interfaces page to see how these interaction take place. [^1]
 
-![Use Case - Example REPLACE ME](./assets/0-functional-overview.jpg)
-
->
+![Use Case - Example REPLACE ME](./assets/ML2RA_PLM-bcOverviewFlowDiagram_Apr22-a_1429.png)
+>BC Workflow Diagram: Functional Overview
 
 ## Use Cases
 
@@ -32,133 +31,133 @@ Please review the common interfaces page to see how these interaction take place
 
 #### Description
 
-Process to create a Participant on the Mojaloop ecosystem, this usually requires all the information that relates to the participant and the initial accounts needed.
+The workflow provided by this UC enables the BC to employ a process through which to create a Participant on the Mojaloop ecosystem, this usually requires all the information that relates to the participant and the initial accounts needed.
 
 #### Flow Diagram
 
-![Use Case - Example REPLACE ME](./assets/ML2RA_PLM-ucCreateParticipant_Mar22-a_P1&2.png)
+![Use Case - Create Pariticipant Initial](./assets/ML2RA_PLM-ucCreateParticipantInit_Apr22-a_P1-1429.png)
+![UC - Create Participant Approve](./assets/ML2RA_PLM-ucCreateParticipantAppro_Apr22-a_P2-1429.png)
 >UC Workflow Diagram: Create Participant
 
 ### Manage Funds
 
 #### Description
 
-Process to either withdraw or deposit funds to the Participant's account(s).
+The workflow provided by this UC enables the BC to employ a process through which to either withdraw or deposit funds to the Participant's account(s).
 
 #### Flow Diagram
 
-![Use Case - Example REPLACE ME](./assets/2-manage-funds.jpg)
-
->
+![Use Case - Manage Funds - Initial](./assets/ML2RA_PLM-ucManageFundsInit_Apr22-a_P1-1429.png)
+![Use Case - Manage Funds - Approve](./assets/ML2RA_PLM-ucManageFundsAppro_Apr22-a_P2-1429.png)
+>UC Workflow Diagram: Manage Funds
 
 ### Update Endpoints
 
 #### Description
 
-Updates the endpoint of a given participant, when the request has been approved the endpoint will be called on a keep alive path to ensure connectivity.
+The workflow provided by this UC enables the BC to employ a process through which to update the endpoint of a given participant. When the request has been approved the endpoint will be called on a keep alive path to ensure connectivity.
 
 #### Flow Diagram
 
-![Use Case - Example REPLACE ME](./assets/3-update-endpoints.jpg)
-
->
+![Use Case - Update Endpoints - Initial](./assets/ML2RA_PLM-ucUpdateEndpointsInit_Apr22-a_P1-1429.png)
+![Use Case - Update Endpoints - Initial](./assets/ML2RA_PLM-ucUpdateEndpointAppro_Apr22-a_P2-1429.png)
+>UC Workflow Diagram: Update Endpoints
 
 ### Update Participant Status
 
 #### Description
 
-Changes the Status of a given participant to enforce different roles/scheme rules on the participant.
+The workflow provided by this UC enables the BC to employ a process through which to change the status of a given participant to enforce different roles/scheme rules on the participant.
 
 #### Flow Diagram
 
-![Use Case - Example REPLACE ME](./assets/4-participant-update-status.jpg)
-
->
+![Use Case - Update Participant Status - Initial](./assets/ML2RA_PLM-ucUpdateParticipantStatusInit_Apr22-a_P1-1429.png)
+![Use Case - Update Participant Status - Approve](./assets/ML2RA_PLM-ucUpdateParticipantStatusAppro_Apr22-a_P2-1429.png)
+>UC Workflow Diagram: Update Participant Status
 
 ### Get Participant
 
 #### Description
 
-Gets information with about a given participant.
+The workflow provided by this UC enables the BC to employ a process through which to get information with about a given participant.
 
 #### Flow Diagram
 
-![Use Case - Example REPLACE ME](./assets/5-get-participant.jpg)
+![Use Case - Get Participant](./assets/ML2RA_PLM-ucGetParticipant_Apr22-a_1429.png)
+>UC Workflow Diagram: Get Participant
 
->
-
-### Participant Accounts
+### Add Participant Accounts
 
 #### Description
 
-These process controls different aspects of a Participant's accounts, from creating an account, enabling/disabling and update the limits and threshold warnings of an account. sub-processes included in this use case are:
+The workflow provided by this UC enables the BC to employ a process through which to control different aspects of a Participant's accounts, from creating an account, enabling/disabling and updating the limits and threshold warnings of an account.
 
--   Add Participant Account
--   Update Participant Account Status (Enable/Disable)
--   Update Liquidity Limits and Warning Thresholds
+Sub-processes in this UC include:
+
+- Add Participant Account
+- Update Participant Account Status (Enable/Disable)
+- Update Liquidity Limits and Warning Thresholds
 
 #### Flow Diagram
 
-![Use Case - Example REPLACE ME](./assets/ML2RA_PLM-ucAddParticipant_Mar22-a_P1-2.png)
+![Use Case - Add Participant Accounts - Initial](./assets/ML2RA_PLM-ucAddParticipantAccountInit_Apr22-a_P1-1429.png)
+![Use Case - Add Participant Accounts - Approve](./assets/ML2RA_PLM-ucAddParticipantAccountAppro_Apr22-a_P2-1429.png)
 >UC Workflow Diagram: Add Participant Accounts
 
-### Reserve Liquidity Cover
+### Liquidity Cover Reserve
 
 #### Description
 
-Reserves liquidity cover for a Participant and notifies the Accounts and Balances BC about the changes.
+The workflow provided by this UC enables the BC to employ a process through which to reserve liquidity cover for a Participant and notify the Accounts and Balances BC about the update.
 
 #### Flow Diagram
 
-![Use Case - Example REPLACE ME](./assets/7-liquidity-cover-reservations.jpg)
-
->
+![Use Case - Reserve Liquidity Cover - Initial](./assets/ML2RA_PLM-ucLiquidityCoverReserveInit_Apr22-a_P1-1429.png)
+![Use Case - Reserve Liquidity Cover - Approve](./assets/ML2RA_PLM-ucLiquidityCoverReserveAppro_Apr22-a_P2-1429.png)
+>UC Workflow Diagram: Liquidity Cover Reserve
 
 ### Liquidity Threshold Exceeded
 
 #### Description
 
-This process notifies the participant that the liquidity threshold,that has been set beforehand, has been reach and action might be required.
+The workflow provided by this UC enables the BC to employ a process through which to notify the participant that a preset liquidity threshold has been reached and action might be required.
 
 #### Flow Diagram
 
-![Use Case - Example REPLACE ME](./assets/8-liquidity-threshold-exceeded.jpg)
-
->
+![Use Case - Liquidity Threshold Exceeded](./assets/ML2RA_PLM-ucLiquidityThresholdExceeded_Apr22-a_1429.png)
+>UC Workflow Diagram: Liquidity Threshold Exceeded
 
 ### Liquidity Limit Exceeded
 
 #### Description
 
-This process notifies the participant when ha reached the liquidity limit that was set.
+The workflow provided by this UC enables the BC to employ a process through which to notify the participant when they have reached the preset liquidity limit of an account.
 
 #### Flow Diagram
 
-![Use Case - Example REPLACE ME](./assets/9-liquidity-limit-exceeded.jpg)
-
->
+![Use Case - Liquidity Limit Exceeded](./assets/ML2RA_PLM-ucLiquidityLimitedExceeded_Apr22-a_1429.png)
+>UC Workflow Diagram: Liquidity Limit Exceeded
 
 ### Liquidity Threshold & Limit Reset
 
 #### Description
 
-This process resets the liquidity limit or threshold notification checks when successful transfers have been executed and the position is in a positive state.
+The workflow provided by this UC enables the BC to employ a process through which reset the liquidity limit or threshold notification checks when successful transfers have been executed and the participant account position is in a positive state.
 
 #### Flow Diagram
 
-![Use Case - Example REPLACE ME](./assets/10-liquidity-limit-and-threshold-reset.jpg)
+![Use Case - Liquidity Threshold & Limit Reset](./assets/ML2RA_PLM-ucLiquidityLimit&ThresholdReset_Apr22-a_1429.png)
+>UC Workflow Diagram: Liquidity Threshold and Limit Reset
 
->
-
-### Liquidity Cover Queries
+### Liquidity Cover Query
 
 #### Description
 
-Queries to check the current liquidity as well as other read operations that are related to Liquidity.
+The workflow provided by this UC enables the BC to employ a process through which to query the current liquidity of a participant account, along with additional read operations that are related to the participant's liquidity.
 
 #### Flow Diagram
 
-![Use Case - Example REPLACE ME](./assets/ML2RA_PLM-ucLiquidityCoverQueries_Mar22-a.png)
+![Use Case - Liquidity Cover Query](./assets/ML2RA_PLM-ucLiquidityCoverQuery_Apr22-a_1429.png)
 >UC Workflow Diagram: Liquidity Cover Queries
 
 ## Canonical Model
