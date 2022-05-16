@@ -100,6 +100,8 @@ Sub-processes in this UC include:
 
 #### Flow Diagram
 
+<!-- Warning Note to Developers & Editors!!: The following two images are being rendered to the Accounts & Balances BC. -->
+
 ![Use Case - Add Participant Accounts - Initial](./assets/ML2RA_PLM-ucAddParticipantAccountInit_Apr22-a_P1-1429.png)
 ![Use Case - Add Participant Accounts - Approve](./assets/ML2RA_PLM-ucAddParticipantAccountAppro_Apr22-a_P2-1429.png)
 >UC Workflow Diagram: Add Participant Accounts
@@ -156,6 +158,8 @@ The workflow provided by this UC enables the BC to employ a process through whic
 The workflow provided by this UC enables the BC to employ a process through which to query the current liquidity of a participant account, along with additional read operations that are related to the participant's liquidity.
 
 #### Flow Diagram
+
+<!-- Warning Note to Developers & Editors!!: The following two images are being rendered to the Accounts & Balances BC. -->
 
 ![Use Case - Liquidity Cover Query](./assets/ML2RA_PLM-ucLiquidityCoverQuery_Apr22-a_1429.png)
 >UC Workflow Diagram: Liquidity Cover Queries
