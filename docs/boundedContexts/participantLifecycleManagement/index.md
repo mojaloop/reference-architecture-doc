@@ -92,8 +92,6 @@ The workflow provided by this UC enables the BC to employ a process through whic
 
 The workflow provided by this UC enables the BC to employ a process through which to control different aspects of a Participant's accounts, from creating an account, enabling/disabling and updating the limits and threshold warnings of an account.
 
-Sub-processes in this UC include:
-
 - Add Participant Account
 - Update Participant Account Status (Enable/Disable)
 - Update Liquidity Limits and Warning Thresholds
