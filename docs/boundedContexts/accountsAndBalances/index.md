@@ -35,7 +35,10 @@ Further, the workflow provides for specification of credit/debit Journal Entry l
 
 Account creation from [Participant Lifecycle Management BC](../participantLifecycleManagement/index.md)
 
-![Use Case - PLCM BC](../participantLifecycleManagement/assets/ML2RA_PLM-ucAddParticipant_Mar22-a_P1-2.png)
+<!-- Warning Note to Developers & Editors!!: The following two images are being rendered from the Participant Lifecycle BC. -->
+
+![Use Case - PLCM BC](../participantLifecycleManagement/assets/ML2RA_PLM-ucAddParticipantAccountInit_Apr22-a_P1-1429.png)
+![Use Case - Add Participant Account - Approval (P2)](../participantLifecycleManagement/assets/ML2RA_PLM-ucAddParticipantAccountAppro_Apr22-a_P2-1429.png)
 >UC Workflow Diagram: Add Participant Accounts
 
 Account creation from [Settlements BC](../settlements/index.md)
@@ -59,7 +62,9 @@ Query the status and balance for participant account.
 
 Query liquidity CR/DR limits from [Participant Lifecycle Management BC](../participantLifecycleManagement/index.md)
 
-![Use Case - PLCM BC](../participantLifecycleManagement/assets/ML2RA_PLM-ucLiquidityCoverQueries_Mar22-a.png)
+<!-- Warning Note to Developers & Editors!!: The following two images are being rendered from the Participant Lifecycle BC. -->
+
+![Use Case - PLCM BC](../participantLifecycleManagement/assets/ML2RA_PLM-ucLiquidityCoverQuery_Apr22-a_1429.png)
 >UC Workflow Diagram: Liquidity Cover Queries
 
 ### Query Journal Entries
