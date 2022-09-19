@@ -22,7 +22,7 @@ echo "Staging changes..."
 git add -A
 
 # commit
-git commit -a -m "Publishing vue-pages on github..."
+git commit -a -m "[ci skip] Publishing vue-pages on github..."
 
 # push to the gh-pages
 git push -u -f git@github.com:$GITHUB_PROJECT_USERNAME/$GITHUB_PROJECT_REPONAME.git master:vue-pages
