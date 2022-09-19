@@ -22,7 +22,7 @@ The following terms are used in this BC, also known as a domain.
 
 #### Description
 
-Where a Participant DFSP requests a given Party ID to be associated with a Participant (itlself).
+Where a Participant DFSP requests a given Party ID to be associated with a Participant (itself).
 
 ***Note:*** *Checks and validations of the KYC (Know You Customer) details are not covered here and are left to processes outside of the Mojaloop API calls and should be covered by the Scheme, to ensure that association (or disassociation) requests are valid.*
 
@@ -35,7 +35,7 @@ Where a Participant DFSP requests a given Party ID to be associated with a Parti
 
 #### Description
 
-Where a Participant DFSP requests an existing association between a given Party ID and a Participant (itlself) to be removed.
+Where a Participant DFSP requests an existing association between a given Party ID and a Participant (itself) to be removed.
 
 #### Flow Diagram
 
