@@ -18,29 +18,30 @@ The following terms are used in this BC, also known as a domain.
 
 ## Use Cases
 
-### Party/Participant Associate
+#### Party/Participant Associate
 
 #### Description
 
-Where a Participant DFSP indicates Parties/Participants require association with a particular transaction, this UC is used by the Switch to validate the request and, where a Participant DFSP is able to associate the provided Party identity(s), associate the Parties/Participants in accordance with the receipted request/instruction.
+Where a Participant DFSP requests a given Party ID to be associated with a Participant (itlself).
 
 ***Note:*** *Checks and validations of the KYC (Know You Customer) details are not covered here and are left to processes outside of the Mojaloop API calls and should be covered by the Scheme, to ensure that association (or disassociation) requests are valid.*
 
 #### Flow Diagram
 
-![Use Case - Party/Participant Associate](./assets/aldPartyParticipantAssoc_20210825.png)
+![Use Case - Party/Participant Associate](./assets/aldPartyParticipantAssoc_20220919.png)
 >UC Flow Diagram: Party/Participant Associate
 
 ### Party/Participant Disassociate
 
 #### Description
 
-Where a Participant DFSP indicates Party/Participant identity(s)require disassociation from a particular transaction, this UC is used by the Switch to validate the request and, where a participant DFSP is able to, disassociate the Party/Participant identity(s) in accordance with the receipted request/instruction.
+Where a Participant DFSP requests an existing association between a given Party ID and a Participant (itlself) to be removed.
 
 #### Flow Diagram
 
-![Use Case - Party/Participant Disassociate](./assets/aldPartyParticipantDisassoc_20210825.png)
+![Use Case - Party/Participant Disassociate](./assets/aldPartyParticipantDisassoc_20220919.png)
 >UC Workflow Diagram: Party/Participant Disassociate
+
 
 
 
