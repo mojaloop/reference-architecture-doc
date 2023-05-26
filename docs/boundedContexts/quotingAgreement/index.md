@@ -8,12 +8,13 @@ The following terms are used in this BC, also known as a domain.
 
 | Term | Description |
 |---|---|
-| **(D)FSP** | (Digital) Financial Services Provider |
+| **DFSP** | Digital Financial Services Provider |
 | **Participant** | Financial Services Provider |
 
 ## Functional Overview
 
-![Use Case - Functional Overview](./assets/qtaFunctionalOverview_20210825.png)
+![Use Case - Functional Overview](./assets/ML2RA_BC_quotingAgreements_functionalOverview-Mar22a-72-Patched.png)
+> BC Function Diagram: Quoting/Agreements Overview
 
 ## Use Cases
 
@@ -25,7 +26,8 @@ This process obtains an array of relevant Participant data including status flag
 
 #### Flow Diagram
 
-![Use Case - Calculate Quote - Happy Path](./assets/qtaCalculateQuoteHappyPath_20210825.png)
+![Use Case - Calculate Quote - Happy Path](./assets/ML2RA_UC_calcQuoteHappy_Mar22-a-1700.png)
+> UC Flow Diagram: Calculate Quote - Happy Path
 
 ### Get Quote - Happy Path
 
@@ -35,7 +37,8 @@ Process to obtain and deliver existing Quote details to Participant/s on request
 
 #### Flow Diagram
 
-![Use Case - Example REPLACE ME](./assets/qtaGetQuoteHappyPath.png)
+![Use Case - Get Quote - Happy Path](./assets/ML2RA_UC_getQuoteHappy_Mar22-a-1700.png)
+> UC Workflow Diagram: Get Quote - Happy Path
 
 ### Calculate Quote - Invalid Quote Request
 
@@ -45,7 +48,8 @@ Process that enables the system to invalidate quote requests by monitoring and r
 
 #### Flow Diagram
 
-![Use Case - Calculate Quote - Invalid Quote Request](./assets/qtaCalculateQuoteInvalidQuoteRequest_20210825.png)
+![Use Case - Calculate Quote - Invalid Quote Request](./assets/ML2RA_UC_calcQuoteInvalidQuoteRequest_Mar22-a-1700.png)
+> UC Workflow Diagram: Calculate Quote - Invalid Quote Request
 
 ### Calculate Quote - Invalid FSPs
 
@@ -55,7 +59,8 @@ Process that enables the system to invalidate FSP quote requests where the FSP d
 
 #### Flow Diagram
 
-![Use Case - Calculate Quote - Invalid FSPs](./assets/qtaCalculateQuoteInvalidFSPs_20210825.png)
+![Use Case - Calculate Quote - Invalid FSPs](./assets/ML2RA_UC_calcQuoteInvalidFSPs_Mar22-a-1700.png)
+> UC Workflow Diagram: Calculate Quote - Invalid FSPs
 
 ### Calculate Quote - Invalid Scheme Rules Detected In Request
 
@@ -65,7 +70,8 @@ Process to enable the system to invalidate quote requests where Scheme Rules are
 
 #### Flow Diagram
 
-![Use Case - Calculate Quote - Invalid Scheme Rules detected in Request](./assets/qtaCalculateQuoteInvalidSchemeRulesRequest_20210825.png)
+![Use Case - Calculate Quote - Invalid Scheme Rules detected in Request](./assets/ML2RA_UC_calcQuoteInvalidSchemeRulesRequest_Mar22-a-1700.png)
+> UC Workflow Diagram: Calculate Quote - Invalid Scheme Rules Detected In Request
 
 ### Calculate Quote - Invalid Scheme Rules Detected In Response
 
@@ -75,7 +81,8 @@ Process to enable the system to invalidate quote reponses where Scheme Rules are
 
 #### Flow Diagram
 
-![Use Case - Calculate Quote - Invalid Scheme Rules detected in response](./assets/qtaCalculateQuoteInvalidSchemeRulesResponse_20210825.png)
+![Use Case - Calculate Quote - Invalid Scheme Rules detected in response](./assets/ML2RA_UC_calcQuoteInvalidSchemeRulesResponse_Mar22-a-1700.png)
+> UC Workflow Diagram: Calculate Quote - Invalid Scheme Rules Detected In Response
 
 ## Canonical Quote Model
 
